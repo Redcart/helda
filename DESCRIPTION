@@ -1,0 +1,20 @@
+Package: helda
+Title: HELPFUL FUNCTIONS FOR DATA ANALYSIS (one line, title case)
+Version: 0.1
+Authors@R: person("Simon", "Corde", email = "simon.corde@hotmail.fr", role = c("aut", "cre"))
+Description: This package gathers some useful functions for data analysis. Some functions allows to 
+	deal with windows paths, create formula for statistical models, draw lift effect and lift curves,
+	compute inertia in agglomerative clustering, some procedure for kmeans and desired sizes final clusters
+	and one procedure for filling gaps in time series inside a panel data.
+Depends: R (>= 3.5.1)
+Imports:
+    dplyr,
+    ggplot2,
+	  sqldf,
+	  stringr
+License: GNU General Public License v2.0 (GPL-2.0)
+Encoding: UTF-8
+LazyData: true
+URL: https://www.github.com/Redcart/helda
+BugReports: https://github.com/Redcart/helda/issues
+RoxygenNote: 6.1.1.9000
