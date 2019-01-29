@@ -1,23 +1,31 @@
-\name{windows_to_linux_path}
-\alias{windows_to_linux_path}
+\name{compute_inertia_ahc}
+\alias{compute_inertia_ahc}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Function that allows to change windows path into linux path
+\title{Function to compute the intra cluster inertia from AHC
 %%  ~~function to do ... ~~
 }
-\description{Replace "\" in "/"
+\description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-windows_to_linux_path()
+compute_inertia_ahc(data, max_clusters = 10)
 }
 %- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{data}{R data frame: data set
+%%     ~~Describe \code{data} here~~
+}
+  \item{max_clusters}{numeric: number of maximum clusters we want to perform agglomerative clustering
+%%     ~~Describe \code{max_clusters} here~~
+}
+}
 \details{
 Link to the github repository:
 
 https://www.github.com/Redcart/helda
 
 }
-\value{The input must be inserted by the user from the console
+\value{vector of length max_clusters - 1. It stores all intra cluster inertia for AHC from 2 to max_clusters clusters.
 %%  ~Describe the value returned
 %%  If it is a LIST, use
 %%  \item{comp1 }{Description of 'comp1'}
@@ -45,9 +53,7 @@ https://www.github.com/Redcart
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-windows_to_linux_path()
 
-# C:\Users\scorde\Desktop\Data_Science
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

@@ -4,7 +4,7 @@
 \title{Function to do the first step in filling gaps in time series
 %%  ~~function to do ... ~~
 }
-\description{ This function allows to create a complete empty calendar.
+\description{This function allows to create a complete empty calendar.
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
@@ -31,7 +31,8 @@ create_calendar_day(data, key_variable, time_variable, start_year, end_year)
 \details{
 Link to the github repository:
 
-\link{https://www.github.com/Redcart/r_packages/helda}
+https://www.github.com/Redcart/helda
+
 }
 \value{R data frame with three columns
 %%  ~Describe the value returned
@@ -48,9 +49,10 @@ Link to the github repository:
 \author{
 Simon Corde
 
-Link to the author's repository:
+Link to the author's github repository:
 
-\link{https://www.github.com/Redcart}
+https://www.github.com/Redcart
+
 }
 \note{
 %%  ~~further notes~~

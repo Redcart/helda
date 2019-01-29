@@ -34,7 +34,8 @@ end_start_to_fill(data, calendar, gap_variable, key_variable, time_variable, dig
 \details{
 Link to the github repository:
 
-\link{https://www.github.com/Redcart/r_packages/helda}
+https://www.github.com/Redcart/helda
+
 }
 \value{R data frame with five columns
 %%  ~Describe the value returned
@@ -52,9 +53,10 @@ Link to the github repository:
 \author{
 Simon Corde
 
-Link to the author's repository:
+Link to the author's github repository:
 
-\link{https://www.github.com/Redcart}
+https://www.github.com/Redcart
+
 }
 \note{
 %%  ~~further notes~~

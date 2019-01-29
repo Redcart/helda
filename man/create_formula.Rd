@@ -1,23 +1,31 @@
-\name{windows_to_linux_path}
-\alias{windows_to_linux_path}
+\name{create_formula}
+\alias{create_formula}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Function that allows to change windows path into linux path
+\title{Function that permits to automatically create formula from a data set
 %%  ~~function to do ... ~~
 }
-\description{Replace "\" in "/"
+\description{ This function generalizes the creation of formula needed for the training of machine learning models. It allows to do it quickly from the columns of data frame.
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-windows_to_linux_path()
+create_formula(data, position = 1)
 }
 %- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{data}{R data frame: data set
+%%     ~~Describe \code{data} here~~
+}
+  \item{position}{numeric: position of the target variable in the data frame (by default equal to 1)
+%%     ~~Describe \code{position} here~~
+}
+}
 \details{
 Link to the github repository:
 
 https://www.github.com/Redcart/helda
 
 }
-\value{The input must be inserted by the user from the console
+\value{The function outputs a string containing the formula such as Y ~ X1 + X2 + ... + XN
 %%  ~Describe the value returned
 %%  If it is a LIST, use
 %%  \item{comp1 }{Description of 'comp1'}
@@ -45,9 +53,7 @@ https://www.github.com/Redcart
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-windows_to_linux_path()
-
-# C:\Users\scorde\Desktop\Data_Science
+create_formula(mtcars)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
