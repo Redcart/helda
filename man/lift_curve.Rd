@@ -53,8 +53,8 @@ https://www.github.com/Redcart
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\seealso{\code{\link{lift_effect}}
+%% ~~objects to See Also as , ~~~
 }
 \examples{
 

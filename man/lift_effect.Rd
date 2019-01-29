@@ -52,7 +52,7 @@ https://www.github.com/Redcart
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{
+\seealso{\code{\link{lift_curve}}
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{

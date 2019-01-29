@@ -68,7 +68,7 @@ https://www.github.com/Redcart
 
 \seealso{\code{\link{create_calendar_day}}
 
-\code{\link{end_start_to_fill}}
+\code{\link{start_end_to_fill}}
 
 }
 \examples{

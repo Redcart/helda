@@ -60,7 +60,7 @@ https://www.github.com/Redcart
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{\code{\link{end_start_to_fill}}
+\seealso{\code{\link{start_end_to_fill}}
 
 \code{\link{gap_to_fill}
 %% ~~objects to See Also as \code{\link{help}}, ~~~
