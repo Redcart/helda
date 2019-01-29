@@ -1,6 +1,6 @@
-#####################################################################
-####    Function for filling intermdediate gaps in a time serie   ###
-#####################################################################
+####################################################################
+####   Function for filling intermdediate gaps in a time serie   ###
+####################################################################
 
 # arguments:
   # - data: R data frame
@@ -47,4 +47,3 @@ gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits 
   return(data)
 
 }
-

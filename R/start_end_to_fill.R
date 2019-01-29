@@ -4,12 +4,12 @@
 
 # this function allows to fill the start and end gaps of time series by doing repetition
 # arguments:
-# - data: R data frame
-# - calendar: complete empty calendar (performed by create_calendar_day)
-# - gap_variable: name of the variable we want to fill the gaps
-# - key_variable: variable name that refers to the key variable in the panel (ID, ...)
-# - time_variable: time variable name that permits to sort observation on a time scale
-# - digits: number of decimals to keep for the rounding
+  # - data: R data frame
+  # - calendar: complete empty calendar (performed by create_calendar_day)
+  # - gap_variable: name of the variable we want to fill the gaps
+  # - key_variable: variable name that refers to the key variable in the panel (ID, ...)
+  # - time_variable: time variable name that permits to sort observation on a time scale
+  # - digits: number of decimals to keep for the rounding
 
 start_end_to_fill <- function(data, calendar, gap_variable, key_variable, time_variable, digits = 2){
   

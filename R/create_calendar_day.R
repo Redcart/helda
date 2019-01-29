@@ -4,11 +4,11 @@
 
 # This function allows to create a complete empty calendar
 # arguments:
-# - data: R data frame
-# - key_variable: variable name that refers to the key variable in the panel (ID, ...)
-# - time_variable: time variable name that permits to sort observation on a time scale
-# - start_year: starting year of the time serie
-# - end_year: ending year of the time serie
+  # - data: R data frame
+  # - key_variable: variable name that refers to the key variable in the panel (ID, ...)
+  # - time_variable: time variable name that permits to sort observation on a time scale
+  # - start_year: starting year of the time serie
+  # - end_year: ending year of the time serie
 
 create_calendar_day <- function(data, key_variable, time_variable, start_year, end_year){
   

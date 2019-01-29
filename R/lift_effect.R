@@ -4,9 +4,9 @@
 
 # This function allows to draw the lift effect on a graph
 # arguments:
-# predictions: vector of predicted probabilities 
-# true_labels: vector of true labels 
-# positive_label: string for the positive label (Y = 0)
+  # predictions: vector of predicted probabilities 
+  # true_labels: vector of true labels 
+  # positive_label: string for the positive label (Y = 0)
 
 lift_effect <- function(predictions, true_labels, positive_label)
 {
