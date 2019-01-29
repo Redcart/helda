@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-end_start_to_fill(data, calendar, gap_variable, key_variable, time_variable, digits = 2)
+gap_to_fill(data, calendar, gap_variable, key_variable, time_variable, digits = 2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
