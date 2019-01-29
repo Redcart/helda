@@ -11,21 +11,21 @@
   # - end_year: ending year of the time serie
 
 create_calendar_day <- function(data, key_variable, time_variable, start_year, end_year){
-  
+
   #, scale_time
-  
-  ids <- data %>% 
-    select(key_variable) %>% 
+
+  ids <- data %>%
+    select(key_variable) %>%
     distinct()
-  
+
   years <- data.frame(start_year:end_year)
-  
-  calendar <- sqldf("SELECT * 
+
+  calendar <- sqldf("SELECT *
                      FROM ids
                      CROSS JOIN years")
-  
+
   colnames(calendar) <- c(key_variable, time_variable)
-  
+
   return(calendar)
-  
+
 }

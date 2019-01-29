@@ -1,8 +1,3 @@
-library(dplyr)
-library(ggplot2)
-library(sqldf)
-library(stringr)
-
 ######################################################
 ###  Computing of the intragroup variance for AHC  ###
 ######################################################
