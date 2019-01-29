@@ -1,5 +1,5 @@
 Package: helda
-Title: HELPFUL FUNCTIONS FOR DATA ANALYSIS (one line, title case)
+Title: HELpful functions for Data Analysis
 Version: 0.1
 Authors@R: person("Simon", "Corde", email = "simon.corde@hotmail.fr", role = c("aut", "cre"))
 Description: This package gathers some useful functions for data analysis. Some functions allows to 
@@ -12,7 +12,7 @@ Imports:
     ggplot2,
 	  sqldf,
 	  stringr
-License: GNU General Public License v2.0 (GPL-2.0)
+License: GPL-2.0
 Encoding: UTF-8
 LazyData: true
 URL: https://www.github.com/Redcart/helda

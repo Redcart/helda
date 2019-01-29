@@ -1,5 +1,5 @@
-\name{end_start_to_fill}
-\alias{end_start_to_fill}
+\name{start_end_to_fill}
+\alias{start_end_to_fill}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Function to do the second step in filling gaps in time series
 %%  ~~function to do ... ~~
