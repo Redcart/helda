@@ -1,4 +1,4 @@
-### R package helda (**HEL**pful functions for **D**ata **A**nalysis in R)
+# R package helda (HELpful functions for Data Analysis in R)
 
 This package provides functionalities that aim at facilitating and saving time when analysing data.
 
