@@ -1,23 +1,3 @@
-###################################################################################################################################################
-#######                                                                                                                                      ######
-#######                                                       Helpful functions                                                              ######
-#######                                                       for data analysis                                                              ######
-#######                                                     S.CORDE December 2018                                                            ######
-#######                                                                                                                                      ######
-###################################################################################################################################################
-
-### Functions coded in this script
-
-# - Procedure that permits to get clusters from Kmeans with some rules on the sizes of the clusters
-
-rm(list = ls())
-
-### Loading of required R packages
-
-library(ggplot2)
-library(dplyr)
-
-
 ###########################################
 ###  Function for the kmeans procedure  ###
 ###########################################
@@ -162,12 +142,3 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
 
 }
 
-############################################
-###  Performing example of the function  ###
-############################################
-
-# data <- trees
-# str(data)
-#
-# final <- kmeans_procedure(data = data, columns = 1:3, threshold_min = 3, threshold_max = 5)
-# final

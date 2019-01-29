@@ -1,13 +1,3 @@
-
-rm(list = ls())
-
-### Loading of required R packages
-
-library(ggplot2)
-library(dplyr)
-library(sqldf)
-library(stringr)
-
 ##############################################
 ###  Function for complete empty calendar  ###
 ##############################################
@@ -31,8 +21,8 @@ create_calendar_day <- function(data, key_variable, time_variable, start_year, e
   years <- data.frame(start_year:end_year)
   
   calendar <- sqldf("SELECT * 
-                    FROM ids
-                    CROSS JOIN years")
+                     FROM ids
+                     CROSS JOIN years")
   
   colnames(calendar) <- c(key_variable, time_variable)
   
