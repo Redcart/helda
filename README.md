@@ -1,12 +1,13 @@
 ### R package helda (HELpful functions for Data Analysis in R)
 
-This package provides functionalities that aim at facilitating ans saving time when analysing data.
+This package provides functionalities that aim at facilitating and saving time when analysing data.
 
 ## Installation
 
-You can install the package from r using the following commands:
+You can install the package from R using the following commands:
 ``` r
 # The development version from GitHub:
+
 # install.packages("devtools")
 devtools::install_github("Redcart/helda")
 ```
