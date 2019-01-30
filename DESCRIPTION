@@ -6,11 +6,11 @@ Description: This package gathers some useful functions for data analysis. Some 
 	deal with windows paths, create formula for statistical models, draw lift effect and lift curves,
 	compute inertia in agglomerative clustering, some procedure for kmeans and desired sizes final clusters
 	and one procedure for filling gaps in time series inside a panel data.
-Depends: R (>= 3.5.1),
+Depends: R (>= 3.4.1),
     dplyr,
     ggplot2,
-	  sqldf,
-	  stringr
+    sqldf,
+    stringr
 License: GPL-2.0
 Encoding: UTF-8
 LazyData: true
