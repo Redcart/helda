@@ -1,7 +1,7 @@
 \name{lift_effect}
 \alias{lift_effect}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Function to draw the lift effect with gplot style
+\title{Function to draw the lift effect with ggplot2 style
 %%  ~~function to do ... ~~
 }
 \description{This function allows to get on a graph the lift effect with the size of population. It allows to compare the classification machine learning model to the random one.
