@@ -9,8 +9,8 @@ Description: This package gathers some useful functions for data analysis. Some 
 Depends: R (>= 3.5.1),
     dplyr(>= 0.7.8),
     ggplot2(>= 3.1.0),
-	  sqldf(>= 0.4-11),
-	  stringr(>= 1.3.1)
+    sqldf(>= 0.4-11),
+    stringr(>= 1.3.1)
 License: GPL-2.0
 Encoding: UTF-8
 LazyData: true
