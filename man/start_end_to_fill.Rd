@@ -8,7 +8,7 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-end_start_to_fill(data, calendar, gap_variable, key_variable, time_variable, digits = 2)
+start_end_to_fill(data, calendar, gap_variable, key_variable, time_variable, digits = 2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -89,7 +89,7 @@ jeu_donnees <- na.omit(jeu_donnees)# we artificially create some gaps in the tim
 
 data_to_check_1 <- create_calendar_day(data = jeu_donnees, key_variable = "country", time_variable = "year", start_year = 2009, end_year = 2018)
 
-data_to_check_2 <- end_start_to_fill(data = jeu_donnees, calendar = data_to_check_1, gap_variable = "gdp", key_variable = "country", time_variable = "year", digits = 2)
+data_to_check_2 <- start_end_to_fill(data = jeu_donnees, calendar = data_to_check_1, gap_variable = "gdp", key_variable = "country", time_variable = "year", digits = 2)
 
 data_to_check_3 <- gap_to_fill(data = data_to_check_2, gap_variable = "gdp_corrected_1", key_variable = "country", time_variable = "year", digits = 1)
 
