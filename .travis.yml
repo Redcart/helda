@@ -11,6 +11,9 @@ r_packages:
  - ggplot2
  - sqldf
  - stringr
+- testthat
 # set a Linux system dependency
 apt_packages:
   - libxml2-dev
+script:
+ - Rscript -e 'testthat::test_dir("./R")'
