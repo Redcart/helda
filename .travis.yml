@@ -3,16 +3,13 @@ language: r
 #Define multiple R-versions, one from bioconductor
 r:
   - oldrel
-  - release
-  - devel
-  - bioc-devel
 # Set one of you dependencies from github
 r_github_packages: r-lib/testthat
 # Set one of your dependencies from CRAN
 r_packages: 
- - dplyr(>= 0.7.8),
- - ggplot2(>= 3.1.0),
- - sqldf(>= 0.4-11),
+ - dplyr(>= 0.7.8)
+ - ggplot2(>= 3.1.0)
+ - sqldf(>= 0.4-11)
  - stringr(>= 1.3.1)
 # set a Linux system dependency
 apt_packages:
