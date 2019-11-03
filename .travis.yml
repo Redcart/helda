@@ -15,4 +15,4 @@ r_packages:
 apt_packages:
  - libxml2-dev
 script:
- - Rscript -e 'testthat::test_dir("./R")'
+ - Rscript -e "testthat::test_dir('R')"
