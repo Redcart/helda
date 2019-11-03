@@ -1,4 +1,5 @@
 # R package helda (HELpful functions for Data Analysis in R)
+[![Build Status](https://travis-ci.com/Redcart/helda.svg?branch=master)](https://travis-ci.org/Redcart/helda)
 
 This package provides functionalities that aim at facilitating and saving time when analysing data.
 
