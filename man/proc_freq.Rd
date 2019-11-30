@@ -19,8 +19,10 @@ This function permits to reproduce the output of the SAS proc freq
 }
 \details{
 The five columns diplay the following information:
- the first one shows the different categories of the variable on which we want to perform proc_freq
- then we have frequency, percentage, cumulative frequency and cumulative percentage
+\itemize{
+ \item the first one shows the different categories of the variable on which we want to perform proc_freq
+ \item then we have frequency, percentage, cumulative frequency and cumulative percentage
+ }
 }
 \examples{
 data <- iris
