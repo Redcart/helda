@@ -1,0 +1,4 @@
+"Category","Frequency","Percentage","Cumulative.Frequency","Cumulative.Percentage"
+"setosa",50,33.33,50,33.33
+"versicolor",50,33.33,100,66.66
+"virginica",50,33.33,150,99.99
