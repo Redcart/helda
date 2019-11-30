@@ -24,7 +24,7 @@
 #' @keywords proc_freq frequency table categorical variable SAS
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
-#' @export
+#' @export proc_freq
 #' @examples
 #' data <- iris
 #' str(data)

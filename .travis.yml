@@ -17,3 +17,5 @@ apt_packages:
  - libxml2-dev
 script:
  - Rscript -e "testthat::test_dir('tests/)"
+after_success:
+  - Rscript -e 'covr::codecov()'
