@@ -6,7 +6,7 @@ r:
 # Set one of you dependencies from github
 r_github_packages: r-lib/testthat
 # Set one of your dependencies from CRAN
-r_packages: 
+r_packages:
  - dplyr
  - ggplot2
  - sqldf
@@ -15,4 +15,4 @@ r_packages:
 apt_packages:
  - libxml2-dev
 script:
- - Rscript -e "testthat::test_dir('R')"
+ - Rscript -e "devtools::test()"
