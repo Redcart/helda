@@ -2,7 +2,7 @@
 % Please edit documentation in R/proc_freq.R
 \name{proc_freq}
 \alias{proc_freq}
-\title{This function permits to reproduce the output of the SAS proc freq}
+\title{SAS proc freq in R}
 \usage{
 proc_freq(variable, digits = 4)
 }
@@ -19,8 +19,8 @@ This function permits to reproduce the output of the SAS proc freq
 }
 \details{
 The five columns diplay the following information:
-*the first one shows the different categories of the variable on which we want to perform proc_freq
-*then we have frequency, percentage, cumulative frequency and cumulative percentage
+ the first one shows the different categories of the variable on which we want to perform proc_freq
+ then we have frequency, percentage, cumulative frequency and cumulative percentage
 }
 \examples{
 data <- iris
@@ -31,7 +31,7 @@ View(result_array)
 }
 \references{
 Link to the author's github repository:
-https://www.github.com/Redcart
+\url{https://www.github.com/Redcart}
 }
 \author{
 Simon CORDE
