@@ -7,6 +7,16 @@
   # variable: vector on which we want to apply the function
   # digits: integer that specifies the number of decimals we want to keep in the rounded figures
 
+#' This function permits to reproduce the output of the SAS proc freq
+#'
+#' @param variable vector on which we want to apply the function
+#' @param digits: integer that specifies the number of decimals we want to keep in the rounded figures
+#' @export
+#' @examples
+#' proc_freq(variable, digits = 4)
+#'
+
+
 proc_freq <- function(variable, digits = 4)
 {
   

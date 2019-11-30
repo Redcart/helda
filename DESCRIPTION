@@ -6,7 +6,7 @@ Description: This package gathers some useful functions for data analysis. Some 
 	deal with windows paths, create formula for statistical models, draw lift effect and lift curves,
 	compute inertia in agglomerative clustering, some procedure for kmeans and desired sizes final clusters
 	and one procedure for filling gaps in time series inside a panel data.
-Depends: R (>= 3.5.1),
+Depends: R (>= 3.4.1),
     dplyr(>= 0.7.8),
     ggplot2(>= 3.1.0),
     sqldf(>= 0.4-11),
@@ -16,4 +16,4 @@ Encoding: UTF-8
 LazyData: true
 URL: https://www.github.com/Redcart/helda
 BugReports: https://github.com/Redcart/helda/issues
-RoxygenNote: 6.1.1.9000
+RoxygenNote: 6.0.0
