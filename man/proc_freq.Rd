@@ -13,12 +13,14 @@ proc_freq(variable, digits = 4)
 }
 \value{
 data frame of dimension [nb of categories x 5].
-The five columns diplay the following information:
-* the first one shows the different categories of the variable on which we want to perform proc_freq
-* then we have frequency, percentage, cumulative frequency and cumulative percentage
 }
 \description{
 This function permits to reproduce the output of the SAS proc freq
+}
+\details{
+The five columns diplay the following information:
+*the first one shows the different categories of the variable on which we want to perform proc_freq
+*then we have frequency, percentage, cumulative frequency and cumulative percentage
 }
 \examples{
 data <- iris

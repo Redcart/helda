@@ -12,9 +12,10 @@
 #' @param variable vector on which we want to apply the function
 #' @param digits: integer that specifies the number of decimals we want to keep in the rounded figures
 #' @return data frame of dimension [nb of categories x 5].
+#' @details
 #' The five columns diplay the following information:
-#' * the first one shows the different categories of the variable on which we want to perform proc_freq
-#' * then we have frequency, percentage, cumulative frequency and cumulative percentage
+#' *the first one shows the different categories of the variable on which we want to perform proc_freq
+#' *then we have frequency, percentage, cumulative frequency and cumulative percentage
 #' @author Simon CORDE
 #' @keywords proc_freq frequency table categorical variable SAS
 #' @references Link to the author's github repository:
