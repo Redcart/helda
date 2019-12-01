@@ -11,10 +11,39 @@
   # - time_variable: time variable name that permits to sort observation on a time scale
   # - digits: number of decimals to keep for the rounding
 
+#' Function for filling start and end of time series
+#'
+#' This function allows to fill the start and end gaps of time series by doing repetition
+#'
+#' @param data R data frame
+#' @param calendar complete empty calendar (performded by \code{create_calendar_day})
+#' @param gap_variable name of the variable we want to fill the gaps
+#' @param key_variable variable name that refers to the key variable in the panel (ID, ...)
+#' @param time_variable time variable name that permits to sort observation on a time scale
+#' @param digits number of decimals to keep for the rounding
+#' @return a R data frame of dimension containing the original columns and new ones
+#' @details
+#' The five columns diplay the following information:
+#' \itemize{
+#'  \item the first one shows the different categories of the variable on which we want to perform proc_freq
+#'  \item then we have frequency, percentage, cumulative frequency and cumulative percentage
+#'  }
+#' @author Simon CORDE
+#' @keywords time series fill gaps
+#' @references Link to the author's github repository:
+#' \url{https://www.github.com/Redcart}
+#' @export start_end_to_fill
+#' @examples
+#' data <- iris
+#' str(data)
+#' result_array <- proc_freq(data$Species)
+#' View(result_array)
+#'
+
 start_end_to_fill <- function(data, calendar, gap_variable, key_variable, time_variable, digits = 2){
-  
+
   new_var <- paste(gap_variable, "_corrected_1", sep = "")
-  
+
   start_end <- data %>%
     arrange(get(key_variable), get(time_variable)) %>%
     select(key_variable, gap_variable) %>%
@@ -24,8 +53,8 @@ start_end_to_fill <- function(data, calendar, gap_variable, key_variable, time_v
     ungroup() %>%
     select(-gap_variable) %>%
     distinct()
-  
-  
+
+
   data_1 <- calendar %>%
     left_join(data, by = c(key_variable, time_variable)) %>%
     left_join(start_end, by = key_variable) %>%
@@ -55,7 +84,7 @@ start_end_to_fill <- function(data, calendar, gap_variable, key_variable, time_v
     arrange(get(key_variable), get(time_variable)) %>%
     select(key_variable, time_variable, gap_variable, gap_variable_corrected) %>%
     rename(!!new_var:=gap_variable_corrected)
-  
+
   return(data_1)
-  
+
 }
