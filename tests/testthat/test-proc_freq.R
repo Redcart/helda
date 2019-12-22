@@ -7,7 +7,7 @@ test_that("multiplication works", {
 
 print(getwd())
 data <- iris
-load(file = "../../results_proc_freq.RData")
+load(file = "results_proc_freq.RData")
 
 test_that("proc freq", {
   expect_equal(helda::proc_freq(data$Species), result_array)
