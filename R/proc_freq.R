@@ -29,7 +29,6 @@
 #' data <- iris
 #' str(data)
 #' result_array <- proc_freq(data$Species)
-#' View(result_array)
 #'
 
 

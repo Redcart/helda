@@ -28,7 +28,6 @@ The five columns diplay the following information:
 data <- iris
 str(data)
 result_array <- proc_freq(data$Species)
-View(result_array)
 
 }
 \references{
