@@ -15,8 +15,8 @@ r_packages:
 # set a Linux system dependency
 apt_packages:
  - libxml2-dev
- env:
-  - CODECOV_TOKEN="6073f04a-c72e-41e1-87a1-81a856f76aac"
+env:
+ - CODECOV_TOKEN="6073f04a-c72e-41e1-87a1-81a856f76aac"
 script:
  - Rscript -e "testthat::test_dir('./tests/testthat/')"
 after_success:
