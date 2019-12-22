@@ -3,6 +3,7 @@ test_that("multiplication works", {
 })
 
 
+print(getwd())
 data <- iris
 result_proc_freq <- load(file = "results_proc_freq.RData")
 
