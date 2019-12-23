@@ -16,10 +16,7 @@ apt_packages:
  - libxml2-dev
 env:
  - CODECOV_TOKEN="6073f04a-c72e-41e1-87a1-81a856f76aac"
-install:
-- R -e 'devtools::install_deps(dep = T)'
 script:
-- R CMD build .
-- R CMD check *tar.gz
+ - Rscript -e 'library(testthat); testthat::test_dir("tests/testthat")'
 after_success:
   - Rscript -e 'library(covr); covr::codecov(token=CODECOV_TOKEN)'
