@@ -12,6 +12,8 @@ test_that("proc freq", {
   data <- iris
   load(file = "../../results_proc_freq.RData")
   print(result_array)
+  print(data)
+  print(helda::proc_freq(data$Species))
   expect_equal(helda::proc_freq(data$Species), result_array)
 })
 
