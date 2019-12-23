@@ -3,14 +3,13 @@ language: r
 #Define multiple R-versions, one from bioconductor
 r:
   - oldrel
-# Set one of you dependencies from github
-r_github_packages: r-lib/testthat
 # Set one of your dependencies from CRAN
 r_packages:
  - dplyr
  - ggplot2
  - sqldf
  - stringr
+ - testthat
  - covr
 # set a Linux system dependency
 apt_packages:
