@@ -18,6 +18,6 @@ apt_packages:
 env:
  - CODECOV_TOKEN="6073f04a-c72e-41e1-87a1-81a856f76aac"
 script:
- - Rscript -e 'library(testthat); testthat::test_dir("tests/testthat")'
+ - Rscript -e 'library(testthat); testthat::test_dir("tests/testthats")'
 after_success:
   - Rscript -e 'library(covr); covr::codecov(token=CODECOV_TOKEN)'
