@@ -17,7 +17,7 @@ apt_packages:
 env:
  - CODECOV_TOKEN="6073f04a-c72e-41e1-87a1-81a856f76aac"
 script:
- - R CMD build helda_0.1.tar.gz
+ - R CMD build .
  - R CMD check --as-cran helda_0.1.tar.gz
 after_success:
   - Rscript -e 'library(covr); covr::codecov(token=CODECOV_TOKEN)'
