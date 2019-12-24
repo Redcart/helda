@@ -23,10 +23,6 @@
 #' \url{https://www.github.com/Redcart}
 #' @export lift_curve
 #' @examples
-#' data <- iris
-#' str(data)
-#' result_array <- proc_freq(data$Species)
-#' View(result_array)
 #'
 lift_curve <- function(predictions, true_labels, positive_label)
 {

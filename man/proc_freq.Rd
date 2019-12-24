@@ -9,7 +9,7 @@ proc_freq(variable, digits = 4)
 \arguments{
 \item{variable}{vector on which we want to apply the function}
 
-\item{digits:}{integer that specifies the number of decimals we want to keep in the rounded figures}
+\item{digits}{integer that specifies the number of decimals we want to keep in the rounded figures}
 }
 \value{
 data frame of dimension [nb of categories x 5].

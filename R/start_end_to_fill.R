@@ -34,10 +34,6 @@
 #' \url{https://www.github.com/Redcart}
 #' @export start_end_to_fill
 #' @examples
-#' data <- iris
-#' str(data)
-#' result_array <- proc_freq(data$Species)
-#' View(result_array)
 #'
 
 start_end_to_fill <- function(data, calendar, gap_variable, key_variable, time_variable, digits = 2){

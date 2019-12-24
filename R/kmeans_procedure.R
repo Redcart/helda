@@ -36,7 +36,7 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
       if (verbose == TRUE)
        {
 
-        print(paste("boucle : " , b, " nb de clusters : ", k, " N° cluster : ", c))
+        print(paste("boucle : " , b, " nb de clusters : ", k, " N cluster : ", c))
 
        }
 

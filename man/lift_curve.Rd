@@ -21,10 +21,6 @@ plot the lift curve
 This function allows to draw a lift curve in a ggplot style for binary classification model
 }
 \examples{
-data <- iris
-str(data)
-result_array <- proc_freq(data$Species)
-View(result_array)
 
 }
 \references{
