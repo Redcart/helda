@@ -19,6 +19,6 @@ env:
 script:
  - R CMD build .
  - R CMD check --as-cran helda_0.1.tar.gz
- - Rscript -e "library(testthat); testthat::test_dir('tests/testthat')"
+ - Rscript tests/testthat.R
 after_success:
   - Rscript -e 'library(covr); CODECOV_TOKEN="6073f04a-c72e-41e1-87a1-81a856f76aac"; covr::codecov(coverage=covr::package_coverage(path="."), token=CODECOV_TOKEN)'
