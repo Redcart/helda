@@ -1,4 +1,4 @@
 library(testthat)
 library(helda)
 
-testthat::test_dir("testthat/")
+testthat::test_check("helda")

@@ -18,5 +18,6 @@ URL: https://www.github.com/Redcart/helda
 BugReports: https://github.com/Redcart/helda/issues
 RoxygenNote: 7.0.1
 Suggests: 
+    devtools,
     testthat (>= 2.1.0),
     covr
