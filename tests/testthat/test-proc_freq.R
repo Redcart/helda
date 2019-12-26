@@ -8,7 +8,7 @@ context('Proc Freq Function')
 
 test_that("proc freq", {
   print(getwd())
-  data <- iristtttt
+  data <- iris
   load(file = "../../data/results_proc_freq.RData")
   print(data)
   print(helda::proc_freq(data$Species))
