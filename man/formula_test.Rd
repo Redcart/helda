@@ -19,6 +19,6 @@ formula_test
 Look up airline names from their carrier codes.
 }
 \examples{
-data(results_proc_freq)
+data(formula_test)
 }
 \keyword{datasets}

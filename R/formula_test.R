@@ -9,5 +9,5 @@
 #' \item{name}{Full name.}
 #' }
 #' @examples
-#' data(results_proc_freq)
+#' data(formula_test)
 "formula_test"

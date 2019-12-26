@@ -10,6 +10,6 @@ test_that("create formula", {
   #print(getwd())
   data <- iris
   data_expected <- formula_test
-  #print(helda::proc_freq(data$Species))
+  print(data_expected)
   expect_equal(create_formula(data), data_expected)
 })
