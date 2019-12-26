@@ -8,7 +8,6 @@
 #' \item{carrier}{Two letter abbreviation.}
 #' \item{name}{Full name.}
 #' }
-#' @export results_proc_freq
 #' @examples
 #' data(results_proc_freq)
 "results_proc_freq"
