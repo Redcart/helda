@@ -7,11 +7,10 @@ context('Proc Freq Function')
 # })
 
 test_that("proc freq", {
-  ééé
   #print(getwd())
   data <- iris
-  load(file = "../../data/results_proc_freq.RData")
+  data_expected <- results_proc_freq
   #print(helda::proc_freq(data$Species))
-  expect_equal(helda::proc_freq(data$Species), results_proc_freq)
+  expect_equal(proc_freq(data$Species), data_expected)
 })
 
