@@ -7,6 +7,7 @@ context('Proc Freq Function')
 # })
 
 test_that("proc freq", {
+  ééé
   #print(getwd())
   data <- iris
   load(file = "../../data/results_proc_freq.RData")
