@@ -12,6 +12,8 @@
 #'
 #' This function allows to draw a lift curve in a ggplot style for binary classification model
 #'
+#' @import ggplot2 dplyr
+#' @importFrom stats quantile
 #' @param predictions vector of predictions. These are generally the result of a machine learning model.
 #' The predictions must be probabilities (a real number between 0 and 1).
 #' @param true_labels vector of true labels.
@@ -22,7 +24,6 @@
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export lift_curve
-#' @examples
 #'
 lift_curve <- function(predictions, true_labels, positive_label)
 {

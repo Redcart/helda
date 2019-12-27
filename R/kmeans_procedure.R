@@ -11,8 +11,13 @@
   # verbose: print the current state of the procedure
   # seed: seed for the random call (if we want the output to be reproducible)
 
+#' @importFrom stats kmeans
+#' @import dplyr
+
 kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbose = FALSE, seed = 42)
 {
+
+  cluster_bis <- NULL
 
   set.seed(seed)
 

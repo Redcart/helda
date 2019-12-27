@@ -10,6 +10,7 @@
   # - start_year: starting year of the time serie
   # - end_year: ending year of the time serie
 
+#' @import dplyr sqldf
 create_calendar_day <- function(data, key_variable, time_variable, start_year, end_year){
 
   #, scale_time

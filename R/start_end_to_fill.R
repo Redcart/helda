@@ -15,6 +15,7 @@
 #'
 #' This function allows to fill the start and end gaps of time series by doing repetition
 #'
+#' @import dplyr
 #' @param data R data frame
 #' @param calendar complete empty calendar (performded by \code{create_calendar_day})
 #' @param gap_variable name of the variable we want to fill the gaps
@@ -33,10 +34,13 @@
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export start_end_to_fill
-#' @examples
 #'
 
 start_end_to_fill <- function(data, calendar, gap_variable, key_variable, time_variable, digits = 2){
+
+  boo_gap<-boo_gap<-lag_boo_gap<-first_gap<-n_gap<-boo_start_toreplace <- NULL
+  values_to_replace<-first_gap_variable<-gap_variable_corrected <- NULL
+  boo_end_toreplace<-last_gap_variable <- NULL
 
   new_var <- paste(gap_variable, "_corrected_1", sep = "")
 

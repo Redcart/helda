@@ -11,9 +11,8 @@
 #'
 #' This function permits to reproduce the output of the SAS proc freq
 #'
-#' @param variable vector on which we want to apply the function
-#' @param digits integer that specifies the number of decimals we want to keep in the rounded figures
-#' @return data frame of dimension [nb of categories x 5].
+#' @param data R data frame
+#' @param position number of the column in the data frame that we want to predict#' @return data frame of dimension [nb of categories x 5].
 #' @details
 #' The five columns diplay the following information:
 #' \itemize{

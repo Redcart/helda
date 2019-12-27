@@ -9,7 +9,14 @@
   # - time_variable: time variable name that permits to sort observation on a time scale
   # - digits: number of decimals to keep for the rounding
 
+#' @importFrom stringr str_sub str_length
+#' @import dplyr
+
 gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits = 2){
+
+  boo_gap<-lag_boo_gap<-first_gap<-n_gap <- NULL
+  n_gap_step<-gap_variable_before<-gap_variable_after<-number_gap_step <- NULL
+  gap_variable_corrected<-get(key_variable) <- NULL
 
   new_var <- paste(str_sub(gap_variable, 1, str_length(gap_variable)-1), "2", sep = "")
 

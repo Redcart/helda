@@ -20,9 +20,6 @@ plot the lift curve
 \description{
 This function allows to draw a lift curve in a ggplot style for binary classification model
 }
-\examples{
-
-}
 \references{
 Link to the author's github repository:
 \url{https://www.github.com/Redcart}

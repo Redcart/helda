@@ -39,9 +39,6 @@ The five columns diplay the following information:
  \item then we have frequency, percentage, cumulative frequency and cumulative percentage
  }
 }
-\examples{
-
-}
 \references{
 Link to the author's github repository:
 \url{https://www.github.com/Redcart}
