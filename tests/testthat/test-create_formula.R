@@ -11,5 +11,5 @@ test_that("create formula", {
   data <- iris
   data_expected <- formula_test
   print(data_expected)
-  expect_equal(create_formula(data), data_expected)
+  expect_equal(create_formula(data), data_expecteds)
 })
