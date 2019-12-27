@@ -11,6 +11,6 @@ test_that("proc freq", {
   data <- iris
   data_expected <- results_proc_freq
   #print(helda::proc_freq(data$Species))
-  expect_equal(proc_freq(data$Species), data_expected)
+  expect_equal(proc_freq(data$Species), data_expecteds)
 })
 
