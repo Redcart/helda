@@ -2,7 +2,7 @@
 % Please edit documentation in R/compute_inertia_ahc.R
 \name{clust_centroid}
 \alias{clust_centroid}
-\title{Centroid of data frame}
+\title{Centroid of a cluster}
 \usage{
 clust_centroid(i, data, cluster)
 }
@@ -11,10 +11,10 @@ clust_centroid(i, data, cluster)
 
 \item{data}{R data frame (all columns are required to be numeric types)}
 
-\item{cluster}{column of the data frame representing the clusters}
+\item{cluster}{character column of the data frame representing the clusters}
 }
 \description{
-This function allow to compute the centroid of a cluster in a data frame
+This function allows to compute the centroid of a cluster in a R data frame
 }
 \references{
 Link to the author's github repository:

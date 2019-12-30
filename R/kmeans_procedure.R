@@ -9,29 +9,22 @@
 #' @importFrom stats kmeans
 #' @import dplyr
 #' @param data R data frame
-#' @param columns columns of the data frame on which we perform the kmeans algorithm
-#' @param threshold_min minimum size for cluster
-#' @param threshold_max maximum size fo cluster
-#' @param verbose if TRUE print the current state of the procedure (by default FALSE)
-#' @param seed seed for the random call (if we want the output to be reproducible)
+#' @param columns vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.
+#' @param threshold_min integer minimum size for cluster.
+#' @param threshold_max integer maximum size fo cluster.
+#' @param verbose if set to TRUE print the current state of the procedure (by default set to FALSE).
+#' @param seed seed for the random call (if we want the output to be reproducible).
+#' @return R data frame
 #' @details
-#' The five columns diplay the following information:
-#' \itemize{
-#'  \item the first one shows the different categories of the variable on which we want to perform proc_freq
-#'  \item then we have frequency, percentage, cumulative frequency and cumulative percentage
-#'  }
+#' The R data frame contains the id of the original data frame and a column `cluster` representing
+#' the cluster to which the observation belongs to.
 #' @author Simon CORDE
 #' @keywords kmeans cluster sizes
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export kmeans_procedure
-#' @examples
-#' data <- iris
-#' str(data)
-#' result_array <- proc_freq(data$Species)
 
-
-kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbose = FALSE, seed = 42)
+kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbose=FALSE, seed=42)
 {
 
   cluster_bis <- NULL

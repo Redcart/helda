@@ -1,4 +1,4 @@
-#' Proc Freq results data set for unit test of proc freq function
+#' Proc Freq results R data frame for unit test of proc freq function
 #'
 #' @format Data frame with columns
 #' \describe{

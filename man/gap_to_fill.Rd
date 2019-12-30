@@ -2,20 +2,20 @@
 % Please edit documentation in R/gap_to_fill.R
 \name{gap_to_fill}
 \alias{gap_to_fill}
-\title{Filling intermdediate gaps in a time serie}
+\title{Filling intermediate gaps in a time serie}
 \usage{
 gap_to_fill(data, gap_variable, key_variable, time_variable, digits = 2)
 }
 \arguments{
 \item{data}{R data frame}
 
-\item{gap_variable}{name of the variable we want to fill the start and end gaps}
+\item{gap_variable}{character name of the variable we want to fill the start and end gaps}
 
-\item{key_variable}{variable name that refers to the key variable in the panel data (ID, ...)}
+\item{key_variable}{character variable name that refers to the key variable in the panel data (ID, ...)}
 
-\item{time_variable}{time variable name that permits to sort observation on a time scale}
+\item{time_variable}{character time variable name that permits to sort observation on a time scale}
 
-\item{digits}{number of decimals to keep for the rounding (by default 2)}
+\item{digits}{integer number of decimals to keep for the rounding (by default set to 2)}
 }
 \value{
 a R data frame of dimension containing the original columns and new ones

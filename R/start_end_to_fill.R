@@ -1,18 +1,18 @@
-###########################################################
-###  Function for filling start and end of time series  ###
-###########################################################
+################################################################
+###  Function for filling start and end gaps in time series  ###
+################################################################
 
-#' Function for filling start and end of time series
+#' Function for filling start and end gaps in time series
 #'
-#' This function allows to fill the start and end gaps of time series by doing repetition
+#' This function allows to fill the start and end gaps of a time series
+#' by doing repetition of next and prevoius values
 #'
 #' @import dplyr
 #' @param data R data frame
-#' @param calendar complete empty calendar (as one can performs with \code{create_calendar_day})
-#' @param gap_variable name of the variable we want to fill the start and end gaps
-#' @param key_variable variable name that refers to the key variable in the panel data (ID, ...)
-#' @param time_variable time variable name that permits to sort observation on a time scale
-#' @param digits number of decimals to keep for the rounding
+#' @param calendar R data frame complete empty calendar (as one can performs with \code{create_calendar_day})
+#' @param gap_variable character name of the variable we want to fill the start and end gaps
+#' @param key_variable character variable name that refers to the key variable in the panel data (ID, ...)
+#' @param time_variable character time variable name that permits to sort observation on a time scale
 #' @return a R data frame of dimension containing the original columns and new ones
 #' @details
 #' The news columns are:
@@ -26,7 +26,7 @@
 #' @export start_end_to_fill
 #'
 
-start_end_to_fill <- function(data, calendar, gap_variable, key_variable, time_variable, digits = 2){
+start_end_to_fill <- function(data, calendar, gap_variable, key_variable, time_variable){
 
   boo_gap<-boo_gap<-lag_boo_gap<-first_gap<-n_gap<-boo_start_toreplace <- NULL
   values_to_replace<-first_gap_variable<-gap_variable_corrected <- NULL

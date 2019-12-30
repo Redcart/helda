@@ -16,30 +16,25 @@ kmeans_procedure(
 \arguments{
 \item{data}{R data frame}
 
-\item{columns}{columns of the data frame on which we perform the kmeans algorithm}
+\item{columns}{vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.}
 
-\item{threshold_min}{minimum size for cluster}
+\item{threshold_min}{integer minimum size for cluster.}
 
-\item{threshold_max}{maximum size fo cluster}
+\item{threshold_max}{integer maximum size fo cluster.}
 
-\item{verbose}{if TRUE print the current state of the procedure (by default FALSE)}
+\item{verbose}{if set to TRUE print the current state of the procedure (by default set to FALSE).}
 
-\item{seed}{seed for the random call (if we want the output to be reproducible)}
+\item{seed}{seed for the random call (if we want the output to be reproducible).}
+}
+\value{
+R data frame
 }
 \description{
 This function allows to perform kmeans clustering with some desired output sizes for clusters
 }
 \details{
-The five columns diplay the following information:
-\itemize{
- \item the first one shows the different categories of the variable on which we want to perform proc_freq
- \item then we have frequency, percentage, cumulative frequency and cumulative percentage
- }
-}
-\examples{
-data <- iris
-str(data)
-result_array <- proc_freq(data$Species)
+The R data frame contains the id of the original data frame and a column `cluster` representing
+the cluster to which the observation belongs to.
 }
 \references{
 Link to the author's github repository:

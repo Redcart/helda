@@ -4,7 +4,7 @@
 
 #' Complete empty calendar
 #'
-#' This function allows to create a complete empty calendar
+#' This function allows to create a complete empty calendar on a year scale
 #'
 #' @import dplyr sqldf
 #' @param data R data frame

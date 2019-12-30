@@ -3,7 +3,7 @@
 \docType{data}
 \name{proc_freq_test}
 \alias{proc_freq_test}
-\title{Proc Freq results data set for unit test of proc freq function}
+\title{Proc Freq results R data frame for unit test of proc freq function}
 \format{Data frame with columns
 \describe{
 \item{Category}{Iris flowers species}
@@ -16,7 +16,7 @@
 proc_freq_test
 }
 \description{
-Proc Freq results data set for unit test of proc freq function
+Proc Freq results R data frame for unit test of proc freq function
 }
 \examples{
 data(proc_freq_test)

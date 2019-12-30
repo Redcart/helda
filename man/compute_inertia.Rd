@@ -2,15 +2,21 @@
 % Please edit documentation in R/compute_inertia_ahc.R
 \name{compute_inertia}
 \alias{compute_inertia}
-\title{Inertia of data frame}
+\title{Inertia of a data frame}
 \usage{
 compute_inertia(data)
 }
 \arguments{
 \item{data}{R data frame (all columns are required to be numeric types)}
 }
+\value{
+integer representing the total inertia
+}
 \description{
-This function allows to compute the inertia in a R data frame
+This function allows to compute the inertia of a R data frame
+}
+\examples{
+compute_inertia(mtcars)
 }
 \references{
 Link to the author's github repository:

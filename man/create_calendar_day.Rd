@@ -21,7 +21,7 @@ create_calendar_day(data, key_variable, time_variable, start_year, end_year)
 a R data frame with the key and time variable for a complete calendar
 }
 \description{
-This function allows to create a complete empty calendar
+This function allows to create a complete empty calendar on a year scale
 }
 \references{
 Link to the author's github repository:

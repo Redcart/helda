@@ -3,16 +3,13 @@
 \docType{data}
 \name{create_formula_test}
 \alias{create_formula_test}
-\title{String for unit test of create_formula function}
+\title{String representing a R formula for unit test of create_formula function}
 \format{Formula with features of Iris data set}
-\source{
-<https://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236>
-}
 \usage{
 create_formula_test
 }
 \description{
-String for unit test of create_formula function
+String representing a R formula for unit test of create_formula function
 }
 \examples{
 data(create_formula_test)

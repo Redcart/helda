@@ -2,17 +2,18 @@
 % Please edit documentation in R/compute_inertia_ahc.R
 \name{compute_inertia_ahc}
 \alias{compute_inertia_ahc}
-\title{Intragroup inertia for choosing best number of cluster in AHC}
+\title{Intragroup inertia for choosing the optimal number of clusters in Agglomerative Clustering}
 \usage{
 compute_inertia_ahc(data, max_clusters = 10)
 }
 \arguments{
 \item{data}{R data frame (all columns are required to be numeric types)}
 
-\item{max_clusters}{maximal number of clusters for which we compute intra group inertia}
+\item{max_clusters}{maximal number of clusters for which we intend to compute intra group inertia}
 }
 \description{
-This function allows to compute the intra group inertia from agglomerative clustering for different number of clusters
+This function allows to compute the inter group inertia from agglomerative clustering
+for different number of clusters
 }
 \references{
 Link to the author's github repository:
@@ -21,6 +22,8 @@ Link to the author's github repository:
 \author{
 Simon CORDE
 }
+\keyword{agglomerative}
+\keyword{clustering}
 \keyword{data}
 \keyword{frame}
 \keyword{inertia}
