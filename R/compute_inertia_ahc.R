@@ -2,13 +2,20 @@
 ###  Computing of the intragroup variance for AHC  ###
 ######################################################
 
-# This function allow to compute the centroid of a data frame
-# arguments:
-  # i: number of the cluster
-  # data: R data frame
-  # cluster: nom de la variable indiquant le cluster
-
+#' Centroid of data frame
+#'
+#' This function allow to compute the centroid of a cluster in a data frame
+#'
 #' @importFrom stats hclust dist cutree
+#' @param i integer that represents the cluster number
+#' @param data R data frame (all columns are required to be numeric types)
+#' @param cluster column of the data frame representing the clusters
+#' @author Simon CORDE
+#' @keywords centroids data frame
+#' @references Link to the author's github repository:
+#' \url{https://www.github.com/Redcart}
+#' @export clust_centroid
+#'
 clust_centroid <- function(i, data, cluster)
 {
 
@@ -16,9 +23,18 @@ clust_centroid <- function(i, data, cluster)
 
 }
 
-# This function allows to compute the inertia in a R data frame
-# arguments:
-  # data: R data frame (all columns are required to be numeric types)
+#' Inertia of data frame
+#'
+#' This function allows to compute the inertia in a R data frame
+#'
+#' @importFrom stats hclust dist cutree
+#' @param data R data frame (all columns are required to be numeric types)
+#' @author Simon CORDE
+#' @keywords inertia data frame
+#' @references Link to the author's github repository:
+#' \url{https://www.github.com/Redcart}
+#' @export compute_inertia
+#'
 
 compute_inertia <- function(data)
 {
@@ -37,11 +53,20 @@ compute_inertia <- function(data)
 
 #compute_inertia(mtcars)
 
-# This function allows to compute the intra group inertia from agglomerative clustering for different number of clusters
-# arguments:
-  # data: R data frame (all columns are required to be numeric types)
-  # max_clusters: maximal number of clusters for which we compute intra group inertia
+#' Intragroup inertia for choosing best number of cluster in AHC
+#'
+#' This function allows to compute the intra group inertia from agglomerative clustering for different number of clusters
 
+#'
+#' @importFrom stats hclust dist cutree
+#' @param data R data frame (all columns are required to be numeric types)
+#' @param max_clusters maximal number of clusters for which we compute intra group inertia
+#' @author Simon CORDE
+#' @keywords inertia data frame
+#' @references Link to the author's github repository:
+#' \url{https://www.github.com/Redcart}
+#' @export compute_inertia_ahc
+#'
 # Step 1: Find clusters centroids and the global centroid
 # Step 2: Compute quadratic differences between cluster centroids and global centroid
 # Step 3: Compute the weighted average of quadratic differences (weigth = size of the cluster)

@@ -2,25 +2,17 @@
 ###  Create a formula for machine learning models  ###
 ######################################################
 
-# This function allows to create a formula from the columns of a data frame
-# arguments:
-  # data: R data frame
-  # position: number of the column in the data frame that we want to predict
-
 #' Create a formula
 #'
-#' This function permits to reproduce the output of the SAS proc freq
+#' This function allows to create a formula from the columns of a data frame very quickly
 #'
 #' @param data R data frame
-#' @param position number of the column in the data frame that we want to predict#' @return data frame of dimension [nb of categories x 5].
+#' @param position number of the column in the data frame that we want to predict
+#' @return string that contains the formula
 #' @details
-#' The five columns diplay the following information:
-#' \itemize{
-#'  \item the first one shows the different categories of the variable on which we want to perform proc_freq
-#'  \item then we have frequency, percentage, cumulative frequency and cumulative percentage
-#'  }
+#' The formula is diplayed with the following format: Y ~ X1 + X2
 #' @author Simon CORDE
-#' @keywords proc_freq frequency table categorical variable SAS
+#' @keywords formula data frame
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export create_formula

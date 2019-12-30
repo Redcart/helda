@@ -9,17 +9,16 @@ create_formula(data, position = 1)
 \arguments{
 \item{data}{R data frame}
 
-\item{position}{number of the column in the data frame that we want to predict#' @return data frame of dimension [nb of categories x 5].}
+\item{position}{number of the column in the data frame that we want to predict}
+}
+\value{
+string that contains the formula
 }
 \description{
-This function permits to reproduce the output of the SAS proc freq
+This function allows to create a formula from the columns of a data frame very quickly
 }
 \details{
-The five columns diplay the following information:
-\itemize{
- \item the first one shows the different categories of the variable on which we want to perform proc_freq
- \item then we have frequency, percentage, cumulative frequency and cumulative percentage
- }
+The formula is diplayed with the following format: Y ~ X1 + X2
 }
 \examples{
 data <- iris
@@ -34,9 +33,6 @@ Link to the author's github repository:
 \author{
 Simon CORDE
 }
-\keyword{SAS}
-\keyword{categorical}
-\keyword{frequency}
-\keyword{proc_freq}
-\keyword{table}
-\keyword{variable}
+\keyword{data}
+\keyword{formula}
+\keyword{frame}

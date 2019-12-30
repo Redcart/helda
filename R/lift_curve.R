@@ -2,12 +2,6 @@
 ###  Lift Curve ###
 ###################
 
-# This function allows to draw the lift curve on a graph
-# arguments:
-  # predictions: vector of predicted probabilities
-  # true_labels: vector of true labels
-  # positive_label: string for the positive label (Y = 0)
-
 #' Lift curve graph
 #'
 #' This function allows to draw a lift curve in a ggplot style for binary classification model
@@ -18,13 +12,14 @@
 #' The predictions must be probabilities (a real number between 0 and 1).
 #' @param true_labels vector of true labels.
 #' @param positive_label string that specify the positive label (Y=1) in the `true_labels`
-#' @return plot the lift curve
+#' @return a ggplot object containing the lift curve
 #' @author Simon CORDE
-#' @keywords proc_freq frequency table categorical variable SAS
+#' @keywords lift curve machine learning classification
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export lift_curve
 #'
+
 lift_curve <- function(predictions, true_labels, positive_label)
 {
 

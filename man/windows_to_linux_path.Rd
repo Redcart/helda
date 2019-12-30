@@ -21,9 +21,6 @@ Link to the author's github repository:
 \author{
 Simon CORDE
 }
-\keyword{SAS}
-\keyword{categorical}
-\keyword{frequency}
-\keyword{proc_freq}
-\keyword{table}
-\keyword{variable}
+\keyword{linux}
+\keyword{path}
+\keyword{windows}

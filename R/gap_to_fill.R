@@ -2,16 +2,29 @@
 ####   Function for filling intermdediate gaps in a time serie   ###
 ####################################################################
 
-# arguments:
-  # - data: R data frame
-  # - gap_variable: name of the variable we want to fill the gaps
-  # - key_variable: variable name that refers to the key variable in the panel (ID, ...)
-  # - time_variable: time variable name that permits to sort observation on a time scale
-  # - digits: number of decimals to keep for the rounding
-
+#' Filling intermdediate gaps in a time serie
+#'
+#' This function allows to fill intermediate gaps in panel data by linear interpolation
+#'
 #' @importFrom stringr str_sub str_length
 #' @import dplyr
-
+#' @param data R data frame
+#' @param gap_variable name of the variable we want to fill the start and end gaps
+#' @param key_variable variable name that refers to the key variable in the panel data (ID, ...)
+#' @param time_variable time variable name that permits to sort observation on a time scale
+#' @param digits number of decimals to keep for the rounding (by default 2)
+#' @return a R data frame of dimension containing the original columns and new ones
+#' @details
+#' The news columns are:
+#' \itemize{
+#'  \item _corrected_2: the variable with intermediate gaps filled
+#'  }
+#' @author Simon CORDE
+#' @keywords time series fill gaps interpolation
+#' @references Link to the author's github repository:
+#' \url{https://www.github.com/Redcart}
+#' @export gap_to_fill
+#'
 gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits = 2){
 
   boo_gap<-lag_boo_gap<-first_gap<-n_gap <- NULL

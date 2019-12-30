@@ -2,32 +2,22 @@
 ###  Function for filling start and end of time series  ###
 ###########################################################
 
-# this function allows to fill the start and end gaps of time series by doing repetition
-# arguments:
-  # - data: R data frame
-  # - calendar: complete empty calendar (performed by create_calendar_day)
-  # - gap_variable: name of the variable we want to fill the gaps
-  # - key_variable: variable name that refers to the key variable in the panel (ID, ...)
-  # - time_variable: time variable name that permits to sort observation on a time scale
-  # - digits: number of decimals to keep for the rounding
-
 #' Function for filling start and end of time series
 #'
 #' This function allows to fill the start and end gaps of time series by doing repetition
 #'
 #' @import dplyr
 #' @param data R data frame
-#' @param calendar complete empty calendar (performded by \code{create_calendar_day})
-#' @param gap_variable name of the variable we want to fill the gaps
-#' @param key_variable variable name that refers to the key variable in the panel (ID, ...)
+#' @param calendar complete empty calendar (as one can performs with \code{create_calendar_day})
+#' @param gap_variable name of the variable we want to fill the start and end gaps
+#' @param key_variable variable name that refers to the key variable in the panel data (ID, ...)
 #' @param time_variable time variable name that permits to sort observation on a time scale
 #' @param digits number of decimals to keep for the rounding
 #' @return a R data frame of dimension containing the original columns and new ones
 #' @details
-#' The five columns diplay the following information:
+#' The news columns are:
 #' \itemize{
-#'  \item the first one shows the different categories of the variable on which we want to perform proc_freq
-#'  \item then we have frequency, percentage, cumulative frequency and cumulative percentage
+#'  \item _corrected_1: the variable with starts and ends filled
 #'  }
 #' @author Simon CORDE
 #' @keywords time series fill gaps

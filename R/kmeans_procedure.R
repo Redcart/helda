@@ -2,17 +2,34 @@
 ###  Function for the kmeans procedure  ###
 ###########################################
 
-# This function allows to perform kmeans clustering with some desired output sizes for clusters
-# arguments:
-  # data: R data frame
-  # columns: columns of the data frame on which we perform the kmeans algorithm
-  # threshold_min: minimum size for cluster
-  # threshold_max: maximum size fo cluster
-  # verbose: print the current state of the procedure
-  # seed: seed for the random call (if we want the output to be reproducible)
-
+#' Kmeans procedure
+#'
+#' This function allows to perform kmeans clustering with some desired output sizes for clusters
+#'
 #' @importFrom stats kmeans
 #' @import dplyr
+#' @param data R data frame
+#' @param columns columns of the data frame on which we perform the kmeans algorithm
+#' @param threshold_min minimum size for cluster
+#' @param threshold_max maximum size fo cluster
+#' @param verbose if TRUE print the current state of the procedure (by default FALSE)
+#' @param seed seed for the random call (if we want the output to be reproducible)
+#' @details
+#' The five columns diplay the following information:
+#' \itemize{
+#'  \item the first one shows the different categories of the variable on which we want to perform proc_freq
+#'  \item then we have frequency, percentage, cumulative frequency and cumulative percentage
+#'  }
+#' @author Simon CORDE
+#' @keywords kmeans cluster sizes
+#' @references Link to the author's github repository:
+#' \url{https://www.github.com/Redcart}
+#' @export kmeans_procedure
+#' @examples
+#' data <- iris
+#' str(data)
+#' result_array <- proc_freq(data$Species)
+
 
 kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbose = FALSE, seed = 42)
 {

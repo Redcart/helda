@@ -2,11 +2,6 @@
 ###  SAS Proc Freq   ###
 ########################
 
-# This function permits to reproduce the output of the SAS proc freq
-# arguments:
-  # variable: vector on which we want to apply the function
-  # digits: integer that specifies the number of decimals we want to keep in the rounded figures
-
 #' SAS proc freq in R
 #'
 #' This function permits to reproduce the output of the SAS proc freq

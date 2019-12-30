@@ -2,14 +2,24 @@
 ###  Lift Effect Curve ###
 ##########################
 
-# This function allows to draw the lift effect on a graph
-# arguments:
-  # predictions: vector of predicted probabilities
-  # true_labels: vector of true labels
-  # positive_label: string for the positive label (Y = 0)
-
+#' Lift effect curve
+#'
+#' This function allows to draw the lift effect on a graph for binary classification model
+#'
 #' @import ggplot2 dplyr
 #' @importFrom stats quantile
+#' @param predictions vector of predictions. These are generally the result of a machine learning model.
+#' The predictions must be probabilities (a real number between 0 and 1).
+#' @param true_labels vector of true labels.
+#' @param positive_label string that specify the positive label (Y=1) in the `true_labels`
+#' @return a ggplot object containing the lift effect
+#' @author Simon CORDE
+#' @keywords lift curve machine learning classification
+#' @references Link to the author's github repository:
+#' \url{https://www.github.com/Redcart}
+#' @export lift_effect
+#'
+
 lift_effect <- function(predictions, true_labels, positive_label)
 {
 

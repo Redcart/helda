@@ -15,7 +15,7 @@
 #' The Linux converted path appears.
 
 #' @author Simon CORDE
-#' @keywords proc_freq frequency table categorical variable SAS
+#' @keywords windows linux path
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export windows_to_linux_path
