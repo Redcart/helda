@@ -38,7 +38,7 @@ the cluster to which the observation belongs to.
 }
 \examples{
 data <- iris[, c(1:4)]
-features <- iris[, c(1:4)]
+features <- colnames(iris)[c(1:4)]
 result <- kmeans_procedure(data=data, columns=features, threshold_min=2, threshold=10,
 verbose=TRUE, seed=10)
 result
