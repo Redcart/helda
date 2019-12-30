@@ -10,7 +10,7 @@ compute_inertia(data)
 \item{data}{R data frame (all columns are required to be numeric types)}
 }
 \value{
-integer representing the total inertia
+numeric value representing the total inertia
 }
 \description{
 This function allows to compute the inertia of a R data frame

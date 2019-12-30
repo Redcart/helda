@@ -50,7 +50,7 @@ lift_effect <- function(predictions, true_labels, positive_label)
     geom_hline(yintercept = mean(true_labels == positive_label), lty = "dashed", color = "grey") +
     coord_cartesian(ylim = c(0.05, 0.8)) +
     scale_x_continuous(breaks = as.vector(quantiles), labels = names(quantiles)) +
-    ggtitle("Effect Lift Curve") +
+    ggtitle("Lift Effect Curve") +
     xlab("Cumulative Population") +
     ylab("% True Positive Label") +
     theme_bw() +

@@ -23,6 +23,12 @@
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export kmeans_procedure
+#' @examples
+#' data <- iris[, c(1:4)]
+#' features <- iris[, c(1:4)]
+#' result <- kmeans_procedure(data=data, columns=features, threshold_min=2, threshold=10,
+#' verbose=TRUE, seed=10)
+#' result
 
 kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbose=FALSE, seed=42)
 {

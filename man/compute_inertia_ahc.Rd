@@ -11,9 +11,18 @@ compute_inertia_ahc(data, max_clusters = 10)
 
 \item{max_clusters}{maximal number of clusters for which we intend to compute intra group inertia}
 }
+\value{
+vector of length max_clusters containing the inter group inertia for agglomerative
+clustering with 1 cluster to max_clusters
+}
 \description{
 This function allows to compute the inter group inertia from agglomerative clustering
 for different number of clusters
+}
+\examples{
+data = iris[c(1:4)]
+results <- compute_inertia_ahc(data=data, max_clusters=15)
+results
 }
 \references{
 Link to the author's github repository:

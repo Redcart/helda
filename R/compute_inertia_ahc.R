@@ -30,7 +30,7 @@ clust_centroid <- function(i, data, cluster)
 #'
 #' @importFrom stats hclust dist cutree
 #' @param data R data frame (all columns are required to be numeric types)
-#' @return integer representing the total inertia
+#' @return numeric value representing the total inertia
 #' @author Simon CORDE
 #' @keywords inertia data frame
 #' @references Link to the author's github repository:
@@ -62,11 +62,17 @@ compute_inertia <- function(data)
 #' @importFrom stats hclust dist cutree
 #' @param data R data frame (all columns are required to be numeric types)
 #' @param max_clusters maximal number of clusters for which we intend to compute intra group inertia
+#' @return vector of length max_clusters containing the inter group inertia for agglomerative
+#' clustering with 1 cluster to max_clusters
 #' @author Simon CORDE
 #' @keywords inertia data frame agglomerative clustering
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export compute_inertia_ahc
+#' @examples
+#' data = iris[c(1:4)]
+#' results <- compute_inertia_ahc(data=data, max_clusters=15)
+#' results
 
 # The basic steps of the functions are the following:
 # Step 1: Find clusters centroids and the global centroid
