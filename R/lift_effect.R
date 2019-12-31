@@ -18,7 +18,14 @@
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export lift_effect
-#'
+#' @examples
+#' data_train <- titanic_train
+#' model_glm <- glm(formula="Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
+#' data=data_train,
+#' family=binomial(link="logit"))
+#' predictions <- predict(object=model_glm, newdata=titanic_train, type="response")
+#' lift_effect(predictions=predictions, true_labels=titanic_train$Survived, positive_label=1)
+
 
 lift_effect <- function(predictions, true_labels, positive_label)
 {
@@ -38,7 +45,7 @@ lift_effect <- function(predictions, true_labels, positive_label)
 
   lift_1 <- c()
 
-  for (i in 1:100)
+  for (i in 1:length(points))
   {
 
     lift_1 <- c(lift_1, mean(data_1$true_labels[1:points[i]] == positive_label))

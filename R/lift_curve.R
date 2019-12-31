@@ -18,7 +18,14 @@
 #' @references Link to the author's github repository:
 #' \url{https://www.github.com/Redcart}
 #' @export lift_curve
-#'
+#' @examples
+#' data_train <- titanic_train
+#' model_glm <- glm(formula="Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
+#' data=data_train,
+#' family=binomial(link="logit"))
+#' predictions <- predict(object=model_glm, newdata=titanic_train, type="response")
+#' lift_curve(predictions=predictions, true_labels=titanic_train$Survived, positive_label=1)
+
 
 lift_curve <- function(predictions, true_labels, positive_label)
 {
@@ -40,7 +47,7 @@ lift_curve <- function(predictions, true_labels, positive_label)
   nb_positifs <- sum(data_1$true_labels == positive_label)
   quantiles <- quantile(0:n)
 
-  for (i in 1:100)
+  for (i in 1:length(points))
   {
 
     lift_2 <- c(lift_2, sum(data_1$true_labels[1:points[i]] == positive_label)/nb_positifs)
