@@ -35,9 +35,6 @@ lift_effect <- function(predictions, true_labels, positive_label)
   data_1 <- data %>%
     arrange(desc(predictions))
 
-  data_2 <- data %>%
-    arrange(desc(true_labels))
-
   n <- length(true_labels)
   step <- floor(n/100)
   points <- seq(1, n, step)
@@ -55,7 +52,7 @@ lift_effect <- function(predictions, true_labels, positive_label)
   plot_1 <- ggplot() +
     geom_line(aes(x = points, y = lift_1), color = "#56B4E9") +
     geom_hline(yintercept = mean(true_labels == positive_label), lty = "dashed", color = "grey") +
-    coord_cartesian(ylim = c(0.05, 0.8)) +
+    coord_cartesian(ylim = c(0, 1)) +
     scale_x_continuous(breaks = as.vector(quantiles), labels = names(quantiles)) +
     ggtitle("Lift Effect Curve") +
     xlab("Cumulative Population") +
