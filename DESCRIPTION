@@ -1,5 +1,5 @@
 Package: helda
-Title: HELPFUL FUNCTIONS FOR DATA ANALYSIS 
+Title: HELPFUL FUNCTIONS for DATA ANALYSIS 
 Version: 0.1
 Authors@R: person("Simon", "Corde", email = "simon.corde@hotmail.fr", role = c("aut", "cre"))
 Description: This resource gathers some useful functions for data analysis. Some functions allows to 
