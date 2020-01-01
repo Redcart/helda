@@ -1,8 +1,8 @@
 Package: helda
-Title: HELpful functions for Data Analysis
+Title: HELPFUL FUNCTIONS FOR DATA ANALYSIS 
 Version: 0.1
 Authors@R: person("Simon", "Corde", email = "simon.corde@hotmail.fr", role = c("aut", "cre"))
-Description: This package gathers some useful functions for data analysis. Some functions allows to 
+Description: This resource gathers some useful functions for data analysis. Some functions allows to 
 	deal with windows paths, create formula for statistical models, draw lift effect and lift curves,
 	compute inertia in agglomerative clustering, some procedure for kmeans and desired sizes final clusters
 	and one procedure for filling gaps in time series inside a panel data.
