@@ -7,6 +7,7 @@
 #' This function allows to fill intermediate gaps in panel data by linear interpolation
 #'
 #' @importFrom stringr str_sub str_length
+#' @importFrom rlang :=
 #' @import dplyr
 #' @param data R data frame
 #' @param gap_variable character name of the variable we want to fill the start and end gaps
@@ -27,9 +28,8 @@
 #'
 gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits=2){
 
-  boo_gap<-lag_boo_gap<-first_gap<-n_gap <- NULL
-  n_gap_step<-gap_variable_before<-gap_variable_after<-number_gap_step <- NULL
-  gap_variable_corrected<-get(key_variable) <- NULL
+  boo_gap<-lag_boo_gap<-first_gap<-n_gap<-n_gap_step<-gap_variable_before <- NULL
+  gap_variable_after<-number_gap_step<-gap_variable_corrected <- NULL
 
   new_var <- paste(str_sub(gap_variable, 1, str_length(gap_variable)-1), "2", sep = "")
 
