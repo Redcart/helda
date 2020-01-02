@@ -3,7 +3,6 @@ language: r
 #Define multiple R-versions, one from bioconductor
 r:
   - oldrel
-
 dist: xenial
 services:
   - xvfb

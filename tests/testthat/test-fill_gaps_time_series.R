@@ -2,7 +2,7 @@ library(helda)
 
 context('Integration test for fill in gaps time series')
 
-test_that("proc freq", {
+test_that("fill gaps time series functions", {
   rep(c("Paris", "Madrid", "Berlin"), each = 10)
 
   jeu_donnees <- data.frame("country" = rep(c("France", "Spain", "Germany"), each = 10),
@@ -19,7 +19,6 @@ test_that("proc freq", {
   data_to_check_2 <- start_end_to_fill(data = jeu_donnees, calendar = data_to_check_1, gap_variable = "gdp", key_variable = "country", time_variable = "year")
 
   data_to_check_3 <- gap_to_fill(data = data_to_check_2, gap_variable = "gdp_corrected_1", key_variable = "country", time_variable = "year", digits = 1)
-
 
   load(file='fill_gaps_test.Rda')
 

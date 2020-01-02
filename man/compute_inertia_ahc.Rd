@@ -4,10 +4,12 @@
 \alias{compute_inertia_ahc}
 \title{Intragroup inertia for choosing the optimal number of clusters in Agglomerative Clustering}
 \usage{
-compute_inertia_ahc(data, max_clusters = 10)
+compute_inertia_ahc(data, method = "ward.D", max_clusters = 10)
 }
 \arguments{
 \item{data}{R data frame (all columns are required to be numeric types)}
+
+\item{method}{character that specifies the method on which the agglomerative is built upon}
 
 \item{max_clusters}{maximal number of clusters for which we intend to compute intra group inertia}
 }

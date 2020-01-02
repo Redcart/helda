@@ -61,6 +61,7 @@ compute_inertia <- function(data)
 #'
 #' @importFrom stats hclust dist cutree
 #' @param data R data frame (all columns are required to be numeric types)
+#' @param method character that specifies the method on which the agglomerative is built upon
 #' @param max_clusters maximal number of clusters for which we intend to compute intra group inertia
 #' @return vector of length max_clusters containing the inter group inertia for agglomerative
 #' clustering with 1 cluster to max_clusters
@@ -79,14 +80,14 @@ compute_inertia <- function(data)
 # Step 2: Compute quadratic differences between cluster centroids and global centroid
 # Step 3: Compute the weighted average of quadratic differences (weigth = size of the cluster)
 
-compute_inertia_ahc <- function(data, max_clusters=10)
+compute_inertia_ahc <- function(data, method="ward.D", max_clusters=10)
 {
 
   n <- dim(data)[1]
 
   intergroup_inertia_ahc <- c()
 
-  model_ahc <- hclust(d = dist(data), method = "ward.D")
+  model_ahc <- hclust(d = dist(data), method = method)
 
   for (i in 2: max_clusters)
   {
