@@ -1,7 +1,8 @@
 # R package helda (HELpful functions for Data Analysis in R)
-[![Generic badge](https://img.shields.io/badge/version-0.1-green.svg)](https://shields.io/)
+[![Package version](https://img.shields.io/badge/package version-0.1-green.svg)](https://shields.io/)
 [![Build Status](https://travis-ci.com/Redcart/helda.svg?branch=master)](https://travis-ci.com/Redcart/helda)
 [![Codecov test coverage](https://codecov.io/gh/Redcart/helda/branch/master/graph/badge.svg)](https://codecov.io/gh/Redcart/helda?branch=master)
+[![Documentation](https://img.shields.io/badge/docs-Roxygen 2-cyan.svg)](https://shields.io/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
   
 This package provides functionalities that aim at facilitating and saving time when analysing data.
