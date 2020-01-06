@@ -6,18 +6,21 @@ Description: This resource gathers some useful functions that speed up data anal
   Some functions allows to fill in gaps in time series, draw lift effect and lift curves or find
   the optimal number of clusters in agglomerative clustering.
 Depends: R (>= 3.5.0),
+Imports:
     dplyr(>= 0.7.8),
     ggplot2(>= 3.1.0),
     sqldf(>= 0.4-11),
     stringr(>= 1.3.1),
     rlang(>= 0.4.2)
+    stats(>= 3.6.1)
+Suggests: 
+    devtools,
+    testthat (>= 2.1.0),
+    covr
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 URL: https://www.github.com/Redcart/helda
 BugReports: https://github.com/Redcart/helda/issues
 RoxygenNote: 7.0.1
-Suggests: 
-    devtools,
-    testthat (>= 2.1.0),
-    covr
+
