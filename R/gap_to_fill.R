@@ -7,7 +7,7 @@
 #' This function allows to fill intermediate gaps in panel data by linear interpolation
 #'
 #' @importFrom stringr str_sub str_length
-#' @importFrom rlang := sym
+#' @importFrom rlang :=
 #' @import dplyr
 #' @param data R data frame
 #' @param gap_variable character name of the variable we want to fill the start and end gaps
