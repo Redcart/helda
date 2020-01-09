@@ -4,7 +4,7 @@
 \name{titanic_train}
 \alias{titanic_train}
 \title{Titanic training data set from Kaggle Competition}
-\format{Data frame with 12 columns}
+\format{Data frame of 891 rows and 12 columns}
 \usage{
 titanic_train
 }

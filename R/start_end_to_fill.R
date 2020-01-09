@@ -2,10 +2,10 @@
 ###  Function for filling start and end gaps in time series  ###
 ################################################################
 
-#' Function for filling start and end gaps in time series
+#' @title Function for filling start and end gaps in time series
 #'
-#' This function allows to fill the start and end gaps of a time series
-#' by doing repetition of next and prevoius values
+#' @description This function allows to fill the start and end gaps of a time series
+#' by doing repetition of next and previous values
 #'
 #' @import dplyr
 #' @param data R data frame

@@ -2,9 +2,9 @@
 ###  Function for the kmeans procedure  ###
 ###########################################
 
-#' Kmeans procedure
+#' @title Kmeans procedure
 #'
-#' This function allows to perform kmeans clustering with some desired output sizes for clusters
+#' @description This function allows to perform kmeans clustering with some desired output sizes for clusters
 #'
 #' @importFrom stats kmeans
 #' @import dplyr

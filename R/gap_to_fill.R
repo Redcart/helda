@@ -2,9 +2,9 @@
 ####   Function for filling intermediate gaps in a time serie   ###
 ###################################################################
 
-#' Filling intermediate gaps in a time serie
+#' @title Filling intermediate gaps in a time serie
 #'
-#' This function allows to fill intermediate gaps in panel data by linear interpolation
+#' @description This function allows to fill intermediate gaps in panel data by linear interpolation
 #'
 #' @importFrom stringr str_sub str_length
 #' @importFrom rlang :=
@@ -33,8 +33,8 @@ gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits=
 
   new_var <- paste(str_sub(gap_variable, 1, str_length(gap_variable)-1), "2", sep = "")
 
-  data <- data %>%
-    arrange(get(key_variable), get(time_variable)) %>%
+  data_1 <- data %>%
+    arrange(get(time_variable), get(key_variable)) %>%
     mutate(boo_gap = ifelse(is.na(get(gap_variable)), 1, 0)) %>%
     group_by(get(key_variable)) %>%
     mutate(lag_boo_gap = lag(boo_gap)) %>%
@@ -64,6 +64,6 @@ gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits=
     select(-boo_gap, -lag_boo_gap, -first_gap, -n_gap, -n_gap_step, -number_gap_step, -gap_variable_before, -gap_variable_after, -`get(key_variable)`) %>%
     rename(!!new_var:=gap_variable_corrected)
 
-  return(data)
+  return(data_1)
 
 }

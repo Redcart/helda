@@ -2,9 +2,9 @@
 ###  Function for complete empty calendar  ###
 ##############################################
 
-#' Complete empty calendar
+#' @title Complete empty calendar
 #'
-#' This function allows to create a complete empty calendar on a year scale
+#' @description This function allows to create a complete empty calendar on a year scale
 #'
 #' @import dplyr sqldf
 #' @param data R data frame

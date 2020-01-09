@@ -2,18 +2,15 @@
 ### Change the path windows ==> linux ###
 #########################################
 
-#This function allows to change "\" into "/" from system paths
-
-#' Convert windows path into linux path
+#' @title Convert windows path into linux path
 #'
-#' This function allows to make conversion of windows path into linux path
+#' @description This function allows to make conversion of windows path into linux path
 #'
-
 #' @details
 #' When the function is called, a prompt asks for the windows path to be converted
 #' in the R console. Enter a windows path or copy paste one. Then type ENTER.
 #' The Linux converted path appears.
-
+#'
 #' @author Simon CORDE
 #' @keywords windows linux path
 #' @references Link to the author's github repository:

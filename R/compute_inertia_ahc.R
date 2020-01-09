@@ -2,9 +2,9 @@
 ###  Computing of the intragroup variance for AHC  ###
 ######################################################
 
-#' Centroid of a cluster
+#' @title Centroid of a cluster
 #'
-#' This function allows to compute the centroid of a cluster in a R data frame
+#' @description This function allows to compute the centroid of a cluster in a R data frame
 #'
 #' @importFrom stats hclust dist cutree
 #' @param i integer that represents the cluster number

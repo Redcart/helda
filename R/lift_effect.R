@@ -2,9 +2,9 @@
 ###  Lift Effect Curve ###
 ##########################
 
-#' Lift effect curve
+#' @title Lift effect curve
 #'
-#' This function allows to draw the lift effect on a graph for binary classification model
+#' @description This function allows to draw the lift effect on a graph for binary classification model
 #'
 #' @import ggplot2 dplyr
 #' @importFrom stats quantile

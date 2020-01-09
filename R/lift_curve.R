@@ -2,9 +2,9 @@
 ###  Lift Curve ###
 ###################
 
-#' Lift curve graph
+#' @title Lift curve graph
 #'
-#' This function allows to draw a lift curve in a ggplot style for binary classification model
+#' @description This function allows to draw a lift curve in a ggplot style for binary classification model
 #'
 #' @import ggplot2 dplyr
 #' @importFrom stats quantile

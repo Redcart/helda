@@ -2,9 +2,9 @@
 ###  Create a formula for machine learning models  ###
 ######################################################
 
-#' Create a formula
+#' @title Create a formula
 #'
-#' This function allows to create a formula from the columns of a data frame very quickly
+#' @description This function allows to create a formula from the columns of a data frame very quickly
 #'
 #' @param data R data frame
 #' @param position number of the column in the data frame that we want to predict

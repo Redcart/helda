@@ -22,7 +22,7 @@ a R data frame of dimension containing the original columns and new ones
 }
 \description{
 This function allows to fill the start and end gaps of a time series
-by doing repetition of next and prevoius values
+by doing repetition of next and previous values
 }
 \details{
 The news columns are:
