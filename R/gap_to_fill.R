@@ -36,21 +36,23 @@ gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits=
   data_1 <- data %>%
     arrange(get(time_variable), get(key_variable)) %>%
     mutate(boo_gap = ifelse(is.na(get(gap_variable)), 1, 0)) %>%
-    group_by(get(key_variable)) %>%
+    group_by_at(key_variable) %>%
     mutate(lag_boo_gap = lag(boo_gap)) %>%
     mutate(first_gap = ifelse(boo_gap == 1 & lag_boo_gap == 0, 1, 0)) %>%
     mutate(n_gap = cumsum(first_gap)) %>%
     mutate(n_gap = ifelse(boo_gap == 1, n_gap, 0)) %>%
     ungroup() %>%
-    group_by(get(key_variable), n_gap) %>%
+    group_by(n_gap) %>%
+    group_by_at(key_variable, .add = TRUE) %>%
     mutate(n_gap_step = cumsum(boo_gap)) %>%
     mutate(number_gap_step = max(n_gap_step)) %>%
     ungroup() %>%
-    group_by(get(key_variable)) %>%
+    group_by_at(key_variable) %>%
     mutate(gap_variable_before = lag(get(gap_variable))) %>%
     mutate(gap_variable_after = lead(get(gap_variable))) %>%
     ungroup() %>%
-    group_by(get(key_variable), n_gap) %>%
+    group_by(n_gap) %>%
+    group_by_at(key_variable, .add = TRUE) %>%
     mutate(gap_variable_before = ifelse(is.na(gap_variable_before), 0, gap_variable_before)) %>%
     mutate(gap_variable_after = ifelse(is.na(gap_variable_after), 0, gap_variable_after)) %>%
     mutate(gap_variable_before = max(gap_variable_before)) %>%
@@ -61,7 +63,7 @@ gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits=
                                            get(gap_variable))) %>%
     mutate(gap_variable_corrected = round(gap_variable_corrected, digits)) %>%
     ungroup() %>%
-    select(-boo_gap, -lag_boo_gap, -first_gap, -n_gap, -n_gap_step, -number_gap_step, -gap_variable_before, -gap_variable_after, -`get(key_variable)`) %>%
+    select(-boo_gap, -lag_boo_gap, -first_gap, -n_gap, -n_gap_step, -number_gap_step, -gap_variable_before, -gap_variable_after) %>%
     rename(!!new_var:=gap_variable_corrected)
 
   return(data_1)
