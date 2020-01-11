@@ -19,12 +19,13 @@
 #' \url{https://www.github.com/Redcart}
 #' @export lift_curve
 #' @examples
-#' data_train <- titanic_train
+#' data_training <- titanic_training
+#' data_validation <- titanic_validation
 #' model_glm <- glm(formula="Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
-#' data=data_train,
+#' data=data_training,
 #' family=binomial(link="logit"))
-#' predictions <- predict(object=model_glm, newdata=titanic_train, type="response")
-#' lift_curve(predictions=predictions, true_labels=titanic_train$Survived, positive_label=1)
+#' predictions <- predict(object=model_glm, newdata=titanic_validation, type="response")
+#' lift_curve(predictions=predictions, true_labels=titanic_validation$Survived, positive_label=1)
 
 
 lift_curve <- function(predictions, true_labels, positive_label)
