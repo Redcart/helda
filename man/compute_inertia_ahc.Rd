@@ -24,7 +24,6 @@ for different number of clusters
 \examples{
 data = iris[c(1:4)]
 results <- compute_inertia_ahc(data=data, max_clusters=15)
-results
 }
 \references{
 Link to the author's github repository:

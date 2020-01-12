@@ -5,24 +5,24 @@
 #' @title Function for filling start and end gaps in time series
 #'
 #' @description This function allows to fill the start and end gaps of a time series
-#' by doing repetition of next and previous values
+#' by doing repetition of next (for the start) and previous values (for the end)
 #'
 #' @import dplyr
 #' @param data R data frame
-#' @param calendar R data frame complete empty calendar (as one can performs with \code{create_calendar_day})
-#' @param gap_variable character name of the variable we want to fill the start and end gaps
-#' @param key_variable character variable name that refers to the key variable in the panel data (ID, ...)
-#' @param time_variable character time variable name that permits to sort observation on a time scale
-#' @return a R data frame of dimension containing the original columns and new ones
+#' @param calendar R data frame complete empty calendar (as one can perform with \code{create_calendar_day})
+#' @param gap_variable character that represents name of the variable we want to fill the start and end gaps
+#' @param key_variable character that represents variable name that refers to the key variable in the panel data (ID, ...)
+#' @param time_variable character that represents time variable name that permits to sort observation on a time scale
+#' @return a R data frame of dimension containing the original columns and a new one
 #' @details
-#' The news columns are:
+#' The new column is:
 #' \itemize{
 #'  \item _corrected_1: the variable with starts and ends filled
 #'  }
 #' @author Simon CORDE
 #' @keywords time series fill gaps
-#' @references Link to the author's github repository:
-#' \url{https://www.github.com/Redcart}
+#' @references Link to the author's github package repository:
+#' \url{https://www.github.com/Redcart/helda}
 #' @export start_end_to_fill
 #'
 

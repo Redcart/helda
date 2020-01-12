@@ -18,19 +18,19 @@ kmeans_procedure(
 
 \item{columns}{vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.}
 
-\item{threshold_min}{integer minimum size for cluster.}
+\item{threshold_min}{integer that represents the minimum size for cluster.}
 
-\item{threshold_max}{integer maximum size fo cluster.}
+\item{threshold_max}{integer that represents the maximum size fo cluster.}
 
-\item{verbose}{if set to TRUE print the current state of the procedure (by default set to FALSE).}
+\item{verbose}{boolean. if set to TRUE print the current state of the procedure (by default set to FALSE).}
 
-\item{seed}{seed for the random call (if we want the output to be reproducible).}
+\item{seed}{integer that represents seed for the random call (if we want the output to be reproducible).}
 }
 \value{
 R data frame
 }
 \description{
-This function allows to perform kmeans clustering with some desired output sizes for clusters
+This function allows to perform k-means clustering with constrained on the size of clusters
 }
 \details{
 The R data frame contains the id of the original data frame and a column `cluster` representing
@@ -40,11 +40,11 @@ the cluster to which the observation belongs to.
 data <- iris[, c(1:4)]
 features <- colnames(iris)[c(1:4)]
 result <- kmeans_procedure(data=data, columns=features, threshold_min=2, threshold=10,
-verbose=TRUE, seed=10)
+verbose=FALSE, seed=10)
 }
 \references{
-Link to the author's github repository:
-\url{https://www.github.com/Redcart}
+Link to the package github repository:
+\url{https://www.github.com/Redcart/helda}
 }
 \author{
 Simon CORDE
