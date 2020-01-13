@@ -30,8 +30,8 @@ predictions <- predict(object=model_glm, newdata=titanic_validation, type="respo
 lift_curve(predictions=predictions, true_labels=titanic_validation$Survived, positive_label=1)
 }
 \references{
-Link to the author's github repository:
-\url{https://www.github.com/Redcart}
+Link to the author's github package repository:
+\url{https://www.github.com/Redcart/helda}
 }
 \author{
 Simon CORDE

@@ -20,7 +20,7 @@
 #' the cluster to which the observation belongs to.
 #' @author Simon CORDE
 #' @keywords kmeans cluster sizes
-#' @references Link to the package github repository:
+#' @references Link to the github package repository:
 #' \url{https://www.github.com/Redcart/helda}
 #' @export kmeans_procedure
 #' @examples

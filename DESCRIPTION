@@ -1,10 +1,10 @@
 Package: helda
 Title: HELPFUL FUNCTIONS for DATA ANALYSIS 
-Version: 0.9
+Version: 0.9.0
 Authors@R: person("Simon", "Corde", email = "simon.corde@hotmail.fr", role = c("aut", "cre"))
-Description: Bunch of functions that allow to speed up data analysis focusing on preprocessing and data visualization of machine learning models performances. 
-  Some functions allow to fill in gaps in time series using linear interpolation on panel data, draw lift effect and lift curves to benchmark machine learning 
-  models or even find the optimal number of clusters in agglomerative clustering algorithm.
+Description: Bunch of functions that allow to facilitate data analysis. The main focus is on preprocessing and data visualization of machine learning models performances. 
+  Some functions allow to fill gaps in time series using linear interpolation on panel data, some functions permit to draw lift effect and lift curves
+  in order to benchmark machine learning models or you can even find the optimal number of clusters in agglomerative clustering algorithm.
 Depends: R (>= 3.5.0),
 Imports:
     dplyr(>= 0.7.8),

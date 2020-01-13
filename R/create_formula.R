@@ -7,7 +7,7 @@
 #' @description This function allows to create a formula from the columns of a data frame very quickly
 #'
 #' @param data R data frame
-#' @param position number of the column in the data frame that we want to predict
+#' @param position integer representing the number of the column in the data frame that we want to predict
 #' @return string that contains the formula
 #' @details
 #' The formula is diplayed with the following format: Y ~ X1 + X2
@@ -19,8 +19,7 @@
 #' @examples
 #' data <- iris
 #' str(data)
-#' result_array <- proc_freq(data$Species)
-#'
+#' result <- create_formula(data = data, position = 4)
 
 create_formula <- function(data, position = 1)
 {

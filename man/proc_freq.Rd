@@ -31,11 +31,10 @@ The five columns diplay the following information:
 data <- iris
 str(data)
 result <- proc_freq(data$Species)
-result
 }
 \references{
-Link to the author's github repository:
-\url{https://www.github.com/Redcart}
+Link to the author's github package repository:
+\url{https://www.github.com/Redcart/helda}
 }
 \author{
 Simon CORDE

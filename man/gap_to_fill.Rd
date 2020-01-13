@@ -18,20 +18,36 @@ gap_to_fill(data, gap_variable, key_variable, time_variable, digits = 2)
 \item{digits}{integer number of decimals to keep for the rounding (by default set to 2)}
 }
 \value{
-a R data frame of dimension containing the original columns and new ones
+a R data frame of dimension containing the original columns and a new one
 }
 \description{
 This function allows to fill intermediate gaps in panel data by linear interpolation
 }
 \details{
-The news columns are:
+The new column is:
 \itemize{
  \item _corrected_2: the variable with intermediate gaps filled
  }
 }
+\examples{
+rep(c("Paris", "Madrid", "Berlin"), each = 10)
+jeu_donnees <- data.frame("country" = rep(c("France", "Spain", "Germany"), each = 10),
+"capital" = rep(c("Paris", "Madrid", "Berlin"), each = 10),
+"year" = 2009:2018,
+"gdp" = c(NA, NA, 200, 300, 500, 1000, NA, NA, NA, 500,
+ 0, NA, NA, NA, NA, NA, NA, 800, 1200, 1500,
+ 100, 200, 400, 700, 700, 800, 600, 500, NA, NA))
+ jeu_donnees <- na.omit(jeu_donnees)# we artificially create some gaps in the time series
+ data_1 <- create_calendar_day(data = jeu_donnees, key_variable = "country", time_variable = "year",
+ start_year = 2009, end_year = 2018)
+ data_2 <- start_end_to_fill(data = jeu_donnees, calendar = data_1, gap_variable = "gdp",
+ key_variable = "country", time_variable = "year")
+ data_3 <- gap_to_fill(data = data_2, gap_variable = "gdp_corrected_1", key_variable = "country",
+ time_variable = "year", digits = 1)
+}
 \references{
-Link to the author's github repository:
-\url{https://www.github.com/Redcart}
+Link to the author's github package repository:
+\url{https://www.github.com/Redcart/helda}
 }
 \author{
 Simon CORDE

@@ -15,8 +15,8 @@
 #' @return a ggplot object containing the lift effect
 #' @author Simon CORDE
 #' @keywords lift curve machine learning classification
-#' @references Link to the author's github repository:
-#' \url{https://www.github.com/Redcart}
+#' @references Link to the author's github package repository:
+#' \url{https://www.github.com/Redcart/helda}
 #' @export lift_effect
 #' @examples
 #' data_training <- titanic_training

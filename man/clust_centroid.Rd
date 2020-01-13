@@ -11,14 +11,14 @@ clust_centroid(i, data, cluster)
 
 \item{data}{R data frame (all columns are required to be numeric types)}
 
-\item{cluster}{character column of the data frame representing the clusters}
+\item{cluster}{character representing the column name of the data frame representing the clusters}
 }
 \description{
 This function allows to compute the centroid of a cluster in a R data frame
 }
 \references{
-Link to the author's github repository:
-\url{https://www.github.com/Redcart}
+Link to the author's github package repository:
+\url{https://www.github.com/Redcart/helda}
 }
 \author{
 Simon CORDE

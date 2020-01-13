@@ -43,7 +43,7 @@ result <- kmeans_procedure(data=data, columns=features, threshold_min=2, thresho
 verbose=FALSE, seed=10)
 }
 \references{
-Link to the package github repository:
+Link to the github package repository:
 \url{https://www.github.com/Redcart/helda}
 }
 \author{

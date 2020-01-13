@@ -9,13 +9,13 @@ compute_inertia_ahc(data, method = "ward.D", max_clusters = 10)
 \arguments{
 \item{data}{R data frame (all columns are required to be numeric types)}
 
-\item{method}{character that specifies the method on which the agglomerative is built upon}
+\item{method}{character that specifies the method on which the agglomerative is built upon (by default set to "ward.D")}
 
-\item{max_clusters}{maximal number of clusters for which we intend to compute intra group inertia}
+\item{max_clusters}{integer that represents the maximal number of clusters for which we intend to compute intra group inertia}
 }
 \value{
 vector of length max_clusters containing the inter group inertia for agglomerative
-clustering with 1 cluster to max_clusters
+clustering from 1 cluster to max_clusters
 }
 \description{
 This function allows to compute the inter group inertia from agglomerative clustering
@@ -23,11 +23,11 @@ for different number of clusters
 }
 \examples{
 data = iris[c(1:4)]
-results <- compute_inertia_ahc(data=data, max_clusters=15)
+result <- compute_inertia_ahc(data=data, max_clusters=15)
 }
 \references{
-Link to the author's github repository:
-\url{https://www.github.com/Redcart}
+Link to the author's github package repository:
+\url{https://www.github.com/Redcart/helda}
 }
 \author{
 Simon CORDE

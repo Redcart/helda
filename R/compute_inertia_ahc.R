@@ -9,11 +9,11 @@
 #' @importFrom stats hclust dist cutree
 #' @param i integer that represents the cluster number
 #' @param data R data frame (all columns are required to be numeric types)
-#' @param cluster character column of the data frame representing the clusters
+#' @param cluster character representing the column name of the data frame representing the clusters
 #' @author Simon CORDE
 #' @keywords centroids data frame
-#' @references Link to the author's github repository:
-#' \url{https://www.github.com/Redcart}
+#' @references Link to the author's github package repository:
+#' \url{https://www.github.com/Redcart/helda}
 #' @export clust_centroid
 
 
@@ -33,8 +33,8 @@ clust_centroid <- function(i, data, cluster)
 #' @return numeric value representing the total inertia
 #' @author Simon CORDE
 #' @keywords inertia data frame
-#' @references Link to the author's github repository:
-#' \url{https://www.github.com/Redcart}
+#' @references Link to the author's github package repository:
+#' \url{https://www.github.com/Redcart/helda}
 #' @export compute_inertia
 #' @examples
 #' compute_inertia(mtcars)
@@ -61,18 +61,18 @@ compute_inertia <- function(data)
 #'
 #' @importFrom stats hclust dist cutree
 #' @param data R data frame (all columns are required to be numeric types)
-#' @param method character that specifies the method on which the agglomerative is built upon
-#' @param max_clusters maximal number of clusters for which we intend to compute intra group inertia
+#' @param method character that specifies the method on which the agglomerative is built upon (by default set to "ward.D")
+#' @param max_clusters integer that represents the maximal number of clusters for which we intend to compute intra group inertia
 #' @return vector of length max_clusters containing the inter group inertia for agglomerative
-#' clustering with 1 cluster to max_clusters
+#' clustering from 1 cluster to max_clusters
 #' @author Simon CORDE
 #' @keywords inertia data frame agglomerative clustering
-#' @references Link to the author's github repository:
-#' \url{https://www.github.com/Redcart}
+#' @references Link to the author's github package repository:
+#' \url{https://www.github.com/Redcart/helda}
 #' @export compute_inertia_ahc
 #' @examples
 #' data = iris[c(1:4)]
-#' results <- compute_inertia_ahc(data=data, max_clusters=15)
+#' result <- compute_inertia_ahc(data=data, max_clusters=15)
 
 # The basic steps of the functions are the following:
 # Step 1: Find clusters centroids and the global centroid
