@@ -9,10 +9,10 @@ create_formula(data, position = 1)
 \arguments{
 \item{data}{R data frame}
 
-\item{position}{integer representing the number of the column in the data frame that we want to predict}
+\item{position}{an integer representing the number of the column in the data frame that we want to predict}
 }
 \value{
-string that contains the formula
+a character that contains the formula
 }
 \description{
 This function allows to create a formula from the columns of a data frame very quickly
@@ -26,7 +26,7 @@ str(data)
 result <- create_formula(data = data, position = 4)
 }
 \references{
-Link to the author's github repository:
+Link to the author's github package repository:
 \url{https://www.github.com/Redcart}
 }
 \author{

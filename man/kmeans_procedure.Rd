@@ -2,7 +2,7 @@
 % Please edit documentation in R/kmeans_procedure.R
 \name{kmeans_procedure}
 \alias{kmeans_procedure}
-\title{Kmeans procedure}
+\title{K-means procedure}
 \usage{
 kmeans_procedure(
   data,
@@ -14,20 +14,20 @@ kmeans_procedure(
 )
 }
 \arguments{
-\item{data}{R data frame}
+\item{data}{a R data frame}
 
-\item{columns}{vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.}
+\item{columns}{a vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.}
 
-\item{threshold_min}{integer that represents the minimum size for cluster.}
+\item{threshold_min}{an integer. It represents the minimum size for cluster.}
 
-\item{threshold_max}{integer that represents the maximum size fo cluster.}
+\item{threshold_max}{an integer. It represents the maximum size fo cluster.}
 
-\item{verbose}{boolean. if set to TRUE print the current state of the procedure (by default set to FALSE).}
+\item{verbose}{a boolean. If set to TRUE print the current state of the procedure (by default set to FALSE).}
 
-\item{seed}{integer that represents seed for the random call (if we want the output to be reproducible).}
+\item{seed}{an integer. This represents the seed for the random call (if we want the output to be reproducible).}
 }
 \value{
-R data frame
+a R data frame
 }
 \description{
 This function allows to perform k-means clustering with constrained on the size of clusters
@@ -37,9 +37,9 @@ The R data frame contains the id of the original data frame and a column `cluste
 the cluster to which the observation belongs to.
 }
 \examples{
-data <- iris[, c(1:4)]
-features <- colnames(iris)[c(1:4)]
-result <- kmeans_procedure(data=data, columns=features, threshold_min=2, threshold=10,
+data <- iris[, c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width")]
+features <- colnames(data)
+result <- kmeans_procedure(data = data, columns = features, threshold_min = 2, threshold = 10,
 verbose=FALSE, seed=10)
 }
 \references{

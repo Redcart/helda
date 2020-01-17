@@ -7,15 +7,15 @@
 start_end_to_fill(data, calendar, gap_variable, key_variable, time_variable)
 }
 \arguments{
-\item{data}{R data frame}
+\item{data}{a R data frame}
 
-\item{calendar}{R data frame complete empty calendar (as one can perform with \code{create_calendar_day})}
+\item{calendar}{a R data frame containing a complete empty calendar (as one can performs with \code{create_calendar_day})}
 
-\item{gap_variable}{character that represents name of the variable we want to fill the start and end gaps}
+\item{gap_variable}{a character. This represents the name of the variable we want to fill the start and end gaps}
 
-\item{key_variable}{character that represents variable name that refers to the key variable in the panel data (ID, ...)}
+\item{key_variable}{a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...)}
 
-\item{time_variable}{character that represents time variable name that permits to sort observation on a time scale}
+\item{time_variable}{a character. This represents the time variable name that permits to sort observation on a time scale}
 }
 \value{
 a R data frame of dimension containing the original columns and a new one

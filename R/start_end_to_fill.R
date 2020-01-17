@@ -8,11 +8,11 @@
 #' by doing repetition of next (for the start) and previous values (for the end)
 #'
 #' @import dplyr
-#' @param data R data frame
-#' @param calendar R data frame complete empty calendar (as one can perform with \code{create_calendar_day})
-#' @param gap_variable character that represents name of the variable we want to fill the start and end gaps
-#' @param key_variable character that represents variable name that refers to the key variable in the panel data (ID, ...)
-#' @param time_variable character that represents time variable name that permits to sort observation on a time scale
+#' @param data a R data frame
+#' @param calendar a R data frame containing a complete empty calendar (as one can performs with \code{create_calendar_day})
+#' @param gap_variable a character. This represents the name of the variable we want to fill the start and end gaps
+#' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...)
+#' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale
 #' @return a R data frame of dimension containing the original columns and a new one
 #' @details
 #' The new column is:

@@ -7,12 +7,12 @@
 proc_freq(variable, digits = 4)
 }
 \arguments{
-\item{variable}{vector on which we want to apply the function}
+\item{variable}{a vector on which we want to apply the function}
 
-\item{digits}{integer that specifies the number of decimals we want to keep in the rounded figures}
+\item{digits}{an integer that specifies the number of decimals we want to keep in the rounded figures}
 }
 \value{
-data frame of dimension [number of categories x 5].
+a R data frame of dimension [number of categories x 5].
 }
 \description{
 This function permits to reproduce the output of the SAS proc freq

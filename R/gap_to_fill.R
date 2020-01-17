@@ -9,11 +9,11 @@
 #' @importFrom stringr str_sub str_length
 #' @importFrom rlang :=
 #' @import dplyr
-#' @param data R data frame
-#' @param gap_variable character name of the variable we want to fill the start and end gaps
-#' @param key_variable character variable name that refers to the key variable in the panel data (ID, ...)
-#' @param time_variable character time variable name that permits to sort observation on a time scale
-#' @param digits integer number of decimals to keep for the rounding (by default set to 2)
+#' @param data a R data frame
+#' @param gap_variable a character. This represents the name of the variable we want to fill the start and end gaps
+#' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...)
+#' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale
+#' @param digits an integer. This is the number of decimals to keep for the rounding (by default set to 2)
 #' @return a R data frame of dimension containing the original columns and a new one
 #' @details
 #' The new column is:
@@ -41,7 +41,7 @@
 #'  data_3 <- gap_to_fill(data = data_2, gap_variable = "gdp_corrected_1", key_variable = "country",
 #'  time_variable = "year", digits = 1)
 
-gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits=2){
+gap_to_fill <- function(data, gap_variable, key_variable, time_variable, digits = 2){
 
   boo_gap<-lag_boo_gap<-first_gap<-n_gap<-n_gap_step<-gap_variable_before <- NULL
   gap_variable_after<-number_gap_step<-gap_variable_corrected <- NULL

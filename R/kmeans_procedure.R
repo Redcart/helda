@@ -1,20 +1,20 @@
-###########################################
-###  Function for the kmeans procedure  ###
-###########################################
+############################################
+###  Function for the k-means procedure  ###
+############################################
 
-#' @title Kmeans procedure
+#' @title K-means procedure
 #'
 #' @description This function allows to perform k-means clustering with constrained on the size of clusters
 #'
 #' @importFrom stats kmeans
 #' @import dplyr
-#' @param data R data frame
-#' @param columns vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.
-#' @param threshold_min integer that represents the minimum size for cluster.
-#' @param threshold_max integer that represents the maximum size fo cluster.
-#' @param verbose boolean. if set to TRUE print the current state of the procedure (by default set to FALSE).
-#' @param seed integer that represents seed for the random call (if we want the output to be reproducible).
-#' @return R data frame
+#' @param data a R data frame
+#' @param columns a vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.
+#' @param threshold_min an integer. It represents the minimum size for cluster.
+#' @param threshold_max an integer. It represents the maximum size fo cluster.
+#' @param verbose a boolean. If set to TRUE print the current state of the procedure (by default set to FALSE).
+#' @param seed an integer. This represents the seed for the random call (if we want the output to be reproducible).
+#' @return a R data frame
 #' @details
 #' The R data frame contains the id of the original data frame and a column `cluster` representing
 #' the cluster to which the observation belongs to.
@@ -24,9 +24,9 @@
 #' \url{https://www.github.com/Redcart/helda}
 #' @export kmeans_procedure
 #' @examples
-#' data <- iris[, c(1:4)]
-#' features <- colnames(iris)[c(1:4)]
-#' result <- kmeans_procedure(data=data, columns=features, threshold_min=2, threshold=10,
+#' data <- iris[, c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width")]
+#' features <- colnames(data)
+#' result <- kmeans_procedure(data = data, columns = features, threshold_min = 2, threshold = 10,
 #' verbose=FALSE, seed=10)
 
 kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbose = FALSE, seed = 42)
@@ -159,4 +159,3 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
     return(results)
 
 }
-
