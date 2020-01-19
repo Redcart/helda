@@ -137,7 +137,9 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
       if (verbose  == TRUE)
        {
 
-         print(table(liste_clusterise$cluster))
+         cat("\n")
+         cat(table(liste_clusterise$cluster))
+         cat("\n")
 
        }
 
