@@ -54,7 +54,7 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
       if (verbose == TRUE)
        {
 
-        print(paste("loop : " , b, " nb of clusters : ", k, " n cluster : ", c))
+        cat(paste("loop : " , b, " nb of clusters : ", k, " n cluster : ", c))
 
        }
 
@@ -131,13 +131,6 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
           }
 
        }
-
-      else
-        {# Test to be sure to not forget a case
-
-        print(" Be careful another case exists !")
-
-        }
       # Are all observations clusterized ?
       test <- sum(is.na(liste_temp$cluster)) == 0
 
