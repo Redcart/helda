@@ -14,7 +14,7 @@ test_that("fill gaps time series functions", {
 
   jeu_donnees <- na.omit(jeu_donnees)# we artificially create some gaps in the time series
 
-  data_to_check_1 <- create_calendar_day(data = jeu_donnees, key_variable = "country", time_variable = "year", start_year = 2009, end_year = 2018)
+  data_to_check_1 <- create_calendar(data = jeu_donnees, key_variable = "country", time_variable = "year", start_year = 2009, end_year = 2018)
 
   data_to_check_2 <- start_end_to_fill(data = jeu_donnees, calendar = data_to_check_1, gap_variable = "gdp", key_variable = "country", time_variable = "year")
 

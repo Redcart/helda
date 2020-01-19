@@ -12,13 +12,8 @@ proc_freq(variable, digits = 4)
 \item{digits}{integer that specifies the number of decimals we want to keep in the rounded figures}
 }
 \value{
-data frame of dimension [number of categories x 5].
-}
-\description{
-This function permits to reproduce the output of the SAS proc freq
-}
-\details{
-The five columns diplay the following information:
+a R data frame of dimension [number of categories x 5].
+The five columns display the following information:
 \itemize{
  \item Category: different categories of the original categorical variable
  \item Frequency
@@ -26,6 +21,9 @@ The five columns diplay the following information:
  \item Cumulative.Frequency
  \item Cumulative.Percentage
  }
+}
+\description{
+This function permits to reproduce the output of the SAS proc freq
 }
 \examples{
 data <- iris

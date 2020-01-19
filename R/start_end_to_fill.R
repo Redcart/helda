@@ -32,7 +32,7 @@
 #'  0, NA, NA, NA, NA, NA, NA, 800, 1200, 1500,
 #'  100, 200, 400, 700, 700, 800, 600, 500, NA, NA))
 #'  jeu_donnees <- na.omit(jeu_donnees)# we artificially create some gaps in the time series
-#'  data_1 <- create_calendar_day(data = jeu_donnees, key_variable = "country", time_variable = "year",
+#'  data_1 <- create_calendar(data = jeu_donnees, key_variable = "country", time_variable = "year",
 #'  start_year = 2009, end_year = 2018)
 #'  data_2 <- start_end_to_fill(data = jeu_donnees, calendar = data_1, gap_variable = "gdp",
 #'  key_variable = "country", time_variable = "year")

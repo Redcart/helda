@@ -8,9 +8,8 @@
 #'
 #' @param variable vector on which we want to apply the function
 #' @param digits integer that specifies the number of decimals we want to keep in the rounded figures
-#' @return data frame of dimension [number of categories x 5].
-#' @details
-#' The five columns diplay the following information:
+#' @return a R data frame of dimension [number of categories x 5].
+#' The five columns display the following information:
 #' \itemize{
 #'  \item Category: different categories of the original categorical variable
 #'  \item Frequency
