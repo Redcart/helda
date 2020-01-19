@@ -1,6 +1,6 @@
 Package: helda
 Title: HELPFUL FUNCTIONS for DATA ANALYSIS 
-Version: 0.9.0
+Version: 0.9.1
 Authors@R: person("Simon", "Corde", email = "simon.corde@hotmail.fr", role = c("aut", "cre"))
 Description: The main focus is on preprocessing and data visualization of machine learning models performances. 
   Some functions allow to fill gaps in time series using linear interpolation on panel data, some functions permit to draw lift effect and lift curves
