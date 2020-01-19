@@ -18,17 +18,14 @@ start_end_to_fill(data, calendar, gap_variable, key_variable, time_variable)
 \item{time_variable}{character that represents time variable name that permits to sort observation on a time scale}
 }
 \value{
-a R data frame of dimension containing the original columns and a new one
+a R data frame containing the original columns and a new one:
+\itemize{
+ \item \code{gap_variable}_corrected_1: the gap variable with starts and ends filled
+ }
 }
 \description{
 This function allows to fill the start and end gaps of a time series
 by doing repetition of next (for the start) and previous values (for the end)
-}
-\details{
-The new column is:
-\itemize{
- \item _corrected_1: the variable with starts and ends filled
- }
 }
 \examples{
 rep(c("Paris", "Madrid", "Berlin"), each = 10)

@@ -10,6 +10,7 @@
 #' @param i integer that represents the cluster number
 #' @param data R data frame (all columns are required to be numeric types)
 #' @param cluster character representing the column name of the data frame representing the clusters
+#' @return a vector of coordinates for the centroid of the cluster i
 #' @author Simon CORDE
 #' @keywords centroids data frame
 #' @references Link to the author's github package repository:
@@ -30,7 +31,7 @@ clust_centroid <- function(i, data, cluster)
 #'
 #' @importFrom stats hclust dist cutree
 #' @param data R data frame (all columns are required to be numeric types)
-#' @return numeric value representing the total inertia
+#' @return a numeric value representing the total inertia
 #' @author Simon CORDE
 #' @keywords inertia data frame
 #' @references Link to the author's github package repository:
@@ -63,9 +64,9 @@ compute_inertia <- function(data)
 #' @param data R data frame (all columns are required to be numeric types)
 #' @param method character that specifies the method on which the agglomerative is built upon (by default set to "ward.D")
 #' @param max_clusters integer that represents the maximal number of clusters for which we intend to compute intra group inertia
-#' @return vector of length max_clusters containing the inter group inertia for agglomerative
-#' clustering from 1 cluster to max_clusters
-#' @author Simon CORDE
+#' @return a vector of length \code{max_clusters} containing the inter group inertia for agglomerative
+#' clustering. The ith value of the vector corresponds to the inter group inertia from agglomerative
+#' clustering run with i clusters.
 #' @keywords inertia data frame agglomerative clustering
 #' @references Link to the author's github package repository:
 #' \url{https://www.github.com/Redcart/helda}

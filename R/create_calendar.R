@@ -12,7 +12,8 @@
 #' @param time_variable character that represents the variable name that permits to sort observation on a time scale
 #' @param start_year integer of the starting year of the time serie
 #' @param end_year integer of the ending year of the time serie
-#' @return a R data frame with the key and time variable for a complete calendar
+#' @return a R data frame with the key and time variable. Each id key is associated with all years between
+#' \code{start_year} and \code{end_year}
 #' @author Simon CORDE
 #' @keywords time series fill gaps calendar
 #' @references Link to the author's github package repository:

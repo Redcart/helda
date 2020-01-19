@@ -18,16 +18,13 @@ gap_to_fill(data, gap_variable, key_variable, time_variable, digits = 2)
 \item{digits}{integer number of decimals to keep for the rounding (by default set to 2)}
 }
 \value{
-a R data frame of dimension containing the original columns and a new one
+a R data frame containing the original columns and a new one:
+\itemize{
+ \item \code{gap_variable}_corrected_2: the gap variable with intermediate gaps filled
+ }
 }
 \description{
 This function allows to fill intermediate gaps in panel data by linear interpolation
-}
-\details{
-The new column is:
-\itemize{
- \item _corrected_2: the variable with intermediate gaps filled
- }
 }
 \examples{
 rep(c("Paris", "Madrid", "Berlin"), each = 10)

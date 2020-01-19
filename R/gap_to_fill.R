@@ -14,11 +14,9 @@
 #' @param key_variable character variable name that refers to the key variable in the panel data (ID, ...)
 #' @param time_variable character time variable name that permits to sort observation on a time scale
 #' @param digits integer number of decimals to keep for the rounding (by default set to 2)
-#' @return a R data frame of dimension containing the original columns and a new one
-#' @details
-#' The new column is:
+#' @return a R data frame containing the original columns and a new one:
 #' \itemize{
-#'  \item _corrected_2: the variable with intermediate gaps filled
+#'  \item \code{gap_variable}_corrected_2: the gap variable with intermediate gaps filled
 #'  }
 #' @author Simon CORDE
 #' @keywords time series fill gaps interpolation

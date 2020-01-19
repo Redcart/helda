@@ -14,8 +14,9 @@ compute_inertia_ahc(data, method = "ward.D", max_clusters = 10)
 \item{max_clusters}{integer that represents the maximal number of clusters for which we intend to compute intra group inertia}
 }
 \value{
-vector of length max_clusters containing the inter group inertia for agglomerative
-clustering from 1 cluster to max_clusters
+a vector of length \code{max_clusters} containing the inter group inertia for agglomerative
+clustering. The ith value of the vector corresponds to the inter group inertia from agglomerative
+clustering run with i clusters.
 }
 \description{
 This function allows to compute the inter group inertia from agglomerative clustering
@@ -28,9 +29,6 @@ result <- compute_inertia_ahc(data=data, max_clusters=15)
 \references{
 Link to the author's github package repository:
 \url{https://www.github.com/Redcart/helda}
-}
-\author{
-Simon CORDE
 }
 \keyword{agglomerative}
 \keyword{clustering}

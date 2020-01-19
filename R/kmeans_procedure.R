@@ -14,10 +14,8 @@
 #' @param threshold_max integer that represents the maximum size fo cluster.
 #' @param verbose boolean. if set to TRUE print the current state of the procedure (by default set to FALSE).
 #' @param seed integer that represents seed for the random call (if we want the output to be reproducible).
-#' @return R data frame
-#' @details
-#' The R data frame contains the id of the original data frame and a column `cluster` representing
-#' the cluster to which the observation belongs to.
+#' @return a R data frame contains the number of observation in the original data frame and a column \code{cluster}
+#' representing the cluster to which the observation belongs to.
 #' @author Simon CORDE
 #' @keywords kmeans cluster sizes
 #' @references Link to the github package repository:
