@@ -1,5 +1,5 @@
 Package: helda
-Title: HELPFUL FUNCTIONS for DATA ANALYSIS 
+Title: Preprocess Data and Get Better Insights from Machine Learning Models 
 Version: 0.9.1
 Authors@R: person("Simon", "Corde", email = "simon.corde@hotmail.fr", role = c("aut", "cre"))
 Description: The main focus is on preprocessing and data visualization of machine learning models performances. 
