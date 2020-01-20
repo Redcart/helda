@@ -22,7 +22,7 @@ kmeans_procedure(
 
 \item{threshold_max}{integer that represents the maximum size fo cluster.}
 
-\item{verbose}{boolean. if set to TRUE print the current state of the procedure (by default set to FALSE).}
+\item{verbose}{boolean. if set to TRUE displays the current state of the procedure (by default set to FALSE).}
 
 \item{seed}{integer that represents seed for the random call (if we want the output to be reproducible).}
 }

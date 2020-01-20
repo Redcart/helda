@@ -12,7 +12,7 @@
 #' @param columns vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.
 #' @param threshold_min integer that represents the minimum size for cluster.
 #' @param threshold_max integer that represents the maximum size fo cluster.
-#' @param verbose boolean. if set to TRUE print the current state of the procedure (by default set to FALSE).
+#' @param verbose boolean. if set to TRUE displays the current state of the procedure (by default set to FALSE).
 #' @param seed integer that represents seed for the random call (if we want the output to be reproducible).
 #' @return a R data frame contains the number of observation in the original data frame and a column \code{cluster}
 #' representing the cluster to which the observation belongs to.
