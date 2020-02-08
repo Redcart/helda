@@ -1,9 +1,6 @@
 # R package helda (HELpful functions for Data Analysis in R)
-<<<<<<< HEAD
-[![Package version](https://img.shields.io/badge/version-0.9.0-green.svg)](https://shields.io/)
-=======
 [![Package version](https://img.shields.io/badge/version-0.9.1-green.svg)](https://shields.io/)
->>>>>>> master
+
 [![Build Status](https://travis-ci.com/Redcart/helda.svg?branch=master)](https://travis-ci.com/Redcart/helda)
 [![Codecov test coverage](https://codecov.io/gh/Redcart/helda/branch/master/graph/badge.svg)](https://codecov.io/gh/Redcart/helda?branch=master)
 [![Documentation](https://img.shields.io/badge/docs-Roxygen%202-informational.svg)](https://shields.io/)
