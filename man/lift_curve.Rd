@@ -7,12 +7,12 @@
 lift_curve(predictions, true_labels, positive_label)
 }
 \arguments{
-\item{predictions}{vector of predictions. These are generally the result of a machine learning model.
+\item{predictions}{a vector of predictions. These are generally the result of a machine learning model.
 The predictions must be probabilities (a real number between 0 and 1).}
 
-\item{true_labels}{vector of true labels.}
+\item{true_labels}{a vector of true labels.}
 
-\item{positive_label}{string that specify the positive label (Y=1) in the `true_labels`}
+\item{positive_label}{a character or integer that specify the positive label (Y=1) in the `true_labels`}
 }
 \value{
 a ggplot object containing the lift curve
@@ -23,11 +23,11 @@ This function allows to draw a lift curve in a ggplot style for binary classific
 \examples{
 data_training <- titanic_training
 data_validation <- titanic_validation
-model_glm <- glm(formula="Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
-data=data_training,
-family=binomial(link="logit"))
-predictions <- predict(object=model_glm, newdata=titanic_validation, type="response")
-lift_curve(predictions=predictions, true_labels=titanic_validation$Survived, positive_label=1)
+model_glm <- glm(formula = "Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
+data = data_training,
+family = binomial(link = "logit"))
+predictions <- predict(object = model_glm, newdata = titanic_validation, type = "response")
+lift_curve(predictions = predictions, true_labels = titanic_validation$Survived, positive_label = 1)
 }
 \references{
 Link to the author's github package repository:

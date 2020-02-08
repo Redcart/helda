@@ -8,10 +8,10 @@
 #'
 #' @import ggplot2 dplyr
 #' @importFrom stats quantile
-#' @param predictions vector of predictions. These are generally the result of a machine learning model.
+#' @param predictions a vector of predictions. These are generally the result of a machine learning model.
 #' The predictions must be probabilities (a real number between 0 and 1).
-#' @param true_labels vector of true labels.
-#' @param positive_label string that specify the positive label (Y=1) in the `true_labels`
+#' @param true_labels a vector of true labels.
+#' @param positive_label a character or integer that specify the positive label (Y=1) in the `true_labels`
 #' @return a ggplot object containing the lift curve
 #' @author Simon CORDE
 #' @keywords lift curve machine learning classification
@@ -21,11 +21,11 @@
 #' @examples
 #' data_training <- titanic_training
 #' data_validation <- titanic_validation
-#' model_glm <- glm(formula="Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
-#' data=data_training,
-#' family=binomial(link="logit"))
-#' predictions <- predict(object=model_glm, newdata=titanic_validation, type="response")
-#' lift_curve(predictions=predictions, true_labels=titanic_validation$Survived, positive_label=1)
+#' model_glm <- glm(formula = "Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
+#' data = data_training,
+#' family = binomial(link = "logit"))
+#' predictions <- predict(object = model_glm, newdata = titanic_validation, type = "response")
+#' lift_curve(predictions = predictions, true_labels = titanic_validation$Survived, positive_label = 1)
 
 
 lift_curve <- function(predictions, true_labels, positive_label)

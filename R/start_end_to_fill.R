@@ -8,12 +8,12 @@
 #' by doing repetition of next (for the start) and previous values (for the end)
 #'
 #' @import dplyr
-#' @param data R data frame
-#' @param calendar R data frame complete empty calendar (as one can perform with \code{create_calendar_day})
-#' @param gap_variable character that represents name of the variable we want to fill the start and end gaps
-#' @param key_variable character that represents variable name that refers to the key variable in the panel data (ID, ...)
-#' @param time_variable character that represents time variable name that permits to sort observation on a time scale
-#' @return a R data frame containing the original columns and a new one:
+#' @param data a R data frame
+#' @param calendar a R data frame containing a complete empty calendar (as one can performs with \code{create_calendar_day})
+#' @param gap_variable a character. This represents the name of the variable we want to fill the start and end gaps
+#' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...)
+#' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale
+#' @return a R data frame of dimension containing the original columns and a new one:
 #' \itemize{
 #'  \item \code{gap_variable}_corrected_1: the gap variable with starts and ends filled
 #'  }
@@ -24,21 +24,23 @@
 #' @export start_end_to_fill
 #' @export gap_to_fill
 #' @examples
-#' rep(c("Paris", "Madrid", "Berlin"), each = 10)
-#' jeu_donnees <- data.frame("country" = rep(c("France", "Spain", "Germany"), each = 10),
-#' "capital" = rep(c("Paris", "Madrid", "Berlin"), each = 10),
-#' "year" = 2009:2018,
-#' "gdp" = c(NA, NA, 200, 300, 500, 1000, NA, NA, NA, 500,
-#'  0, NA, NA, NA, NA, NA, NA, 800, 1200, 1500,
-#'  100, 200, 400, 700, 700, 800, 600, 500, NA, NA))
-#'  jeu_donnees <- na.omit(jeu_donnees)# we artificially create some gaps in the time series
-#'  data_1 <- create_calendar(data = jeu_donnees, key_variable = "country", time_variable = "year",
-#'  start_year = 2009, end_year = 2018)
-#'  data_2 <- start_end_to_fill(data = jeu_donnees, calendar = data_1, gap_variable = "gdp",
-#'  key_variable = "country", time_variable = "year")
-#'  data_3 <- gap_to_fill(data = data_2, gap_variable = "gdp_corrected_1", key_variable = "country",
-#'  time_variable = "year", digits = 1)
-
+#' library(dplyr)
+#' # We take three countries from 2011 to 2018
+#' fr_sp_ge_pop <- world_countries_pop %>%
+#' filter(country_name %in% c('France', 'Spain', 'Germany')) %>%
+#' filter(year > 2010) %>%
+#' arrange(country_name, year)
+#'
+#' # We artificially create some gaps in time series
+#' fr_sp_ge_pop$population[c(1, 5, 11, 12, 24)] <- NA
+#' fr_sp_ge_pop <- na.omit(fr_sp_ge_pop)
+#'
+#' data_1 <- create_calendar(data = fr_sp_ge_pop, key_variable = "country_code",
+#' time_variable = "year", start_year = 2011, end_year = 2018)
+#' data_2 <- start_end_to_fill(data = fr_sp_ge_pop, calendar = data_1, gap_variable = "population",
+#' key_variable = "country_code", time_variable = "year")
+#' data_3 <- gap_to_fill(data = data_2, gap_variable = "population_corrected_1",
+#' key_variable = "country_code", time_variable = "year", digits = 1)
 
 start_end_to_fill <- function(data, calendar, gap_variable, key_variable, time_variable){
 
