@@ -18,17 +18,14 @@ start_end_to_fill(data, calendar, gap_variable, key_variable, time_variable)
 \item{time_variable}{a character. This represents the time variable name that permits to sort observation on a time scale}
 }
 \value{
-a R data frame of dimension containing the original columns and a new one
+a R data frame of dimension containing the original columns and a new one:
+\itemize{
+ \item \code{gap_variable}_corrected_1: the gap variable with starts and ends filled
+ }
 }
 \description{
 This function allows to fill the start and end gaps of a time series
 by doing repetition of next (for the start) and previous values (for the end)
-}
-\details{
-The new column is:
-\itemize{
- \item _corrected_1: the variable with starts and ends filled
- }
 }
 \examples{
 library(dplyr)
@@ -42,7 +39,7 @@ arrange(country_name, year)
 fr_sp_ge_pop$population[c(1, 5, 11, 12, 24)] <- NA
 fr_sp_ge_pop <- na.omit(fr_sp_ge_pop)
 
-data_1 <- create_calendar_day(data = fr_sp_ge_pop, key_variable = "country_code",
+data_1 <- create_calendar(data = fr_sp_ge_pop, key_variable = "country_code",
 time_variable = "year", start_year = 2011, end_year = 2018)
 data_2 <- start_end_to_fill(data = fr_sp_ge_pop, calendar = data_1, gap_variable = "population",
 key_variable = "country_code", time_variable = "year")

@@ -27,14 +27,11 @@ kmeans_procedure(
 \item{seed}{an integer. This represents the seed for the random call (if we want the output to be reproducible).}
 }
 \value{
-a R data frame
+a R data frame. This contains the id of the original data frame and a column `cluster` representing
+the cluster to which the observation belongs to.
 }
 \description{
 This function allows to perform k-means clustering with constrained on the size of clusters
-}
-\details{
-The R data frame contains the id of the original data frame and a column `cluster` representing
-the cluster to which the observation belongs to.
 }
 \examples{
 data <- iris[, c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width")]

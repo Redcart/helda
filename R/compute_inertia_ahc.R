@@ -10,6 +10,7 @@
 #' @param i an integer that represents the cluster number
 #' @param data a R data frame (all columns are required to be numeric types)
 #' @param cluster a character. This refers to the column name of the data frame representing the clusters
+#' @return a vector of coordinates for the centroid of the cluster i
 #' @author Simon CORDE
 #' @keywords centroids data frame
 #' @references Link to the author's github package repository:
@@ -62,8 +63,9 @@ compute_inertia <- function(data)
 #' @param data a R data frame (all columns are required to be numeric types)
 #' @param method a character. This specifies the method on which the agglomerative is built upon (by default set to "ward.D")
 #' @param max_clusters an integer. The maximal number of clusters for which we intend to compute inter group inertia
-#' @return vector of length max_clusters containing the inter group inertias for agglomerative
-#' clustering from 1 cluster to max_clusters
+#' @return a vector of length \code{max_clusters} containing the inter group inertia for agglomerative
+#' clustering. The ith value of the vector corresponds to the inter group inertia from agglomerative
+#' clustering run with i clusters.
 #' @author Simon CORDE
 #' @keywords inertia data frame agglomerative clustering
 #' @references Link to the author's github package repository:

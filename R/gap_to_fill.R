@@ -14,11 +14,9 @@
 #' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...)
 #' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale
 #' @param digits an integer. This is the number of decimals to keep for the rounding (by default set to 2)
-#' @return a R data frame of dimension containing the original columns and a new one
-#' @details
-#' The new column is:
+#' @return a R data frame of dimension containing the original columns and a new one:
 #' \itemize{
-#'  \item _corrected_2: the variable with intermediate gaps filled
+#'  \item \code{gap_variable}_corrected_2: the gap variable with intermediate gaps filled
 #'  }
 #' @author Simon CORDE
 #' @keywords time series fill gaps interpolation
@@ -37,7 +35,7 @@
 #' fr_sp_ge_pop$population[c(1, 5, 11, 12, 24)] <- NA
 #' fr_sp_ge_pop <- na.omit(fr_sp_ge_pop)
 #'
-#' data_1 <- create_calendar_day(data = fr_sp_ge_pop, key_variable = "country_code",
+#' data_1 <- create_calendar(data = fr_sp_ge_pop, key_variable = "country_code",
 #' time_variable = "year", start_year = 2011, end_year = 2018)
 #' data_2 <- start_end_to_fill(data = fr_sp_ge_pop, calendar = data_1, gap_variable = "population",
 #' key_variable = "country_code", time_variable = "year")

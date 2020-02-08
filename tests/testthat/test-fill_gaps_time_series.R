@@ -3,6 +3,7 @@ library(helda)
 context('Integration test for fill in gaps time series')
 
 test_that("fill gaps time series functions", {
+
   # We take three countries from 2011 to 2018
   fr_sp_ge_pop <- world_countries_pop %>%
    filter(country_name %in% c('France', 'Spain', 'Germany')) %>%
@@ -13,7 +14,7 @@ test_that("fill gaps time series functions", {
   fr_sp_ge_pop$population[c(1, 5, 11, 12, 24)] <- NA
   fr_sp_ge_pop <- na.omit(fr_sp_ge_pop)
 
-  data_1 <- create_calendar_day(data = fr_sp_ge_pop, key_variable = "country_code",
+  data_1 <- create_calendar(data = fr_sp_ge_pop, key_variable = "country_code",
    time_variable = "year", start_year = 2011, end_year = 2018)
   data_2 <- start_end_to_fill(data = fr_sp_ge_pop, calendar = data_1, gap_variable = "population",
    key_variable = "country_code", time_variable = "year")

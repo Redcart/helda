@@ -3,7 +3,7 @@
 export(clust_centroid)
 export(compute_inertia)
 export(compute_inertia_ahc)
-export(create_calendar_day)
+export(create_calendar)
 export(create_formula)
 export(gap_to_fill)
 export(kmeans_procedure)

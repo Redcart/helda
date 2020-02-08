@@ -6,11 +6,10 @@
 #'
 #' @description This function permits to reproduce the output of the SAS proc freq
 #'
-#' @param variable a vector on which we want to apply the function
-#' @param digits an integer that specifies the number of decimals we want to keep in the rounded figures
+#' @param variable vector on which we want to apply the function
+#' @param digits integer that specifies the number of decimals we want to keep in the rounded figures
 #' @return a R data frame of dimension [number of categories x 5].
-#' @details
-#' The five columns diplay the following information:
+#' The five columns display the following information:
 #' \itemize{
 #'  \item Category: different categories of the original categorical variable
 #'  \item Frequency

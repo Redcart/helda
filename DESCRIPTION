@@ -1,8 +1,8 @@
 Package: helda
-Title: HELPFUL FUNCTIONS for DATA ANALYSIS 
-Version: 0.9.0
+Title: Preprocess Data and Get Better Insights from Machine Learning Models 
+Version: 0.9.1
 Authors@R: person("Simon", "Corde", email = "simon.corde@hotmail.fr", role = c("aut", "cre"))
-Description: Bunch of functions that allow to facilitate data analysis. The main focus is on preprocessing and data visualization of machine learning models performances. 
+Description: The main focus is on preprocessing and data visualization of machine learning models performances. 
   Some functions allow to fill gaps in time series using linear interpolation on panel data, some functions permit to draw lift effect and lift curves
   in order to benchmark machine learning models or you can even find the optimal number of clusters in agglomerative clustering algorithm.
 Depends: R (>= 3.5.0),

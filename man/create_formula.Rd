@@ -9,16 +9,14 @@ create_formula(data, position = 1)
 \arguments{
 \item{data}{R data frame}
 
-\item{position}{an integer representing the number of the column in the data frame that we want to predict}
+\item{position}{integer representing the number of the column in the data frame that we want to create a formula}
 }
 \value{
-a character that contains the formula
+string that contains the formula
+The formula is diplayed with the following format: "Y ~ X1 + X2 + ..."
 }
 \description{
 This function allows to create a formula from the columns of a data frame very quickly
-}
-\details{
-The formula is diplayed with the following format: Y ~ X1 + X2
 }
 \examples{
 data <- iris
@@ -27,7 +25,7 @@ result <- create_formula(data = data, position = 4)
 }
 \references{
 Link to the author's github package repository:
-\url{https://www.github.com/Redcart}
+\url{https://www.github.com/Redcart/helda}
 }
 \author{
 Simon CORDE

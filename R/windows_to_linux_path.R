@@ -11,6 +11,7 @@
 #' in the R console. Enter a windows path or copy paste one. Then type ENTER.
 #' The Linux converted path appears.
 #'
+#' @return None
 #' @author Simon CORDE
 #' @keywords windows linux path
 #' @references Link to the author's github package repository:
