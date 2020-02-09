@@ -10,7 +10,7 @@
 #' @param i an integer that represents the cluster number
 #' @param data a R data frame (all columns are required to be numeric types)
 #' @param cluster a character. This refers to the column name of the data frame representing the clusters
-#' @return a vector of coordinates for the centroid of the cluster i
+#' @return a vector of coordinates of the centroid of the cluster i
 #' @author Simon CORDE
 #' @keywords centroids data frame
 #' @references Link to the author's github package repository:

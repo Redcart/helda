@@ -14,7 +14,7 @@ clust_centroid(i, data, cluster)
 \item{cluster}{a character. This refers to the column name of the data frame representing the clusters}
 }
 \value{
-a vector of coordinates for the centroid of the cluster i
+a vector of coordinates of the centroid of the cluster i
 }
 \description{
 This function allows to compute the centroid of a cluster in a R data frame
