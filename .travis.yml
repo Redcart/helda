@@ -6,7 +6,12 @@ r:
   - release
   - devel
   - bioc-devel
-dist: xenial
+jobs:
+  include:
+    - os: linux
+      dist: xenial
+    - os: osx
+      osx_image: xcode11
 services:
   - xvfb
 # Set one of your dependencies from CRAN
