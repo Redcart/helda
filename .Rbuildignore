@@ -3,4 +3,8 @@
 ^\.travis\.yml$
 ^codecov\.yml$
 \.docx$
-\tar.gz$
+\.tar\.gz$
+^cran-comments\.md$
+^README\.Rmd$
+^LICENSE$
+^LICENSE\.md$
