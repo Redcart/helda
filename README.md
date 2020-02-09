@@ -9,10 +9,16 @@ This package provides functionalities that aim at facilitating and saving time w
 
 ## Installation
 
-You can install the package from R using the following commands:
-``` r
-# The development version from GitHub:
+You can install the package in R using the following commands:
 
+- CRAN version:
+``` r
+install.packages("helda")
+```
+
+- Development version from github:
+
+``` r
 # install.packages("devtools")
 devtools::install_github("Redcart/helda")
 ```
