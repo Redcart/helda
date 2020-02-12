@@ -49,12 +49,12 @@ predictions <- predict(object = model_glm, newdata = titanic_validation, type = 
 lift_curve(predictions = predictions, true_labels = titanic_validation$Survived, positive_label = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-lift_curve-1.png" width="100%" />
 
 Getting help
 ------------
 
-If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/Redcart/helda/issues).
+If you encounter a clear bug, please file a minimal reproducible example on [issues section](https://github.com/Redcart/helda/issues) of the repository.
 
 Author
 ------
