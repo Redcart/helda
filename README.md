@@ -54,7 +54,7 @@ lift_curve(predictions = predictions, true_labels = titanic_validation$Survived,
 Getting help
 ------------
 
-If you encounter a clear bug, please file a minimal reproducible example on [issues section](https://github.com/Redcart/helda/issues) of the repository.
+If you encounter a clear bug, please file a minimal reproducible example on the [issues section](https://github.com/Redcart/helda/issues) of the repository.
 
 Author
 ------
