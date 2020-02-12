@@ -1,36 +1,64 @@
-# R package helda (HELpful functions for Data Analysis in R)
-[![CRAN status](https://www.r-pkg.org/badges/version/helda)](https://cran.r-project.org/package=helda)
-[![Build Status](https://travis-ci.com/Redcart/helda.svg?branch=master)](https://travis-ci.com/Redcart/helda)
-[![Codecov test coverage](https://codecov.io/gh/Redcart/helda/branch/master/graph/badge.svg)](https://codecov.io/gh/Redcart/helda?branch=master)
-[![Documentation](https://www.rdocumentation.org/badges/version/helda)](https://www.rdocumentation.org/packages/helda/versions/0.9.1)
-[![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+R package helda (HELpful functions for Data Analysis in R)
+==========================================================
+
+<!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/helda)](https://cran.r-project.org/package=helda) [![Build Status](https://travis-ci.com/Redcart/helda.svg?branch=master)](https://travis-ci.com/Redcart/helda) [![Codecov test coverage](https://codecov.io/gh/Redcart/helda/branch/master/graph/badge.svg)](https://codecov.io/gh/Redcart/helda?branch=master) [![Documentation](https://www.rdocumentation.org/badges/version/helda)](https://www.rdocumentation.org/packages/helda/versions/0.9.1) [![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) <!-- badges: end -->
+
+Overview
+--------
+
 This package provides functionalities that aim at facilitating and saving time when analysing data.
 
-## Installation
+Installation
+------------
 
-You can install the package in R using the following commands:
+You can install helda from CRAN by simply running:
 
-- CRAN version:
 ``` r
 install.packages("helda")
 ```
 
-- Development version from github:
+Development version
+-------------------
+
+To get a bug fix, or use a feature from the development version, you can install helda from this GitHub repository.
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("Redcart/helda")
 ```
 
+Usage
+-----
 
-### Author
+This is a quick introduction to the lift curve function of the package:
+
+``` r
+library(helda)
+
+data_training <- titanic_training
+data_validation <- titanic_validation
+
+model_glm <- glm(formula = "Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
+                 data = data_training,
+                 family = binomial(link = "logit"))
+
+predictions <- predict(object = model_glm, newdata = titanic_validation, type = "response")
+
+lift_curve(predictions = predictions, true_labels = titanic_validation$Survived, positive_label = 1)
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+
+Getting help
+------------
+
+If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/Redcart/helda/issues).
+
+Author
+------
 
 Simon Corde
 
-simon.corde@hotmail.fr
-
-### Issues
-
-If you want to report issues or bugs please start a new issue in the github repository.
-
+<simon.corde@hotmail.fr>
