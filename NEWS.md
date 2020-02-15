@@ -1,3 +1,13 @@
+## version 1.0.0
+
+ * Lift curve and lift effect functions more precise
+ * Function compute_inertia renamed as compute_global_inertia 
+ * Inertias function script split into three differents scripts
+ * New markdown file (with Rmd extension) with new examples and new badges
+ * Unit tests more complete
+ * Minor corrections in documentation
+ * Add NEWS markdon file
+
 ## version 0.9.1
 
  * Add \value in all documentation Rd files
