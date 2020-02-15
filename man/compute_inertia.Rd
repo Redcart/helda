@@ -7,16 +7,17 @@
 compute_inertia(data)
 }
 \arguments{
-\item{data}{R data frame (all columns are required to be numeric types)}
+\item{data}{a R data frame (all columns are required to be numeric types).}
 }
 \value{
-a numeric value representing the total inertia
+a numeric value representing the total inertia.
 }
 \description{
 This function allows to compute the inertia of a R data frame
 }
 \examples{
-compute_inertia(mtcars)
+result <- compute_inertia(mtcars)
+result
 }
 \references{
 Link to the author's github package repository:

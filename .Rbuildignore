@@ -8,3 +8,4 @@
 ^README\.Rmd$
 ^LICENSE$
 ^LICENSE\.md$
+^README-.*\.png$

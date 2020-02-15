@@ -7,14 +7,14 @@
 clust_centroid(i, data, cluster)
 }
 \arguments{
-\item{i}{an integer that represents the cluster number}
+\item{i}{an integer that represents the cluster number.}
 
-\item{data}{a R data frame (all columns are required to be numeric types)}
+\item{data}{a R data frame (all columns are required to be numeric types).}
 
 \item{cluster}{a character. This refers to the column name of the data frame representing the clusters}
 }
 \value{
-a vector of coordinates of the centroid of the cluster i
+a vector of coordinates of the centroid of the cluster i.
 }
 \description{
 This function allows to compute the centroid of a cluster in a R data frame

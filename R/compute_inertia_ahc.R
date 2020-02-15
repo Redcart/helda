@@ -6,11 +6,10 @@
 #'
 #' @description This function allows to compute the centroid of a cluster in a R data frame
 #'
-#' @importFrom stats hclust dist cutree
-#' @param i an integer that represents the cluster number
-#' @param data a R data frame (all columns are required to be numeric types)
+#' @param i an integer that represents the cluster number.
+#' @param data a R data frame (all columns are required to be numeric types).
 #' @param cluster a character. This refers to the column name of the data frame representing the clusters
-#' @return a vector of coordinates of the centroid of the cluster i
+#' @return a vector of coordinates of the centroid of the cluster i.
 #' @author Simon CORDE
 #' @keywords centroids data frame
 #' @references Link to the author's github package repository:
@@ -28,16 +27,17 @@ clust_centroid <- function(i, data, cluster)
 #'
 #' @description This function allows to compute the inertia of a R data frame
 #'
-#' @importFrom stats hclust dist cutree
-#' @param data R data frame (all columns are required to be numeric types)
-#' @return a numeric value representing the total inertia
+#' @importFrom dplyr %>%
+#' @param data a R data frame (all columns are required to be numeric types).
+#' @return a numeric value representing the total inertia.
 #' @author Simon CORDE
 #' @keywords inertia data frame
 #' @references Link to the author's github package repository:
 #' \url{https://www.github.com/Redcart/helda}
 #' @export compute_inertia
 #' @examples
-#' compute_inertia(mtcars)
+#' result <- compute_inertia(mtcars)
+#' result
 
 compute_inertia <- function(data)
 {
@@ -48,19 +48,20 @@ compute_inertia <- function(data)
 
   squares <- (data_with_center[ ,-(n+1)] -  data_with_center[ ,(n+1)])^2
 
-  inertia <- sum(apply(squares, 2, sum)) / n
+  inertia <- sum(apply(squares, 2, sum)) / (n-1)
 
   return(inertia)
 
 }
 
-#' @title Intragroup inertia for choosing the optimal number of clusters in Agglomerative Clustering
+#' @title Inter group inertia for choosing the optimal number of clusters in Agglomerative Clustering
 #'
 #' @description This function allows to compute the inter group inertia from agglomerative clustering
 #' for different number of clusters
 #'
 #' @importFrom stats hclust dist cutree
-#' @param data a R data frame (all columns are required to be numeric types)
+#' @importFrom dplyr %>%
+#' @param data a R data frame (all columns are required to be numeric types).
 #' @param method a character. This specifies the method on which the agglomerative is built upon (by default set to "ward.D")
 #' @param max_clusters an integer. The maximal number of clusters for which we intend to compute inter group inertia
 #' @return a vector of length \code{max_clusters} containing the inter group inertia for agglomerative
@@ -72,8 +73,11 @@ compute_inertia <- function(data)
 #' \url{https://www.github.com/Redcart/helda}
 #' @export compute_inertia_ahc
 #' @examples
-#' data <- iris[, c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width")]
+#' library(dplyr)
+#' # We select only numeric features from Iris data set
+#' data <- iris %>% select(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)
 #' result <- compute_inertia_ahc(data = data, max_clusters = 15)
+#' result
 
 # The basic steps of the functions are the following:
 # Step 1: Find clusters centroids and the global centroid
@@ -89,6 +93,8 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
   model_ahc <- hclust(d = dist(data), method = method)
 
+  global_inertia <- compute_inertia(data = data)
+
   for (i in 2: max_clusters)
   {
 
@@ -100,12 +106,13 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
     squares <- (centroids[, -(i+1)] - centroids[, (i+1)])^2
 
-    frequencies <- as.vector(table(ahc_clusters)) / n
+    frequencies <- as.vector(table(ahc_clusters)) / (n-1)
 
     intergroup_inertia_ahc <- c(intergroup_inertia_ahc, sum(apply(squares, 2, sum)*frequencies))
 
   }
 
+  intergroup_inertia_ahc <- c(global_inertia, intergroup_inertia_ahc)
   return(intergroup_inertia_ahc)
 
 }
