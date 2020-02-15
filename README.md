@@ -46,7 +46,10 @@ model_glm <- glm(formula = "Survived ~ Pclass + Sex + Age + SibSp + Fare + Embar
 
 predictions <- predict(object = model_glm, newdata = titanic_validation, type = "response")
 
-lift_curve(predictions = predictions, true_labels = titanic_validation$Survived, positive_label = 1)
+plot <- lift_curve(predictions = predictions, true_labels = titanic_validation$Survived, 
+                   positive_label = 1)
+
+plot
 ```
 
 <img src="man/figures/README-lift_curve-1.png" width="100%" />
