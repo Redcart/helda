@@ -18,7 +18,7 @@ start_end_to_fill(data, calendar, gap_variable, key_variable, time_variable)
 \item{time_variable}{a character. This represents the time variable name that permits to sort observation on a time scale}
 }
 \value{
-a R data frame of dimension containing the original columns and a new one:
+a R data frame that contains the original columns and a new one:
 \itemize{
  \item \code{gap_variable}_corrected_1: the gap variable with starts and ends filled
  }

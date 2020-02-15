@@ -13,7 +13,7 @@
 #' @param gap_variable a character. This represents the name of the variable we want to fill the start and end gaps
 #' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...)
 #' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale
-#' @return a R data frame of dimension containing the original columns and a new one:
+#' @return a R data frame that contains the original columns and a new one:
 #' \itemize{
 #'  \item \code{gap_variable}_corrected_1: the gap variable with starts and ends filled
 #'  }

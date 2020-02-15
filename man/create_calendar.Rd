@@ -9,17 +9,17 @@ create_calendar(data, key_variable, time_variable, start_year, end_year)
 \arguments{
 \item{data}{R data frame}
 
-\item{key_variable}{character that represents the variable name that refers to the key variable in the panel data (ID, ...)}
+\item{key_variable}{a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...).}
 
-\item{time_variable}{character that represents the variable name that permits to sort observation on a time scale}
+\item{time_variable}{a character. This represents the time variable name that permits to sort observation on a time scale.}
 
-\item{start_year}{integer of the starting year of the time serie}
+\item{start_year}{integer of the starting year of the time series.}
 
-\item{end_year}{integer of the ending year of the time serie}
+\item{end_year}{integer of the ending year of the time series.}
 }
 \value{
 a R data frame with the key and time variable. Each id key is associated with all years between
-\code{start_year} and \code{end_year}
+\code{start_year} and \code{end_year}.
 }
 \description{
 This function allows to create a complete empty calendar on a year scale

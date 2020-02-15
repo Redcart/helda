@@ -10,11 +10,11 @@
 #' @importFrom rlang :=
 #' @import dplyr
 #' @param data a R data frame
-#' @param gap_variable a character. This represents the name of the variable we want to fill the start and end gaps
-#' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...)
-#' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale
-#' @param digits an integer. This is the number of decimals to keep for the rounding (by default set to 2)
-#' @return a R data frame of dimension containing the original columns and a new one:
+#' @param gap_variable a character. This represents the name of the variable we want to fill the start and end gaps.
+#' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...).
+#' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale.
+#' @param digits an integer. This is the number of decimals to keep for the rounding (by default set to 2).
+#' @return a R data frame that contains the original columns and a new one:
 #' \itemize{
 #'  \item \code{gap_variable}_corrected_2: the gap variable with intermediate gaps filled
 #'  }

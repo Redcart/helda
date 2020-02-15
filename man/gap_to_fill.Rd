@@ -9,16 +9,16 @@ gap_to_fill(data, gap_variable, key_variable, time_variable, digits = 2)
 \arguments{
 \item{data}{a R data frame}
 
-\item{gap_variable}{a character. This represents the name of the variable we want to fill the start and end gaps}
+\item{gap_variable}{a character. This represents the name of the variable we want to fill the start and end gaps.}
 
-\item{key_variable}{a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...)}
+\item{key_variable}{a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...).}
 
-\item{time_variable}{a character. This represents the time variable name that permits to sort observation on a time scale}
+\item{time_variable}{a character. This represents the time variable name that permits to sort observation on a time scale.}
 
-\item{digits}{an integer. This is the number of decimals to keep for the rounding (by default set to 2)}
+\item{digits}{an integer. This is the number of decimals to keep for the rounding (by default set to 2).}
 }
 \value{
-a R data frame of dimension containing the original columns and a new one:
+a R data frame that contains the original columns and a new one:
 \itemize{
  \item \code{gap_variable}_corrected_2: the gap variable with intermediate gaps filled
  }
