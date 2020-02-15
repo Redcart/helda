@@ -14,9 +14,9 @@
 #' @keywords centroids data frame
 #' @references Link to the author's github package repository:
 #' \url{https://www.github.com/Redcart/helda}
-#' @export clust_centroid
+#' @export cluster_centroid
 
-clust_centroid <- function(i, data, cluster)
+cluster_centroid <- function(i, data, cluster)
 {
 
   return(colMeans(data[cluster == i,]))

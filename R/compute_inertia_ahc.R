@@ -46,7 +46,7 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
     ahc_clusters <- cutree(tree = model_ahc, k = i)
 
-    centroids <- sapply(unique(ahc_clusters), clust_centroid, data, ahc_clusters)
+    centroids <- sapply(unique(ahc_clusters), cluster_centroid, data, ahc_clusters)
 
     centroids <- centroids %>% cbind(rowMeans(centroids))
 
