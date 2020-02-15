@@ -6,8 +6,8 @@
 #'
 #' @description This function permits to reproduce the output of the SAS proc freq
 #'
-#' @param variable vector on which we want to apply the function
-#' @param digits integer that specifies the number of decimals we want to keep in the rounded figures
+#' @param variable vector on which we want to apply the function.
+#' @param digits integer that specifies the number of decimals we want to keep in the rounded figures.
 #' @return a R data frame of dimension [number of categories x 5].
 #' The five columns display the following information:
 #' \itemize{
@@ -26,6 +26,7 @@
 #' data <- iris
 #' str(data)
 #' result <- proc_freq(data$Species)
+#' result
 
 proc_freq <- function(variable, digits = 4)
 {

@@ -1,7 +1,8 @@
 ## version 1.0.0
 
  * Lift curve and lift effect functions more precise
- * Function compute_inertia renamed as compute_global_inertia 
+ * Function compute_inertia renamed as compute_global_inertia
+ * Function clust_centroid renamed as cluster_centroid
  * Inertias function script split into three differents scripts
  * New markdown file (with Rmd extension) with new examples and new badges
  * Unit tests more complete

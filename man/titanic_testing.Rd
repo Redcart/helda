@@ -4,7 +4,7 @@
 \name{titanic_testing}
 \alias{titanic_testing}
 \title{Titanic testing data set}
-\format{Data frame of 418 rows and 10 columns}
+\format{Data frame of 418 observations and 10 features}
 \usage{
 titanic_testing
 }

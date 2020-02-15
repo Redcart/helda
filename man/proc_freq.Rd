@@ -7,9 +7,9 @@
 proc_freq(variable, digits = 4)
 }
 \arguments{
-\item{variable}{vector on which we want to apply the function}
+\item{variable}{vector on which we want to apply the function.}
 
-\item{digits}{integer that specifies the number of decimals we want to keep in the rounded figures}
+\item{digits}{integer that specifies the number of decimals we want to keep in the rounded figures.}
 }
 \value{
 a R data frame of dimension [number of categories x 5].
@@ -29,6 +29,7 @@ This function permits to reproduce the output of the SAS proc freq
 data <- iris
 str(data)
 result <- proc_freq(data$Species)
+result
 }
 \references{
 Link to the author's github package repository:

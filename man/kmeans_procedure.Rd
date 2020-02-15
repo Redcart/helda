@@ -14,7 +14,7 @@ kmeans_procedure(
 )
 }
 \arguments{
-\item{data}{a R data frame}
+\item{data}{a R data frame.}
 
 \item{columns}{a vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.}
 
@@ -34,7 +34,8 @@ the cluster to which the observation belongs to.
 This function allows to perform k-means clustering with constrained on the size of clusters
 }
 \examples{
-data <- iris[, c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width")]
+library(dplyr)
+data <- iris \%>\% select(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)
 features <- colnames(data)
 result <- kmeans_procedure(data = data, columns = features, threshold_min = 2, threshold = 10,
 verbose=FALSE, seed=10)
