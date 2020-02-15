@@ -2,58 +2,6 @@
 ###  Computing of the intragroup variance for AHC  ###
 ######################################################
 
-#' @title Centroid of a cluster
-#'
-#' @description This function allows to compute the centroid of a cluster in a R data frame
-#'
-#' @param i an integer that represents the cluster number.
-#' @param data a R data frame (all columns are required to be numeric types).
-#' @param cluster a character. This refers to the column name of the data frame representing the clusters
-#' @return a vector of coordinates of the centroid of the cluster i.
-#' @author Simon CORDE
-#' @keywords centroids data frame
-#' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
-#' @export clust_centroid
-
-clust_centroid <- function(i, data, cluster)
-{
-
-  return(colMeans(data[cluster == i,]))
-
-}
-
-#' @title Inertia of a data frame
-#'
-#' @description This function allows to compute the inertia of a R data frame
-#'
-#' @importFrom dplyr %>%
-#' @param data a R data frame (all columns are required to be numeric types).
-#' @return a numeric value representing the total inertia.
-#' @author Simon CORDE
-#' @keywords inertia data frame
-#' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
-#' @export compute_inertia
-#' @examples
-#' result <- compute_inertia(mtcars)
-#' result
-
-compute_inertia <- function(data)
-{
-
-  n <- dim(data)[1]
-
-  data_with_center <- t(data %>% rbind(colMeans(data)))
-
-  squares <- (data_with_center[ ,-(n+1)] -  data_with_center[ ,(n+1)])^2
-
-  inertia <- sum(apply(squares, 2, sum)) / (n-1)
-
-  return(inertia)
-
-}
-
 #' @title Inter group inertia for choosing the optimal number of clusters in Agglomerative Clustering
 #'
 #' @description This function allows to compute the inter group inertia from agglomerative clustering
@@ -93,7 +41,7 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
   model_ahc <- hclust(d = dist(data), method = method)
 
-  global_inertia <- compute_inertia(data = data)
+  global_inertia <- helda::compute_global_inertia(data = data)
 
   for (i in 2: max_clusters)
   {
