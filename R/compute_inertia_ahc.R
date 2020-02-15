@@ -41,8 +41,6 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
   model_ahc <- hclust(d = dist(data), method = method)
 
-  global_inertia <- helda::compute_global_inertia(data = data)
-
   for (i in 2: max_clusters)
   {
 
@@ -60,7 +58,7 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
   }
 
-  intergroup_inertia_ahc <- c(global_inertia, intergroup_inertia_ahc)
+  intergroup_inertia_ahc <- c(0, intergroup_inertia_ahc)
   return(intergroup_inertia_ahc)
 
 }
