@@ -58,6 +58,7 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
   }
 
+  # The inter group inertia for one cluster is 0 by definition
   intergroup_inertia_ahc <- c(0, intergroup_inertia_ahc)
   return(intergroup_inertia_ahc)
 
