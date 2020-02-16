@@ -4,20 +4,30 @@
 \alias{cluster_centroid}
 \title{Centroid of a cluster}
 \usage{
-cluster_centroid(i, data, cluster)
+cluster_centroid(i, data, cluster_variable)
 }
 \arguments{
 \item{i}{an integer that represents the cluster number.}
 
 \item{data}{a R data frame (all columns are required to be numeric types).}
 
-\item{cluster}{a character. This refers to the column name of the data frame representing the clusters.}
+\item{cluster_variable}{a character. This refers to the column name of the data frame representing
+the clusters.}
 }
 \value{
 a vector of coordinates of the centroid of the cluster i.
 }
 \description{
 This function allows to compute the centroid of a cluster in a R data frame
+}
+\examples{
+library(dplyr)
+# We create some cluster from k-means on the iris data set
+data <- iris \%>\% select(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)
+result_kmeans <- kmeans(data, 3)
+data$cluster <- result_kmeans$cluster
+result <- cluster_centroid(i = 2, data = data, cluster_variable = "cluster")
+result
 }
 \references{
 Link to the author's github package repository:

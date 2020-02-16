@@ -46,7 +46,9 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
     ahc_clusters <- cutree(tree = model_ahc, k = i)
 
-    centroids <- sapply(unique(ahc_clusters), cluster_centroid, data, ahc_clusters)
+    data$cluster <- ahc_clusters
+
+    centroids <- sapply(unique(ahc_clusters), cluster_centroid, data, "cluster")
 
     centroids <- centroids %>% cbind(rowMeans(centroids))
 
@@ -57,9 +59,6 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
     intergroup_inertia_ahc <- c(intergroup_inertia_ahc, sum(apply(squares, 2, sum)*frequencies))
 
   }
-
-  # The inter group inertia for one cluster is 0 by definition
-  intergroup_inertia_ahc <- c(0, intergroup_inertia_ahc)
 
   return(intergroup_inertia_ahc)
 
