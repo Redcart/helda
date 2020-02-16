@@ -2,7 +2,7 @@
 % Please edit documentation in R/compute_inertia_ahc.R
 \name{compute_inertia_ahc}
 \alias{compute_inertia_ahc}
-\title{Inter group inertia for choosing the optimal number of clusters in Agglomerative Clustering}
+\title{Intra group inertia for choosing the optimal number of clusters in Agglomerative Clustering}
 \usage{
 compute_inertia_ahc(data, method = "ward.D", max_clusters = 10)
 }

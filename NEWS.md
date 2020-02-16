@@ -7,7 +7,7 @@
  * New markdown file (with Rmd extension) with new examples and new badges
  * Unit tests more complete
  * Minor corrections in documentation
- * Add NEWS markdon file
+ * Add NEWS markdone file
 
 ## version 0.9.1
 

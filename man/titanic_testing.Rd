@@ -5,6 +5,9 @@
 \alias{titanic_testing}
 \title{Titanic testing data set}
 \format{Data frame of 418 observations and 10 features}
+\source{
+Kaggle Titanic Competition: \url{https://www.kaggle.com/c/titanic/data}
+}
 \usage{
 titanic_testing
 }

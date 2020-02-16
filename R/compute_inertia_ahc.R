@@ -2,7 +2,7 @@
 ###  Computing of the intragroup variance for AHC  ###
 ######################################################
 
-#' @title Inter group inertia for choosing the optimal number of clusters in Agglomerative Clustering
+#' @title Intra group inertia for choosing the optimal number of clusters in Agglomerative Clustering
 #'
 #' @description This function allows to compute the inter group inertia from agglomerative clustering
 #' for different number of clusters
@@ -30,7 +30,7 @@
 # The basic steps of the functions are the following:
 # Step 1: Find clusters centroids and the global centroid
 # Step 2: Compute quadratic differences between cluster centroids and global centroid
-# Step 3: Compute the weighted average of quadratic differences (weigth = size of the cluster)
+# Step 3: Compute the weighted average of quadratic differences (weight = size of the cluster)
 
 compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 {
@@ -60,6 +60,7 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
   # The inter group inertia for one cluster is 0 by definition
   intergroup_inertia_ahc <- c(0, intergroup_inertia_ahc)
+
   return(intergroup_inertia_ahc)
 
 }
