@@ -22,7 +22,7 @@ options(tibble.print_min = 5, tibble.print_max = 5)
 # R package helda (HELpful functions for Data Analysis in R)
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/helda)](https://cran.r-project.org/package=helda)
+[![CRAN status](https://www.r-pkg.org/badges/version/helda)](https://CRAN.R-project.org/package=helda)
 [![Build Status](https://travis-ci.com/Redcart/helda.svg?branch=master)](https://travis-ci.com/Redcart/helda)
 [![Codecov test coverage](https://codecov.io/gh/Redcart/helda/branch/master/graph/badge.svg)](https://codecov.io/gh/Redcart/helda?branch=master)
 [![Documentation](https://www.rdocumentation.org/badges/version/helda)](https://www.rdocumentation.org/packages/helda)
