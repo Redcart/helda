@@ -64,4 +64,4 @@ Author
 
 Simon Corde
 
-<simon.corde@hotmail.fr>
+simon.corde\[at\]hotmail.fr

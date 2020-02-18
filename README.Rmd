@@ -80,4 +80,4 @@ If you encounter a clear bug, please file a minimal reproducible example on the 
 
 Simon Corde
 
-simon.corde@hotmail.fr
+simon.corde[at]hotmail.fr
