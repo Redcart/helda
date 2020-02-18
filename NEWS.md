@@ -3,8 +3,7 @@
  * Lift curve and lift effect functions more precise
  * Function compute_inertia renamed as compute_global_inertia
  * Function clust_centroid renamed as cluster_centroid
- * Inertias function script split into three differents scripts
- * New README markdown file (with Rmd extension) with new examples and new badges
+ * Update README markdown file (with Rmd extension) with example and new badges
  * Add NEWS markdown file
  * Unit tests more complete
  * Minor corrections in documentation
