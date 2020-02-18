@@ -12,10 +12,10 @@ The predictions must be probabilities (a real number between 0 and 1).}
 
 \item{true_labels}{a vector of true labels.}
 
-\item{positive_label}{a character or integer that specify the positive label (Y=1) in the `true_labels`}
+\item{positive_label}{a character or integer that specify the positive label (Y=1) in the `true_labels`.}
 }
 \value{
-a ggplot object containing the lift effect
+a ggplot object containing the lift effect.
 }
 \description{
 This function allows to draw the lift effect on a graph for binary classification model
@@ -26,9 +26,10 @@ data_validation <- titanic_validation
 model_glm <- glm(formula = "Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
 data = data_training,
 family = binomial(link = "logit"))
-predictions <- predict(object=model_glm, newdata = titanic_validation, type = "response")
-lift_effect(predictions = predictions, true_labels = titanic_validation$Survived,
+predictions <- predict(object = model_glm, newdata = data_validation, type = "response")
+plot <- lift_effect(predictions = predictions, true_labels = data_validation$Survived,
 positive_label = 1)
+plot
 }
 \references{
 Link to the author's github package repository:

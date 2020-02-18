@@ -1,6 +1,6 @@
-##############################################
-###  Function for complete empty calendar  ###
-##############################################
+#########################################################
+###  Function for creating a complete empty calendar  ###
+#########################################################
 
 #' @title Complete empty calendar
 #'
@@ -8,12 +8,12 @@
 #'
 #' @import dplyr sqldf
 #' @param data R data frame
-#' @param key_variable character that represents the variable name that refers to the key variable in the panel data (ID, ...)
-#' @param time_variable character that represents the variable name that permits to sort observation on a time scale
-#' @param start_year integer of the starting year of the time serie
-#' @param end_year integer of the ending year of the time serie
+#' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...).
+#' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale.
+#' @param start_year integer of the starting year of the time series.
+#' @param end_year integer of the ending year of the time series.
 #' @return a R data frame with the key and time variable. Each id key is associated with all years between
-#' \code{start_year} and \code{end_year}
+#' \code{start_year} and \code{end_year}.
 #' @author Simon CORDE
 #' @keywords time series fill gaps calendar
 #' @references Link to the author's github package repository:

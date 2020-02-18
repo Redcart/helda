@@ -2,12 +2,12 @@
 % Please edit documentation in R/compute_inertia_ahc.R
 \name{compute_inertia_ahc}
 \alias{compute_inertia_ahc}
-\title{Intragroup inertia for choosing the optimal number of clusters in Agglomerative Clustering}
+\title{Intra group inertia for choosing the optimal number of clusters in Agglomerative Clustering}
 \usage{
 compute_inertia_ahc(data, method = "ward.D", max_clusters = 10)
 }
 \arguments{
-\item{data}{a R data frame (all columns are required to be numeric types)}
+\item{data}{a R data frame (all columns are required to be numeric types).}
 
 \item{method}{a character. This specifies the method on which the agglomerative is built upon (by default set to "ward.D")}
 
@@ -23,8 +23,11 @@ This function allows to compute the inter group inertia from agglomerative clust
 for different number of clusters
 }
 \examples{
-data <- iris[, c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width")]
+library(dplyr)
+# We select only numeric features from Iris data set
+data <- iris \%>\% select(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)
 result <- compute_inertia_ahc(data = data, max_clusters = 15)
+result
 }
 \references{
 Link to the author's github package repository:

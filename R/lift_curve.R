@@ -11,8 +11,8 @@
 #' @param predictions a vector of predictions. These are generally the result of a machine learning model.
 #' The predictions must be probabilities (a real number between 0 and 1).
 #' @param true_labels a vector of true labels.
-#' @param positive_label a character or integer that specify the positive label (Y=1) in the `true_labels`
-#' @return a ggplot object containing the lift curve
+#' @param positive_label a character or integer that specify the positive label (Y=1) in the `true_labels`.
+#' @return a ggplot object containing the lift curve.
 #' @author Simon CORDE
 #' @keywords lift curve machine learning classification
 #' @references Link to the author's github package repository:
@@ -24,8 +24,10 @@
 #' model_glm <- glm(formula = "Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
 #' data = data_training,
 #' family = binomial(link = "logit"))
-#' predictions <- predict(object = model_glm, newdata = titanic_validation, type = "response")
-#' lift_curve(predictions = predictions, true_labels = titanic_validation$Survived, positive_label = 1)
+#' predictions <- predict(object = model_glm, newdata = data_validation, type = "response")
+#' plot <- lift_curve(predictions = predictions, true_labels = data_validation$Survived,
+#' positive_label = 1)
+#' plot
 
 
 lift_curve <- function(predictions, true_labels, positive_label)
@@ -40,19 +42,18 @@ lift_curve <- function(predictions, true_labels, positive_label)
     arrange(desc(true_labels))
 
   n <- length(true_labels)
-  step <- floor(n/100)
-  points <- seq(1, n, step)
+  points <- seq(1, n, 1)
 
   lift_2 <- c()
   truth_lift <- c()
-  nb_positifs <- sum(data_1$true_labels == positive_label)
-  quantiles <- quantile(0:n)
+  nb_positives <- sum(data_1$true_labels == positive_label)
+  quantiles <- quantile(points, probs = seq(0, 1, 0.2))
 
   for (i in 1:length(points))
   {
 
-    lift_2 <- c(lift_2, sum(data_1$true_labels[1:points[i]] == positive_label)/nb_positifs)
-    truth_lift <- c(truth_lift, sum(data_2$true_labels[1:points[i]] == positive_label)/nb_positifs)
+    lift_2 <- c(lift_2, sum(data_1$true_labels[1:points[i]] == positive_label)/nb_positives)
+    truth_lift <- c(truth_lift, sum(data_2$true_labels[1:points[i]] == positive_label)/nb_positives)
 
   }
 

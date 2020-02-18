@@ -8,7 +8,7 @@
 #'
 #' @importFrom stats kmeans
 #' @import dplyr
-#' @param data a R data frame
+#' @param data a R data frame.
 #' @param columns a vector of columns names of the data frame on which we perform the kmeans algorithm. These features have to be numeric.
 #' @param threshold_min an integer. It represents the minimum size for cluster.
 #' @param threshold_max an integer. It represents the maximum size fo cluster.
@@ -22,7 +22,8 @@
 #' \url{https://www.github.com/Redcart/helda}
 #' @export kmeans_procedure
 #' @examples
-#' data <- iris[, c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width")]
+#' library(dplyr)
+#' data <- iris %>% select(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)
 #' features <- colnames(data)
 #' result <- kmeans_procedure(data = data, columns = features, threshold_min = 2, threshold = 10,
 #' verbose=FALSE, seed=10)

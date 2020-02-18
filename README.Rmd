@@ -1,0 +1,83 @@
+---
+title: "README file of HELDA package"
+author: Simon Corde
+date: February 12, 2020
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+options(tibble.print_min = 5, tibble.print_max = 5)
+```
+
+# R package helda (HELpful functions for Data Analysis in R)
+
+<!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/helda)](https://CRAN.R-project.org/package=helda)
+[![Build Status](https://travis-ci.com/Redcart/helda.svg?branch=master)](https://travis-ci.com/Redcart/helda)
+[![Codecov test coverage](https://codecov.io/gh/Redcart/helda/branch/master/graph/badge.svg)](https://codecov.io/gh/Redcart/helda?branch=master)
+[![Documentation](https://www.rdocumentation.org/badges/version/helda)](https://www.rdocumentation.org/packages/helda)
+[![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+<!-- badges: end -->
+
+## Overview
+
+This package provides functionalities that aim at facilitating and saving time when analysing data.
+
+## Installation
+
+You can install helda from CRAN by simply running:
+```{r, eval = FALSE}
+install.packages("helda")
+```
+
+## Development version
+
+To get a bug fix, or use a feature from the development version, you can install 
+helda from this GitHub repository.
+
+```{r, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("Redcart/helda")
+```
+
+## Usage
+
+This is a quick introduction to the lift curve function of the package:
+```{r lift_curve, message = FALSE}
+library(helda)
+
+data_training <- titanic_training
+data_validation <- titanic_validation
+
+model_glm <- glm(formula = "Survived ~ Pclass + Sex + Age + SibSp + Fare + Embarked",
+                 data = data_training,
+                 family = binomial(link = "logit"))
+
+predictions <- predict(object = model_glm, newdata = titanic_validation, type = "response")
+
+plot <- lift_curve(predictions = predictions, true_labels = titanic_validation$Survived, 
+                   positive_label = 1)
+
+plot
+```
+
+## Getting help
+
+If you encounter a clear bug, please file a minimal reproducible example on the [issues section](https://github.com/Redcart/helda/issues) of the repository.
+
+
+## Author
+
+Simon Corde
+
+simon.corde@hotmail.fr

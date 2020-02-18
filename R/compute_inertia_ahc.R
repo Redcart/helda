@@ -2,65 +2,14 @@
 ###  Computing of the intragroup variance for AHC  ###
 ######################################################
 
-#' @title Centroid of a cluster
-#'
-#' @description This function allows to compute the centroid of a cluster in a R data frame
-#'
-#' @importFrom stats hclust dist cutree
-#' @param i an integer that represents the cluster number
-#' @param data a R data frame (all columns are required to be numeric types)
-#' @param cluster a character. This refers to the column name of the data frame representing the clusters
-#' @return a vector of coordinates for the centroid of the cluster i
-#' @author Simon CORDE
-#' @keywords centroids data frame
-#' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
-#' @export clust_centroid
-
-clust_centroid <- function(i, data, cluster)
-{
-
-  return(colMeans(data[cluster == i,]))
-
-}
-
-#' @title Inertia of a data frame
-#'
-#' @description This function allows to compute the inertia of a R data frame
-#'
-#' @importFrom stats hclust dist cutree
-#' @param data R data frame (all columns are required to be numeric types)
-#' @return a numeric value representing the total inertia
-#' @author Simon CORDE
-#' @keywords inertia data frame
-#' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
-#' @export compute_inertia
-#' @examples
-#' compute_inertia(mtcars)
-
-compute_inertia <- function(data)
-{
-
-  n <- dim(data)[1]
-
-  data_with_center <- t(data %>% rbind(colMeans(data)))
-
-  squares <- (data_with_center[ ,-(n+1)] -  data_with_center[ ,(n+1)])^2
-
-  inertia <- sum(apply(squares, 2, sum)) / n
-
-  return(inertia)
-
-}
-
-#' @title Intragroup inertia for choosing the optimal number of clusters in Agglomerative Clustering
+#' @title Intra group inertia for choosing the optimal number of clusters in Agglomerative Clustering
 #'
 #' @description This function allows to compute the inter group inertia from agglomerative clustering
 #' for different number of clusters
 #'
 #' @importFrom stats hclust dist cutree
-#' @param data a R data frame (all columns are required to be numeric types)
+#' @importFrom dplyr %>%
+#' @param data a R data frame (all columns are required to be numeric types).
 #' @param method a character. This specifies the method on which the agglomerative is built upon (by default set to "ward.D")
 #' @param max_clusters an integer. The maximal number of clusters for which we intend to compute inter group inertia
 #' @return a vector of length \code{max_clusters} containing the inter group inertia for agglomerative
@@ -72,13 +21,16 @@ compute_inertia <- function(data)
 #' \url{https://www.github.com/Redcart/helda}
 #' @export compute_inertia_ahc
 #' @examples
-#' data <- iris[, c("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width")]
+#' library(dplyr)
+#' # We select only numeric features from Iris data set
+#' data <- iris %>% select(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)
 #' result <- compute_inertia_ahc(data = data, max_clusters = 15)
+#' result
 
 # The basic steps of the functions are the following:
 # Step 1: Find clusters centroids and the global centroid
 # Step 2: Compute quadratic differences between cluster centroids and global centroid
-# Step 3: Compute the weighted average of quadratic differences (weigth = size of the cluster)
+# Step 3: Compute the weighted average of quadratic differences (weight = size of the cluster)
 
 compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 {
@@ -94,13 +46,15 @@ compute_inertia_ahc <- function(data, method = "ward.D", max_clusters = 10)
 
     ahc_clusters <- cutree(tree = model_ahc, k = i)
 
-    centroids <- sapply(unique(ahc_clusters), clust_centroid, data, ahc_clusters)
+    data$cluster <- ahc_clusters
+
+    centroids <- sapply(unique(ahc_clusters), cluster_centroid, data, "cluster")
 
     centroids <- centroids %>% cbind(rowMeans(centroids))
 
     squares <- (centroids[, -(i+1)] - centroids[, (i+1)])^2
 
-    frequencies <- as.vector(table(ahc_clusters)) / n
+    frequencies <- as.vector(table(ahc_clusters)) / (n-1)
 
     intergroup_inertia_ahc <- c(intergroup_inertia_ahc, sum(apply(squares, 2, sum)*frequencies))
 

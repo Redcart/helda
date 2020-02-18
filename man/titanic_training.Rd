@@ -4,7 +4,10 @@
 \name{titanic_training}
 \alias{titanic_training}
 \title{Titanic training data set}
-\format{Data frame of 712 rows and 12 columns}
+\format{Data frame of 712 observations and 12 features}
+\source{
+Kaggle Titanic Competition: \url{https://www.kaggle.com/c/titanic/data}
+}
 \usage{
 titanic_training
 }
