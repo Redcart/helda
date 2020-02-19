@@ -7,7 +7,7 @@
 windows_to_linux_path()
 }
 \value{
-None
+None.
 }
 \description{
 This function allows to make conversion of windows path into linux path

@@ -7,7 +7,7 @@
 #' @description This function allows to create a complete empty calendar on a year scale
 #'
 #' @import dplyr sqldf
-#' @param data R data frame
+#' @param data a R data frame.
 #' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...).
 #' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale.
 #' @param start_year integer of the starting year of the time series.
@@ -16,11 +16,13 @@
 #' \code{start_year} and \code{end_year}.
 #' @author Simon CORDE
 #' @keywords time series fill gaps calendar
+#' @seealso \code{\link{start_end_to_fill}} \code{\link{gap_to_fill}}
 #' @references Link to the author's github package repository:
 #' \url{https://www.github.com/Redcart/helda}
 #' @export create_calendar
 #' @examples
 #' library(dplyr)
+#'
 #' # We take three countries from 2011 to 2018
 #' fr_sp_ge_pop <- world_countries_pop %>%
 #' filter(country_name %in% c('France', 'Spain', 'Germany')) %>%

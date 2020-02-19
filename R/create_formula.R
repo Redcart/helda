@@ -6,9 +6,10 @@
 #'
 #' @description This function allows to create a formula from the columns of a data frame very quickly
 #'
-#' @param data R data frame
-#' @param position integer representing the number of the column in the data frame that we want to create a formula
-#' @return string that contains the formula
+#' @param data a R data frame.
+#' @param position integer representing the position of the column in the data frame that we want to predict.
+#' The other columns are all considered as explanatory variables.
+#' @return a string that contains the formula.
 #' The formula is diplayed with the following format: "Y ~ X1 + X2 + ..."
 #' @author Simon CORDE
 #' @keywords formula data frame
@@ -19,6 +20,7 @@
 #' data <- iris
 #' str(data)
 #' result <- create_formula(data = data, position = 4)
+#' result
 
 create_formula <- function(data, position = 1)
 {
