@@ -35,6 +35,9 @@ plot
 Link to the author's github package repository:
 \url{https://www.github.com/Redcart/helda}
 }
+\seealso{
+lift_effect
+}
 \author{
 Simon CORDE
 }
