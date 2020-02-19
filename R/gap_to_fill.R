@@ -9,7 +9,7 @@
 #' @importFrom stringr str_sub str_length
 #' @importFrom rlang :=
 #' @import dplyr
-#' @param data a R data frame
+#' @param data a R data frame.
 #' @param gap_variable a character. This represents the name of the variable we want to fill the start and end gaps.
 #' @param key_variable a character. This represents the variable name that refers to the key variable in the panel data (an ID, ...).
 #' @param time_variable a character. This represents the time variable name that permits to sort observation on a time scale.
@@ -20,11 +20,13 @@
 #'  }
 #' @author Simon CORDE
 #' @keywords time series fill gaps interpolation
+#' @seealso \code{\link{create_calendar}} \code{\link{start_end_to_fill}}
 #' @references Link to the author's github package repository:
 #' \url{https://www.github.com/Redcart/helda}
 #' @export gap_to_fill
 #' @examples
 #' library(dplyr)
+#'
 #' # We take three countries from 2011 to 2018
 #' fr_sp_ge_pop <- world_countries_pop %>%
 #' filter(country_name %in% c('France', 'Spain', 'Germany')) %>%

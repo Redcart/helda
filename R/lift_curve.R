@@ -15,6 +15,7 @@
 #' @return a ggplot object containing the lift curve.
 #' @author Simon CORDE
 #' @keywords lift curve machine learning classification
+#' @seealso lift_effect
 #' @references Link to the author's github package repository:
 #' \url{https://www.github.com/Redcart/helda}
 #' @export lift_curve

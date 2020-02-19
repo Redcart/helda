@@ -7,12 +7,13 @@
 create_formula(data, position = 1)
 }
 \arguments{
-\item{data}{R data frame}
+\item{data}{a R data frame.}
 
-\item{position}{integer representing the number of the column in the data frame that we want to create a formula}
+\item{position}{integer representing the position of the column in the data frame that we want to predict.
+The other columns are all considered as explanatory variables.}
 }
 \value{
-string that contains the formula
+a string that contains the formula.
 The formula is diplayed with the following format: "Y ~ X1 + X2 + ..."
 }
 \description{
@@ -22,6 +23,7 @@ This function allows to create a formula from the columns of a data frame very q
 data <- iris
 str(data)
 result <- create_formula(data = data, position = 4)
+result
 }
 \references{
 Link to the author's github package repository:

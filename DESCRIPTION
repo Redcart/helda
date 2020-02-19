@@ -3,8 +3,9 @@ Title: Preprocess Data and Get Better Insights from Machine Learning Models
 Version: 1.0.0
 Authors@R: person("Simon", "Corde", email = "simon.corde@hotmail.fr", role = c("aut", "cre"))
 Description: The main focus is on preprocessing and data visualization of machine learning models performances. 
-  Some functions allow to fill gaps in time series using linear interpolation on panel data, some functions permit to draw lift effect and lift curves
-  in order to benchmark machine learning models or you can even find the optimal number of clusters in agglomerative clustering algorithm.
+  Some functions allow to fill in gaps in time series using linear interpolation on panel data, some functions 
+  permit to draw lift effect and lift curve in order to benchmark machine learning models or you can even find 
+  the optimal number of clusters in agglomerative clustering algorithm.
 Depends: R (>= 3.5.0),
 Imports:
     dplyr(>= 0.7.8),

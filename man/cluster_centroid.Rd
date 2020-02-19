@@ -26,6 +26,7 @@ library(dplyr)
 data <- iris \%>\% select(Sepal.Length, Sepal.Width, Petal.Length, Petal.Width)
 result_kmeans <- kmeans(data, 3)
 data$cluster <- result_kmeans$cluster
+# We get the coordinates of the centroid of the second cluster
 result <- cluster_centroid(i = 2, data = data, cluster_variable = "cluster")
 result
 }

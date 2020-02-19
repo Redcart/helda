@@ -14,7 +14,8 @@
 #' @param positive_label a character or integer that specify the positive label (Y=1) in the `true_labels`.
 #' @return a ggplot object containing the lift effect.
 #' @author Simon CORDE
-#' @keywords lift curve machine learning classification
+#' @keywords lift effect machine learning classification
+#' @seealso lift_curve
 #' @references Link to the author's github package repository:
 #' \url{https://www.github.com/Redcart/helda}
 #' @export lift_effect

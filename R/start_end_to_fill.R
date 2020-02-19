@@ -19,12 +19,13 @@
 #'  }
 #' @author Simon CORDE
 #' @keywords time series fill gaps
+#' @seealso \code{\link{create_calendar}} \code{\link{gap_to_fill}}
 #' @references Link to the author's github package repository:
 #' \url{https://www.github.com/Redcart/helda}
 #' @export start_end_to_fill
-#' @export gap_to_fill
 #' @examples
 #' library(dplyr)
+#'
 #' # We take three countries from 2011 to 2018
 #' fr_sp_ge_pop <- world_countries_pop %>%
 #' filter(country_name %in% c('France', 'Spain', 'Germany')) %>%

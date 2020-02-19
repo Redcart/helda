@@ -7,7 +7,7 @@
 gap_to_fill(data, gap_variable, key_variable, time_variable, digits = 2)
 }
 \arguments{
-\item{data}{a R data frame}
+\item{data}{a R data frame.}
 
 \item{gap_variable}{a character. This represents the name of the variable we want to fill the start and end gaps.}
 
@@ -28,6 +28,7 @@ This function allows to fill intermediate gaps in panel data by linear interpola
 }
 \examples{
 library(dplyr)
+
 # We take three countries from 2011 to 2018
 fr_sp_ge_pop <- world_countries_pop \%>\%
 filter(country_name \%in\% c('France', 'Spain', 'Germany')) \%>\%
@@ -48,6 +49,9 @@ key_variable = "country_code", time_variable = "year", digits = 1)
 \references{
 Link to the author's github package repository:
 \url{https://www.github.com/Redcart/helda}
+}
+\seealso{
+\code{\link{create_calendar}} \code{\link{start_end_to_fill}}
 }
 \author{
 Simon CORDE

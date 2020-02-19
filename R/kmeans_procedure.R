@@ -18,7 +18,7 @@
 #' the cluster to which the observation belongs to.
 #' @author Simon CORDE
 #' @keywords kmeans cluster sizes
-#' @references Link to the github package repository:
+#' @references Link to the author's github package repository:
 #' \url{https://www.github.com/Redcart/helda}
 #' @export kmeans_procedure
 #' @examples
@@ -47,8 +47,8 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
   table(liste_clusterise$cluster)
 
   test <- FALSE
-  ## While clusters are not all filled
 
+  ## While clusters are not all filled
   while (test == FALSE)
     {
 
@@ -79,11 +79,11 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
       if (any(between(eval(as.name(paste("volume_cluster_", b, ".", k, sep = ""))), threshold_min, threshold_max)))
        {
 
-        # We fill the cluster(s) in that case
+        # We fill in the cluster(s) in that case
         for (i in 1:k)
           {
 
-          # We also fill clusters whose size would fall below the minimum treshold
+          # We also fill in clusters whose size would fall below the minimum treshold
             if (eval(as.name(paste("volume_cluster_", b, ".", k, sep = "")))[i] <= threshold_max)
              {
 
@@ -117,7 +117,7 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
       else if (any(eval(as.name(paste("volume_cluster_", b, ".", k, sep = ""))) < threshold_min))
         {
 
-        # We get back to the previous kmeans and fill the clusters
+        # We get back to the previous kmeans and fill in the clusters
         for (i in 1:(k-1))
           {
             liste_temp$cluster_bis[eval(as.name(paste("model_kmeans_", b, ".", k-1, sep = "")))$cluster==i] <- c

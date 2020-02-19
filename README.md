@@ -63,5 +63,3 @@ Author
 ------
 
 Simon Corde
-
-<simon.corde@hotmail.fr>
