@@ -35,11 +35,14 @@ plot
 Link to the author's github package repository:
 \url{https://www.github.com/Redcart/helda}
 }
+\seealso{
+lift_curve
+}
 \author{
 Simon CORDE
 }
 \keyword{classification}
-\keyword{curve}
+\keyword{effect}
 \keyword{learning}
 \keyword{lift}
 \keyword{machine}
