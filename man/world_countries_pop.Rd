@@ -11,6 +11,9 @@
 \item{year}{year from 1960 to 2018}
 \item{population}{number of people}
 }}
+\source{
+World Bank website \url{https://data.worldbank.org/indicator/SP.POP.TOTL}
+}
 \usage{
 world_countries_pop
 }
