@@ -75,9 +75,6 @@ plot
 
 If you encounter a clear bug, please file a minimal reproducible example on the [issues section](https://github.com/Redcart/helda/issues) of the repository.
 
-
 ## Author
 
 Simon Corde
-
-simon.corde[at]hotmail.fr
