@@ -43,7 +43,8 @@ proc_freq <- function(variable, digits = 4)
                        "Frequency" = frequencies,
                        "Percentage" = percentages,
                        "Cumulative.Frequency" = cum_frequencies,
-                       "Cumulative.Percentage" = cum_percentages)
+                       "Cumulative.Percentage" = cum_percentages,
+                       stringsAsFactors = TRUE)
 
   return(result)
 
