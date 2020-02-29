@@ -3,6 +3,7 @@
  * Lift curve and lift effect functions more precise
  * Function compute_inertia renamed as compute_global_inertia
  * Function clust_centroid renamed as cluster_centroid
+ * stringAsFactors argument set to TRUE for proc_freq function
  * Update README markdown file (with Rmd extension) with example and new badges
  * Add NEWS markdown file
  * Unit tests more complete
