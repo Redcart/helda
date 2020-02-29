@@ -27,7 +27,7 @@ options(tibble.print_min = 5, tibble.print_max = 5)
 [![Codecov test coverage](https://codecov.io/gh/Redcart/helda/branch/master/graph/badge.svg)](https://codecov.io/gh/Redcart/helda?branch=master)
 [![Documentation](https://www.rdocumentation.org/badges/version/helda)](https://www.rdocumentation.org/packages/helda)
 [![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/helda)
+[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/helda)](https://cranlogs.r-pkg.org/badges/grand-total/helda)
 <!-- badges: end -->
 
 ## Overview
