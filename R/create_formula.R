@@ -10,7 +10,7 @@
 #' @param position integer representing the position of the column in the data frame that we want to predict.
 #' The other columns are all considered as explanatory variables.
 #' @return a string that contains the formula.
-#' The formula is diplayed with the following format: "Y ~ X1 + X2 + ..."
+#' The formula is displayed with the following format: "Y ~ X1 + X2 + ..."
 #' @author Simon CORDE
 #' @keywords formula data frame
 #' @references Link to the author's github package repository:
