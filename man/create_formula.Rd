@@ -14,7 +14,7 @@ The other columns are all considered as explanatory variables.}
 }
 \value{
 a string that contains the formula.
-The formula is diplayed with the following format: "Y ~ X1 + X2 + ..."
+The formula is displayed with the following format: "Y ~ X1 + X2 + ..."
 }
 \description{
 This function allows to create a formula from the columns of a data frame very quickly
