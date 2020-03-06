@@ -34,7 +34,7 @@
 lift_effect <- function(predictions, true_labels, positive_label)
 {
 
-  data <- data.frame("predictions" = predictions, "true_labels" = true_labels, stringsAsFactors = TRUE)
+  data <- data.frame("predictions" = predictions, "true_labels" = true_labels)
 
   data_1 <- data %>%
     arrange(desc(predictions))
