@@ -1,3 +1,7 @@
+## version 1.0.1
+
+ * compliance with new ggplot2 package version
+ 
 ## version 1.0.0
 
  * Lift curve and lift effect functions more precise
