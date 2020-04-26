@@ -10,6 +10,10 @@ test_that("lift curve for titanic data set", {
                    family=binomial(link="logit"))
   predictions <- predict(object=model_glm, newdata=data_validation, type="response")
   result <- lift_curve(predictions=predictions, true_labels=data_validation$Survived, positive_label=1)
-  load(file='lift_curve_test.Rda')
+  if(R.version$major == '4'){
+    load(file='lift_curve_test_v4.Rda')
+  }else{
+    load(file='lift_curve_test_v3.Rda')
+  }
   expect_equal(result, lift_curve_test)
 })
