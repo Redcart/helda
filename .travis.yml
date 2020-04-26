@@ -24,6 +24,10 @@ jobs:
       r: oldrel
     - os: osx
       r: release
+    - os: osx
+      r: devel
+    - os: osx
+      r: bioc-devel
 services:
   - xvfb
 # Set one of your dependencies from CRAN
