@@ -4,8 +4,7 @@
 \name{titanic_validation}
 \alias{titanic_validation}
 \title{Titanic validation data set}
-\format{
-Data frame of 179 observations and 12 features:
+\format{Data frame of 179 observations and 12 features:
 \describe{
 \item{PassengerId}{id of the passenger}
 \item{Survived}{dummy variable (0 if the passenger died / 1 if the passenger survived)}
@@ -19,8 +18,7 @@ Data frame of 179 observations and 12 features:
 \item{Fare}{price of the ticket}
 \item{Cabin}{location of the cabin on the boat}
 \item{Embarked}{harbor city of boarding}
-}
-}
+}}
 \source{
 Kaggle Titanic Competition: \url{https://www.kaggle.com/c/titanic/data}
 }

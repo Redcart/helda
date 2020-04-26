@@ -21,13 +21,17 @@ jobs:
       dist: xenial
       r: bioc-devel
     - os: osx
+      osx_image: xcode11
       r: oldrel
     - os: osx
       r: release
+      osx_image: xcode11
     - os: osx
       r: devel
+      osx_image: xcode11
     - os: osx
       r: bioc-devel
+      osx_image: xcode11
 services:
   - xvfb
 # Set one of your dependencies from CRAN
