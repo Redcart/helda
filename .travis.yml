@@ -40,10 +40,6 @@ r_packages:
 before_install:
  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then sudo apt-get update; fi
  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then sudo apt-get -y install libxml2-dev; fi
-env:
- - CODECOV_TOKEN="6073f04a-c72e-41e1-87a1-81a856f76aac"
-install:
-- R -e 'devtools::install_deps(dep = T)'
 script:
  - R CMD build .
  - R CMD check --as-cran *.tar.gz
