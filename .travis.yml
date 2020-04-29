@@ -26,12 +26,6 @@ jobs:
     - os: osx
       r: release
       osx_image: xcode11
-    - os: osx
-      r: devel
-      osx_image: xcode11
-    - os: osx
-      r: bioc-devel
-      osx_image: xcode11
 services:
   - xvfb
 # Set one of your dependencies from CRAN
@@ -43,10 +37,13 @@ r_packages:
  - testthat
  - covr
 # set a Linux system dependency
-apt_packages:
- - libxml2-dev
+before_install:
+ - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then sudo apt-get update; fi
+ - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then sudo apt-get -y install libxml2-dev; fi
 env:
  - CODECOV_TOKEN="6073f04a-c72e-41e1-87a1-81a856f76aac"
+install:
+- R -e 'devtools::install_deps(dep = T)'
 script:
  - R CMD build .
  - R CMD check --as-cran *.tar.gz
