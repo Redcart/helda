@@ -1,3 +1,7 @@
+## version 1.1.0
+
+ * compliance with new R 4.0.0 version
+ 
 ## version 1.0.1
 
  * compliance with new ggplot2 package version
