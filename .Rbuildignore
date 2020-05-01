@@ -2,6 +2,7 @@
 ^\.Rproj\.user$
 ^\.travis\.yml$
 ^codecov\.yml$
+^\_config\.yml$
 \.docx$
 \.tar\.gz$
 ^cran-comments\.md$
