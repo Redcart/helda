@@ -1,8 +1,8 @@
 ## Test environments
-  * macOS (on travis-ci)
-     - release
+  * macOS Mojave (on travis-ci)
+     - oldrel, release
   * Ubuntu Xenial 16.04 (on travis-ci)
-     - oldrel, release, devel
+     - oldrel, release, devel, bioc-devel
   * win-builder
      - oldrel, release, devel
 
