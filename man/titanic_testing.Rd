@@ -4,7 +4,8 @@
 \name{titanic_testing}
 \alias{titanic_testing}
 \title{Titanic testing data set}
-\format{Data frame of 418 observations and 11 features:
+\format{
+Data frame of 418 observations and 11 features:
 \describe{
 \item{PassengerId}{id of the passenger}
 \item{Pclass}{passenger class on the boat}
@@ -17,7 +18,8 @@
 \item{Fare}{price of the ticket}
 \item{Cabin}{location of the cabin on the boat}
 \item{Embarked}{harbor city of boarding}
-}}
+}
+}
 \source{
 Kaggle Titanic Competition: \url{https://www.kaggle.com/c/titanic/data}
 }
