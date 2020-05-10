@@ -8,3 +8,5 @@
 
 ## R CMD check results
   There were no ERRORs no WARNINGs no Notes
+  
+## New version for compliance with upcoming 1.0.0 dplyr version
