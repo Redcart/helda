@@ -66,11 +66,11 @@ model_glm <- glm(formula = "Survived ~ Pclass + Sex + Age +
                  family = binomial(link = "logit"))
 
 predictions <- predict(object = model_glm, 
-                       newdata = titanic_validation, 
+                       newdata = data_validation, 
                        type = "response")
 
 plot <- lift_curve(predictions = predictions, 
-                   true_labels = titanic_validation$Survived, 
+                   true_labels = data_validation$Survived, 
                    positive_label = 1)
 
 plot

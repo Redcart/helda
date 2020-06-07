@@ -1,3 +1,7 @@
+## version 1.1.2
+
+ * compliance with new ggplot2 1.1.1 version
+ 
 ## version 1.1.1
 
  * compliance with new dplyr 1.0.0 version
