@@ -24,7 +24,5 @@ jobs:
     steps:
     - name: R package install, build and test
       run: |
-         if [ "${{ matrix.os }}" == "linux" ]; then sudo apt-get update; fi
-         if [ "${{ matrix.os }}" == "linux" ]; then sudo apt-get -y install libxml2-dev; fi
          R CMD build .
          R CMD check --as-cran *.tar.gz
