@@ -30,6 +30,6 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@master
       - name: Setup R
-      - run: |
+        run: |
          R CMD build .
          R CMD check --as-cran *.tar.gz
