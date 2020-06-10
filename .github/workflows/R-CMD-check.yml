@@ -23,6 +23,6 @@ jobs:
 
     steps:
     - name: R package install, build and test
-      run: |
+      shell: |
          R CMD build .
          R CMD check --as-cran *.tar.gz
