@@ -1,0 +1,30 @@
+# This is a basic workflow to help you get started with Actions
+
+name: R-CMD-check
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: Test on ${{ matrix.os }} with ${{ matrix.r }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        r: ['oldrel', 'release', 'devel', 'bioc-devel']
+
+    steps:
+    - name: R package install, build and test
+      run: |
+         if [ "${{ matrix.os }}" == "linux" ]; then sudo apt-get update; fi
+         if [ "${{ matrix.os }}" == "linux" ]; then sudo apt-get -y install libxml2-dev; fi
+         R CMD build .
+         R CMD check --as-cran *.tar.gz
