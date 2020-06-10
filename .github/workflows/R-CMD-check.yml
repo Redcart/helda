@@ -13,28 +13,16 @@ on:
       - master
 
 jobs:
-  test:
-    name: Test on ${{ matrix.os }} with ${{ matrix.R }}
-    runs-on: ${{ matrix.os }}
+  build:
+    runs-on: ubuntu-18.04
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
-        R: ['oldrel', 'release', 'devel', 'bioc-devel']
-
+        R: [ '3.5.3', '3.6.1' ]
+    name: R ${{ matrix.R }} sample
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: r-lib/actions/setup-r@master
+      - uses: actions/checkout@master
+      - name: Setup R
+        uses: r-lib/actions/setup-R@v1
         with:
           r-version: ${{ matrix.R }}
-
-      - uses: r-lib/actions/setup-pandoc@master
-      - name: Install Dependencies
-        run: |
-          install.packages('remotes')
-          remotes::install_deps(dependencies = TRUE)
-          remotes::install_cran("rcmdcheck")
-      - name: Setup R
-        run: |
-         R CMD build .
-         R CMD check --as-cran *.tar.gz
+      - run: Rscript -e 'print("hello")'
