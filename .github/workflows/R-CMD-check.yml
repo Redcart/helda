@@ -14,15 +14,19 @@ on:
 
 jobs:
   test:
-    name: Test on ${{ matrix.os }} with ${{ matrix.r }}
+    name: Test on ${{ matrix.os }} with ${{ matrix.R }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
-        r: ['oldrel', 'release', 'devel', 'bioc-devel']
+        R: ['oldrel', 'release', 'devel', 'bioc-devel']
 
     steps:
-    - name: R package install, build and test
-      shell: |
+      - uses: actions/checkout@master
+      - name: Setup R
+        uses: r-lib/actions/setup-R@v1
+        with:
+          r-version: ${{ matrix.R }}
+      - run: |
          R CMD build .
          R CMD check --as-cran *.tar.gz
