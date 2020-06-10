@@ -22,11 +22,14 @@ jobs:
         R: ['oldrel', 'release', 'devel', 'bioc-devel']
 
     steps:
-      - uses: actions/checkout@master
-      - name: Setup R
-        uses: r-lib/actions/setup-R@v1
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@master
         with:
-          r-version: ${{ matrix.R }}
+          r-version: ${{ matrix.config.r }}
+
+      - uses: r-lib/actions/setup-pandoc@master
+      - name: Setup R
       - run: |
          R CMD build .
          R CMD check --as-cran *.tar.gz
