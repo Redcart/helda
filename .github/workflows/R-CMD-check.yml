@@ -26,7 +26,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r@master
         with:
-          r-version: ${{ matrix.config.r }}
+          r-version: ${{ matrix.R }}
 
       - uses: r-lib/actions/setup-pandoc@master
       - name: Install Dependencies
