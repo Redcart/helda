@@ -5,6 +5,8 @@ R package helda (HELpful functions for Data Analysis in R)
 <!-- badges: start -->
 [![CRAN
 status](https://www.r-pkg.org/badges/version/helda)](https://CRAN.R-project.org/package=helda)
+[![R build
+status](https://github.com/Redcart/helda/workflows/R-CMD-check/badge.svg)](https://github.com/Redcart/helda/actions)
 [![Build
 Status](https://travis-ci.com/Redcart/helda.svg?branch=master)](https://travis-ci.com/Redcart/helda)
 [![Codecov test

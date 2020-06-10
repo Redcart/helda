@@ -9,4 +9,4 @@
 ## R CMD check results
   There were no ERRORs no WARNINGs no Notes
   
-## New version for compliance with upcoming 1.1.1 ggplot2 version
+## New version for compliance with upcoming 3.4.0 ggplot2 version

@@ -1,6 +1,10 @@
+## version 1.1.3
+
+ * compliance with new ggplot2 3.4 version
+ 
 ## version 1.1.2
 
- * compliance with new ggplot2 1.1.1 version
+ * compliance with new ggplot2 3.1.1 version
  
 ## version 1.1.1
 
