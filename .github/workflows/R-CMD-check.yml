@@ -1,4 +1,6 @@
 on:
+  schedule:
+  - cron: "30 7 * * Mon"
   push:
     branches:
       - master
