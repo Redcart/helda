@@ -15,5 +15,5 @@ test_that("lift curve for titanic data set", {
   }else{
     load(file='lift_curve_test_v3.Rda')
   }
-  expect_equivalent(result$coordinates, lift_curve_test$coordinates)
+  expect_equivalent(result$coordinates, lift_curve_test$coordinates, check.environment = FALSE)
 })

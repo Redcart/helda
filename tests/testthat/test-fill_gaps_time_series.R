@@ -22,5 +22,5 @@ test_that("fill gaps time series functions", {
    key_variable = "country_code", time_variable = "year", digits = 1)
   load(file='fill_gaps_test.Rda')
 
-  expect_equal(data_3, fill_gaps_test)
+  expect_equal(data_3, fill_gaps_test, check.environment = FALSE)
 })

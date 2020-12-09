@@ -2,7 +2,7 @@
 ###  Accuracy Ratio ###
 #######################
 
-#' @title Accuracy ratio
+#' @title Accuracy Ratio
 #'
 #' @description This function allows to compute the accuracy ratio for binary classification model
 #'
@@ -26,9 +26,9 @@
 #' data = data_training,
 #' family = binomial(link = "logit"))
 #' predictions <- predict(object = model_glm, newdata = data_validation, type = "response")
-#' plot <- lift_effect(predictions = predictions, true_labels = data_validation$Survived,
+#' acr <- accuracy_ratio(predictions = predictions, true_labels = data_validation$Survived,
 #' positive_label = 1)
-#' plot
+#' acr
 
 
 accuracy_ratio <- function(predictions, true_labels, positive_label)
