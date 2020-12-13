@@ -6,5 +6,5 @@ test_that("global inertial", {
   data <- mtcars
   result <- compute_global_inertia(data)
   load('global_inertia_test.Rda')
-  expect_equal(result, global_inertia_test)
+  expect_equal(result, global_inertia_test, check.environment = FALSE)
 })

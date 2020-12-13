@@ -9,23 +9,23 @@ r:
 jobs:
   include:
     - os: linux
-      dist: xenial
+      dist: bionic
       r: oldrel
     - os: linux
-      dist: xenial
+      dist: bionic
       r: release
     - os: linux
-      dist: xenial
+      dist: bionic
       r: devel
     - os: linux
-      dist: xenial
+      dist: bionic
       r: bioc-devel
     - os: osx
-      osx_image: xcode11
+      osx_image: xcode12.2
       r: oldrel
     - os: osx
       r: release
-      osx_image: xcode11
+      osx_image: xcode12.2
 services:
   - xvfb
 # Set one of your dependencies from CRAN
