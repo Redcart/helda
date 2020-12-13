@@ -21,6 +21,6 @@ Suggests:
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-URL: https://www.github.com/Redcart/helda
+URL: https://github.com/Redcart/helda
 BugReports: https://github.com/Redcart/helda/issues
 RoxygenNote: 7.1.1
