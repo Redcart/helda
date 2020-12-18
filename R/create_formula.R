@@ -14,7 +14,7 @@
 #' @author Simon CORDE
 #' @keywords formula data frame
 #' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
+#' \url{https://github.com/Redcart/helda}
 #' @export create_formula
 #' @examples
 #' data <- iris

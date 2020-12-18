@@ -49,7 +49,7 @@ key_variable = "country_code", time_variable = "year", digits = 1)
 }
 \references{
 Link to the author's github package repository:
-\url{https://www.github.com/Redcart/helda}
+\url{https://github.com/Redcart/helda}
 }
 \seealso{
 \code{\link{create_calendar}} \code{\link{gap_to_fill}}

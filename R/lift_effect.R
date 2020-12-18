@@ -17,7 +17,7 @@
 #' @keywords lift effect machine learning classification
 #' @seealso lift_curve
 #' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
+#' \url{https://github.com/Redcart/helda}
 #' @export lift_effect
 #' @examples
 #' data_training <- titanic_training

@@ -9,4 +9,4 @@
 ## R CMD check results
   There were no ERRORs no WARNINGs no Notes
   
-## New version for compliance with upcoming R version
+## New version for problem with github repository link that has changed from https://www.github.com/Redcart/helda to https://github.com/Redcart/helda

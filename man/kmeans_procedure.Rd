@@ -42,7 +42,7 @@ verbose=FALSE, seed=10)
 }
 \references{
 Link to the author's github package repository:
-\url{https://www.github.com/Redcart/helda}
+\url{https://github.com/Redcart/helda}
 }
 \author{
 Simon CORDE

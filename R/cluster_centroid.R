@@ -15,7 +15,7 @@
 #' @author Simon CORDE
 #' @keywords centroids data frame
 #' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
+#' \url{https://github.com/Redcart/helda}
 #' @export cluster_centroid
 #' @examples
 #' library(dplyr)

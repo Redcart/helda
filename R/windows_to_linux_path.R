@@ -14,7 +14,7 @@
 #' @author Simon CORDE
 #' @keywords windows linux path
 #' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
+#' \url{https://github.com/Redcart/helda}
 #' @export windows_to_linux_path
 
 windows_to_linux_path <- function()

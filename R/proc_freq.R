@@ -20,7 +20,7 @@
 #' @author Simon CORDE
 #' @keywords proc_freq frequency table categorical variable SAS
 #' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
+#' \url{https://github.com/Redcart/helda}
 #' @export proc_freq
 #' @examples
 #' data <- iris

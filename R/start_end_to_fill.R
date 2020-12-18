@@ -21,7 +21,7 @@
 #' @keywords time series fill gaps
 #' @seealso \code{\link{create_calendar}} \code{\link{gap_to_fill}}
 #' @references Link to the author's github package repository:
-#' \url{https://www.github.com/Redcart/helda}
+#' \url{https://github.com/Redcart/helda}
 #' @export start_end_to_fill
 #' @examples
 #' library(dplyr)

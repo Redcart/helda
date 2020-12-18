@@ -1,3 +1,7 @@
+## version 1.1.5
+
+ * fix change in new github repository links accordingly to CRAN policies
+ 
 ## version 1.1.4
 
  * compliance with new R-devel 4.1.0 version
