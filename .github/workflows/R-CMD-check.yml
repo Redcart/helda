@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - develop
+      - dev
   pull_request:
     branches:
       - master
@@ -26,8 +26,11 @@ jobs:
           - {os: windows-latest, r: 'devel'}
           - {os: macOS-latest, r: 'oldrel'}
           - {os: macOS-latest, r: 'release'}
-          - {os: ubuntu-latest, r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/__linux__/bionic/latest"}
-          - {os: ubuntu-latest, r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/bionic/latest"}
+          #- {os: macOS-latest, r: 'devel'}
+          - {os: ubuntu-latest, r: 'oldrel', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
+          - {os: ubuntu-latest, r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
+          - {os: ubuntu-latest, r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
+          
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
