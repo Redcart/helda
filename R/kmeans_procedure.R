@@ -71,7 +71,7 @@ kmeans_procedure <- function(data, columns, threshold_min, threshold_max, verbos
              kmeans(data[liste_temp$n_observation, columns], centers = k, iter.max = 50, nstart = 5, algorithm = "Lloyd"))
 
       assign(paste("volume_cluster_", b, ".", k, sep = ""),
-             table(eval(as.name(paste("model_kmeans_", b, ".", k, sep = "")))$cluster))
+             as.numeric(table(eval(as.name(paste("model_kmeans_", b, ".", k, sep = "")))$cluster)))
 
       eval(as.name(paste("volume_cluster_", b, ".", k, sep = "")))
 
