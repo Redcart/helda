@@ -12,6 +12,7 @@ Imports:
     ggplot2(>= 3.4.0),
     sqldf(>= 0.4-11),
     stringr(>= 1.4.0),
+    stringi(>= 1.7.0),
     rlang(>= 1.0.0),
     stats(>= 3.5.0)
 Suggests: 
