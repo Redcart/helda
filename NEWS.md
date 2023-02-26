@@ -1,4 +1,8 @@
-## version 1.1.5
+## version 1.1.6
+
+ * fix change in dplyr package about between() behavior
+ 
+ ## version 1.1.5
 
  * fix change in new github repository links accordingly to CRAN policies
  
